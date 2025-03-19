@@ -1,0 +1,1786 @@
+{
+    "巔峰極速": {
+        "logo": "images/巔峰極速.jpg",
+        "social": {
+            "Facebook": "https://www.facebook.com/RacingMasterHMT",
+            "Instagram": "https://www.instagram.com/racingmasterhmt_official/",
+            "官方網站": "https://www.racingmaster.game/tw/"
+        },
+        "products": [
+            {
+                "name": "鑽石 60顆",
+                "price": 33
+            },
+            {
+                "name": "鑽石 300顆",
+                "price": 170
+            },
+            {
+                "name": "鑽石 680顆",
+                "price": 330
+            },
+            {
+                "name": "鑽石 980顆",
+                "price": 490
+            },
+            {
+                "name": "鑽石 1280顆",
+                "price": 670
+            },
+            {
+                "name": "鑽石 1980顆",
+                "price": 990.0
+            },
+            {
+                "name": "鑽石 3280顆",
+                "price": 1690.0
+            },
+            {
+                "name": "鑽石6480顆",
+                "price": 3290.0
+            },
+            {
+                "name": "月卡",
+                "price": 170.0
+            },
+            {
+                "name": "高級合約",
+                "price": 330.0
+            },
+            {
+                "name": "特級合約",
+                "price": 670.0
+            },
+            {
+                "name": "合約組合禮包",
+                "price": 1690.0
+            }
+        ]
+    },
+    "原神": {
+        "logo": "images/原神.jpg",
+        "social": {
+            "Facebook": "https://www.facebook.com/Genshinimpact",
+            "Instagram": "https://genshin.hoyoverse.com/zh-tw",
+            "官方網站": "https://genshin.com"
+        },
+        "products": [
+            {
+                "name": "創世結晶 60顆",
+                "price": 30
+            },
+            {
+                "name": "創世結晶 300顆",
+                "price": 170
+            },
+            {
+                "name": "創世結晶 980顆",
+                "price": 490
+            },
+            {
+                "name": "創世結晶 1980顆",
+                "price": 990
+            },
+            {
+                "name": "創世結晶 3280顆",
+                "price": 1690
+            },
+            {
+                "name": "創世結晶 6480顆",
+                "price": 3290.0
+            },
+            {
+                "name": "空月祝福",
+                "price": 170.0
+            },
+            {
+                "name": "珍珠紀行",
+                "price": 330.0
+            },
+            {
+                "name": "珍珠之歌",
+                "price": 670.0
+            }
+        ]
+    },
+    "極速快感": {
+        "logo": "images/極速快感.jpg",
+        "social": {
+            "Facebook": "https://www.facebook.com/nfsm.garena.tw?locale=zh_TW",
+            "Instagram": "https://www.instagram.com/nfsm.garena.tw/",
+            "官方網站": "https://landing.nfsm.garena.tw/landing/v2/"
+        },
+        "products": [
+            {
+                "name": "66點券",
+                "price": 30
+            },
+            {
+                "name": "340點券",
+                "price": 170
+            },
+            {
+                "name": "660點券",
+                "price": 330
+            },
+            {
+                "name": "980點券",
+                "price": 490
+            },
+            {
+                "name": "1980點券",
+                "price": 990
+            },
+            {
+                "name": "2580點券",
+                "price": 1290.0
+            },
+            {
+                "name": "3380點券",
+                "price": 1690.0
+            },
+            {
+                "name": "6580點券",
+                "price": 3290.0
+            },
+            {
+                "name": "月卡",
+                "price": 170.0
+            },
+            {
+                "name": "普通通行證",
+                "price": 330.0
+            },
+            {
+                "name": "豪華通行證",
+                "price": 670.0
+            }
+        ]
+    },
+    "俠客傳說": {
+        "logo": "images/俠客傳說.jpg",
+        "social": {
+            "Facebook": "https://www.facebook.com/SSHERO.TW/",
+            "Instagram": "https://www.facebook.com/SSHERO.TW/",
+            "官方網站": "https://sshero.acenetgame.com/p-reg/"
+        },
+        "products": [
+            {
+                "name": "9999仙玉",
+                "price": 8540
+            },
+            {
+                "name": "3290仙玉",
+                "price": 2790
+            },
+            {
+                "name": "1690仙玉",
+                "price": 1450
+            },
+            {
+                "name": "670仙玉",
+                "price": 580
+            },
+            {
+                "name": "330仙玉",
+                "price": 290
+            },
+            {
+                "name": "170仙玉",
+                "price": 155.0
+            },
+            {
+                "name": "33仙玉",
+                "price": 35.0
+            }
+        ]
+    },
+    "逆水寒": {
+        "logo": "images/逆水寒.jpg",
+        "social": {
+            "Facebook": "https://www.facebook.com/SSHERO.TW/",
+            "Instagram": "https://www.facebook.com/SSHERO.TW/",
+            "官方網站": "https://www.facebook.com/SSHERO.TW/"
+        },
+        "products": [
+            {
+                "name": "6480玉",
+                "price": 2590
+            },
+            {
+                "name": "3280玉",
+                "price": 1400
+            },
+            {
+                "name": "1980玉",
+                "price": 840
+            },
+            {
+                "name": "980玉",
+                "price": 420
+            },
+            {
+                "name": "300玉",
+                "price": 155
+            },
+            {
+                "name": "60玉",
+                "price": 30.0
+            }
+        ]
+    },
+    "RO仙境傳說一定要可愛": {
+        "logo": "images/RO仙境傳說一定要可愛.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "4500鑽",
+                "price": 2520
+            },
+            {
+                "name": "3000鑽",
+                "price": 1720
+            },
+            {
+                "name": "1500鑽",
+                "price": 860
+            },
+            {
+                "name": "750鑽",
+                "price": 430
+            },
+            {
+                "name": "450鑽",
+                "price": 260
+            },
+            {
+                "name": "225鑽",
+                "price": 140.0
+            },
+            {
+                "name": "75鑽",
+                "price": 50.0
+            }
+        ]
+    },
+    "RO新世代": {
+        "logo": "images/RO新世代.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "上古龍神覺醒": {
+        "logo": "images/上古龍神覺醒.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "9999紅寶石",
+                "price": 2750
+            },
+            {
+                "name": "4999紅寶石",
+                "price": 1380
+            },
+            {
+                "name": "2999紅寶石",
+                "price": 830
+            },
+            {
+                "name": "1999紅寶石",
+                "price": 550
+            },
+            {
+                "name": "1499紅寶石",
+                "price": 430
+            },
+            {
+                "name": "999紅寶石",
+                "price": 290.0
+            },
+            {
+                "name": "499紅寶石",
+                "price": 150.0
+            },
+            {
+                "name": "99紅寶石",
+                "price": 35.0
+            }
+        ]
+    },
+    "小艦艦超勇": {
+        "logo": "images/小艦艦超勇.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "9999冰海水晶",
+                "price": 2790
+            },
+            {
+                "name": "4999冰海水晶",
+                "price": 1450
+            },
+            {
+                "name": "1999冰海水晶",
+                "price": 580
+            },
+            {
+                "name": "999冰海水晶",
+                "price": 290
+            },
+            {
+                "name": "499冰海水晶",
+                "price": 160
+            },
+            {
+                "name": "99冰海水晶",
+                "price": 40.0
+            }
+        ]
+    },
+    "天使軍團": {
+        "logo": "images/天使軍團.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "天堂W": {
+        "logo": "images/天堂W.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "5900商品",
+                "price": 5300
+            },
+            {
+                "name": "2600商品",
+                "price": 2360
+            },
+            {
+                "name": "1300商品",
+                "price": 1180
+            },
+            {
+                "name": "780商品",
+                "price": 730
+            },
+            {
+                "name": "260商品",
+                "price": 250
+            }
+        ]
+    },
+    "少女前線2": {
+        "logo": "images/少女前線2.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "幻獸傳說Ｍ": {
+        "logo": "images/幻獸傳說Ｍ.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6488彩鑽",
+                "price": 2790
+            },
+            {
+                "name": "3280彩鑽",
+                "price": 1450
+            },
+            {
+                "name": "1980彩鑽",
+                "price": 880
+            },
+            {
+                "name": "1280彩鑽",
+                "price": 580
+            },
+            {
+                "name": "980彩鑽",
+                "price": 430
+            },
+            {
+                "name": "680彩鑽",
+                "price": 290.0
+            },
+            {
+                "name": "300彩鑽",
+                "price": 160.0
+            },
+            {
+                "name": "60彩鑽",
+                "price": 35.0
+            }
+        ]
+    },
+    "未定事件簿": {
+        "logo": "images/未定事件簿.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "永恆靈魂": {
+        "logo": "images/永恆靈魂.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "守住呀主公": {
+        "logo": "images/守住呀主公.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6000元寶",
+                "price": 2790
+            },
+            {
+                "name": "3000元寶",
+                "price": 1450
+            },
+            {
+                "name": "1800元寶",
+                "price": 870
+            },
+            {
+                "name": "1200元寶",
+                "price": 580
+            },
+            {
+                "name": "900元寶",
+                "price": 430
+            },
+            {
+                "name": "600元寶",
+                "price": 290.0
+            },
+            {
+                "name": "300元寶",
+                "price": 150.0
+            },
+            {
+                "name": "60元寶",
+                "price": 30.0
+            }
+        ]
+    },
+    "吟遊戰記": {
+        "logo": "images/吟遊戰記.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480鑽石",
+                "price": 2790
+            },
+            {
+                "name": "3280鑽石",
+                "price": 1450
+            },
+            {
+                "name": "1980鑽石",
+                "price": 870
+            },
+            {
+                "name": "1280鑽石",
+                "price": 580
+            },
+            {
+                "name": "980鑽石",
+                "price": 440
+            },
+            {
+                "name": "680鑽石",
+                "price": 290.0
+            },
+            {
+                "name": "300鑽石",
+                "price": 150.0
+            },
+            {
+                "name": "60鑽石",
+                "price": 30.0
+            }
+        ]
+    },
+    "我獨自升級": {
+        "logo": "images/我獨自升級.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "8700鑽",
+                "price": 1940
+            },
+            {
+                "name": "4750鑽",
+                "price": 1150
+            },
+            {
+                "name": "2600鑽",
+                "price": 620
+            },
+            {
+                "name": "1150鑽",
+                "price": 280
+            },
+            {
+                "name": "335鑽",
+                "price": 90
+            },
+            {
+                "name": "110鑽",
+                "price": 30.0
+            }
+        ]
+    },
+    "命運聖契": {
+        "logo": "images/命運聖契.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480星鑽",
+                "price": 2790
+            },
+            {
+                "name": "3280星鑽",
+                "price": 1450
+            },
+            {
+                "name": "1980星鑽",
+                "price": 880
+            },
+            {
+                "name": "980星鑽",
+                "price": 440
+            },
+            {
+                "name": "300星鑽",
+                "price": 160
+            },
+            {
+                "name": "60星鑽",
+                "price": 40.0
+            }
+        ]
+    },
+    "放置軍團": {
+        "logo": "images/放置軍團.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480氪晶",
+                "price": 2540
+            },
+            {
+                "name": "3280氪晶",
+                "price": 1280
+            },
+            {
+                "name": "1280氪晶",
+                "price": 600
+            },
+            {
+                "name": "680氪晶",
+                "price": 280
+            },
+            {
+                "name": "300氪晶",
+                "price": 150
+            }
+        ]
+    },
+    "明日方舟": {
+        "logo": "images/明日方舟.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "屍鬼三國": {
+        "logo": "images/屍鬼三國.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6000金玉",
+                "price": 2790
+            },
+            {
+                "name": "3000金玉",
+                "price": 1440
+            },
+            {
+                "name": "1800金玉",
+                "price": 880
+            },
+            {
+                "name": "900金玉",
+                "price": 440
+            },
+            {
+                "name": "300金玉",
+                "price": 160
+            },
+            {
+                "name": "60金玉",
+                "price": 30.0
+            }
+        ]
+    },
+    "星鏈計畫": {
+        "logo": "images/星鏈計畫.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "5500星際比特",
+                "price": 2150
+            },
+            {
+                "name": "4400星際比特",
+                "price": 1750
+            },
+            {
+                "name": "2750星際比特",
+                "price": 1130
+            },
+            {
+                "name": "1650星際比特",
+                "price": 700
+            },
+            {
+                "name": "750星際比特",
+                "price": 340
+            },
+            {
+                "name": "165星際比特",
+                "price": 90.0
+            }
+        ]
+    },
+    "英雄之王": {
+        "logo": "images/英雄之王.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "英雄聯盟": {
+        "logo": "images/英雄聯盟.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "12150聯盟幣",
+                "price": 2420
+            },
+            {
+                "name": "7050聯盟幣",
+                "price": 1450
+            },
+            {
+                "name": "3500聯盟幣",
+                "price": 740
+            },
+            {
+                "name": "1380聯盟幣",
+                "price": 300
+            },
+            {
+                "name": "660聯盟幣",
+                "price": 150
+            }
+        ]
+    },
+    "恐龍突變": {
+        "logo": "images/恐龍突變.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "1490商品",
+                "price": 1290
+            },
+            {
+                "name": "1290商品",
+                "price": 1120
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "790商品",
+                "price": 680
+            },
+            {
+                "name": "690商品",
+                "price": 600
+            },
+            {
+                "name": "490商品",
+                "price": 430.0
+            },
+            {
+                "name": "320商品",
+                "price": 280.0
+            },
+            {
+                "name": "190商品",
+                "price": 170.0
+            }
+        ]
+    },
+    "神域": {
+        "logo": "images/神域.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "崩壞星穹鐵道": {
+        "logo": "images/崩壞星穹鐵道.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480古老夢華",
+                "price": 2490
+            },
+            {
+                "name": "3280古老夢華",
+                "price": 1250
+            },
+            {
+                "name": "1980古老夢華",
+                "price": 790
+            },
+            {
+                "name": "980古老夢華",
+                "price": 430
+            },
+            {
+                "name": "300古老夢華",
+                "price": 150
+            },
+            {
+                "name": "60古老夢華",
+                "price": 30.0
+            },
+            {
+                "name": "列車補給憑證",
+                "price": 150.0
+            },
+            {
+                "name": "無名客的榮勳",
+                "price": 260.0
+            },
+            {
+                "name": "無名客的獎章",
+                "price": 520.0
+            }
+        ]
+    },
+    "救世者之樹": {
+        "logo": "images/救世者之樹.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "球球英雄": {
+        "logo": "images/球球英雄.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2720
+            },
+            {
+                "name": "1690商品",
+                "price": 1390
+            },
+            {
+                "name": "990商品",
+                "price": 840
+            },
+            {
+                "name": "670商品",
+                "price": 560
+            },
+            {
+                "name": "330商品",
+                "price": 280
+            },
+            {
+                "name": "170商品",
+                "price": 150.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "第七史詩": {
+        "logo": "images/第七史詩.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2720
+            },
+            {
+                "name": "1690商品",
+                "price": 1390
+            },
+            {
+                "name": "990商品",
+                "price": 840
+            },
+            {
+                "name": "670商品",
+                "price": 560
+            },
+            {
+                "name": "330商品",
+                "price": 280
+            },
+            {
+                "name": "170商品",
+                "price": 150.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "創世紀戰M": {
+        "logo": "images/創世紀戰M.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6350鑽石",
+                "price": 2790
+            },
+            {
+                "name": "4400鑽石",
+                "price": 1980
+            },
+            {
+                "name": "3200鑽石",
+                "price": 1450
+            },
+            {
+                "name": "1850鑽石",
+                "price": 860
+            },
+            {
+                "name": "1250鑽石",
+                "price": 590
+            },
+            {
+                "name": "900鑽石",
+                "price": 440.0
+            },
+            {
+                "name": "310鑽石",
+                "price": 160.0
+            },
+            {
+                "name": "60鑽石",
+                "price": 40.0
+            }
+        ]
+    },
+    "最強宗師": {
+        "logo": "images/最強宗師.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "99.99美金仙玉",
+                "price": 2840
+            },
+            {
+                "name": "49.99美金仙玉",
+                "price": 1430
+            },
+            {
+                "name": "29.99美金仙玉",
+                "price": 870
+            },
+            {
+                "name": "19.99美金仙玉",
+                "price": 580
+            },
+            {
+                "name": "14.99美金仙玉",
+                "price": 440
+            },
+            {
+                "name": "9.99美金仙玉",
+                "price": 290.0
+            },
+            {
+                "name": "4.99美金仙玉",
+                "price": 150.0
+            },
+            {
+                "name": "1.99美金仙玉",
+                "price": 60.0
+            },
+            {
+                "name": "0.99美金仙玉",
+                "price": 35.0
+            }
+        ]
+    },
+    "無期迷途": {
+        "logo": "images/無期迷途.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480晶源",
+                "price": 2360
+            },
+            {
+                "name": "3280晶源",
+                "price": 1200
+            },
+            {
+                "name": "1980晶源",
+                "price": 800
+            },
+            {
+                "name": "980晶源",
+                "price": 420
+            },
+            {
+                "name": "300晶源",
+                "price": 150
+            },
+            {
+                "name": "60晶源",
+                "price": 30.0
+            }
+        ]
+    },
+    "絕區零": {
+        "logo": "images/絕區零.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480菲林底片",
+                "price": 2520
+            },
+            {
+                "name": "3280菲林底片",
+                "price": 1350
+            },
+            {
+                "name": "1980菲林底片",
+                "price": 840
+            },
+            {
+                "name": "980菲林底片",
+                "price": 440
+            },
+            {
+                "name": "300菲林底片",
+                "price": 150
+            },
+            {
+                "name": "60菲林底片",
+                "price": 30.0
+            },
+            {
+                "name": "繩網會員",
+                "price": 150.0
+            },
+            {
+                "name": "成長計畫",
+                "price": 270.0
+            },
+            {
+                "name": "典藏計畫",
+                "price": 540.0
+            }
+        ]
+    },
+    "傳說對決": {
+        "logo": "images/傳說對決.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "4128點券",
+                "price": 2780
+            },
+            {
+                "name": "3692點券",
+                "price": 2490
+            },
+            {
+                "name": "2943點券",
+                "price": 2020
+            },
+            {
+                "name": "2047點券",
+                "price": 1430
+            },
+            {
+                "name": "1466點券",
+                "price": 1040
+            },
+            {
+                "name": "1092點券",
+                "price": 790.0
+            },
+            {
+                "name": "728點券",
+                "price": 540.0
+            },
+            {
+                "name": "364點券",
+                "price": 300.0
+            }
+        ]
+    },
+    "楓之谷M": {
+        "logo": "images/楓之谷M.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2720
+            },
+            {
+                "name": "1690商品",
+                "price": 1390
+            },
+            {
+                "name": "990商品",
+                "price": 840
+            },
+            {
+                "name": "670商品",
+                "price": 560
+            },
+            {
+                "name": "330商品",
+                "price": 280
+            },
+            {
+                "name": "170商品",
+                "price": 150.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "鳴潮": {
+        "logo": "images/鳴潮.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480月相 ",
+                "price": 2550
+            },
+            {
+                "name": "3280月相 ",
+                "price": 1350
+            },
+            {
+                "name": "1980月相 ",
+                "price": 840
+            },
+            {
+                "name": "980月相 ",
+                "price": 430
+            },
+            {
+                "name": "300月相 ",
+                "price": 150
+            },
+            {
+                "name": "60月相 ",
+                "price": 30.0
+            },
+            {
+                "name": "月相觀測卡",
+                "price": 150.0
+            },
+            {
+                "name": "寰宇頻道",
+                "price": 260.0
+            },
+            {
+                "name": "寰宇特約",
+                "price": 520.0
+            }
+        ]
+    },
+    "劍與遠征": {
+        "logo": "images/劍與遠征.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "熱血大作戰": {
+        "logo": "images/熱血大作戰.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6580元寶",
+                "price": 2750
+            },
+            {
+                "name": "3380元寶",
+                "price": 1450
+            },
+            {
+                "name": "1980元寶",
+                "price": 880
+            },
+            {
+                "name": "980元寶",
+                "price": 450
+            },
+            {
+                "name": "340元寶",
+                "price": 160
+            },
+            {
+                "name": "66元寶",
+                "price": 40.0
+            }
+        ]
+    },
+    "骷髏傳說": {
+        "logo": "images/骷髏傳說.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "4500000金券",
+                "price": 2200
+            },
+            {
+                "name": "2820000金券",
+                "price": 1380
+            },
+            {
+                "name": "900000金券",
+                "price": 450
+            },
+            {
+                "name": "480000金券",
+                "price": 240
+            },
+            {
+                "name": "300000金券",
+                "price": 160
+            }
+        ]
+    },
+    "黎明血色魔女": {
+        "logo": "images/黎明血色魔女.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6480鑽石",
+                "price": 2790
+            },
+            {
+                "name": "3280鑽石",
+                "price": 1440
+            },
+            {
+                "name": "1980鑽石",
+                "price": 840
+            },
+            {
+                "name": "1280鑽石",
+                "price": 580
+            },
+            {
+                "name": "980鑽石",
+                "price": 440
+            },
+            {
+                "name": "680鑽石",
+                "price": 290.0
+            },
+            {
+                "name": "300鑽石",
+                "price": 160.0
+            },
+            {
+                "name": "60鑽石",
+                "price": 35.0
+            }
+        ]
+    },
+    "黎明啟示錄": {
+        "logo": "images/黎明啟示錄.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2720
+            },
+            {
+                "name": "1690商品",
+                "price": 1390
+            },
+            {
+                "name": "990商品",
+                "price": 840
+            },
+            {
+                "name": "670商品",
+                "price": 560
+            },
+            {
+                "name": "330商品",
+                "price": 280
+            },
+            {
+                "name": "170商品",
+                "price": 150.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "龍魂旅人": {
+        "logo": "images/龍魂旅人.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "6580鑽石",
+                "price": 2790
+            },
+            {
+                "name": "3380鑽石",
+                "price": 1460
+            },
+            {
+                "name": "1340鑽石",
+                "price": 580
+            },
+            {
+                "name": "660鑽石",
+                "price": 290
+            },
+            {
+                "name": "340鑽石",
+                "price": 155
+            },
+            {
+                "name": "60鑽石",
+                "price": 30.0
+            }
+        ]
+    },
+    "戀與深空": {
+        "logo": "images/戀與深空.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "3290商品",
+                "price": 2790
+            },
+            {
+                "name": "1690商品",
+                "price": 1450
+            },
+            {
+                "name": "990商品",
+                "price": 860
+            },
+            {
+                "name": "670商品",
+                "price": 580
+            },
+            {
+                "name": "330商品",
+                "price": 290
+            },
+            {
+                "name": "170商品",
+                "price": 160.0
+            },
+            {
+                "name": "33商品",
+                "price": 33.0
+            }
+        ]
+    },
+    "靈魂衝擊": {
+        "logo": "images/靈魂衝擊.jpg",
+        "social": {
+            "Facebook": "N",
+            "Instagram": "N",
+            "官方網站": "N"
+        },
+        "products": [
+            {
+                "name": "99900乙醚",
+                "price": 2290
+            },
+            {
+                "name": "49900乙醚",
+                "price": 1180
+            },
+            {
+                "name": "29900乙醚",
+                "price": 720
+            },
+            {
+                "name": "11900乙醚",
+                "price": 280
+            },
+            {
+                "name": "5900乙醚",
+                "price": 150
+            },
+            {
+                "name": "1400乙醚",
+                "price": 40.0
+            }
+        ]
+    }
+}

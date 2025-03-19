@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲詳情</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<script src="script.js?ver=2"></script>
+
+</head>
+<body class="game-detail">
+	<div class="sidebar">
+    	<!-- 新增的 LOGO -->
+    	<a href="index.html">
+	<img src="logo.jpg" alt="公司 LOGO" class="company-logo">
+    	</a>
+        <ul>
+            <li><a href="new-games.html">新上遊戲</a></li>
+            <li><a href="all-games.html">所有遊戲</a></li>
+            <li><a href="event.html">特惠活動</a></li>
+        </ul>
+    </div>
+
+<div class="main-content">
+    <!-- 第一個區塊: 遊戲資訊 + 儲值須知 -->
+<div class="info-box">
+    <img id="gameLogo" src="default.jpg" alt="遊戲 LOGO" class="game-logo">
+    <h2 id="gameTitle">未知遊戲</h2>
+    <h3>儲值須知</h3>
+    <p id="gameDescription">
+    請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
+    留言版請於帳戶 > 訂單內留言。<br>
+    <br>
+    歡迎加入 LINE@ 生活圈 ID：@ssbuy (@也要輸入)。<br>
+    我們將不定時舉辦抽優惠券與點卡活動哦!
+    </p>
+    <div class="social-media">
+        <h3>官方社交媒體</h3>
+        <p>
+            <a href="#" target="_blank">Facebook</a> |
+            <a href="#" target="_blank">Instagram</a> |
+            <a href="#" target="_blank">官方網站</a>
+        </p>
+    </div>
+</div>
+
+<div class="products-box">
+    <h3>選擇商品</h3>
+    <div id="productList"></div>
+</div>
+
+<div class="login-box">
+    <h3>遊戲登入資訊</h3>
+    <input type="text" id="gameName" readonly>
+    <select id="loginMethod">
+        <option>官方登入</option>
+        <option>FB登入</option>
+        <option>Google登入</option>
+        <option>X登入</option>
+        <option>Line登入</option>
+        <option>引繼碼登入</option>
+        <option>AppleID登入</option>
+    </select>
+    <input type="text" id="account" placeholder="登入帳號">
+    <input type="password" id="password" placeholder="登入密碼">
+    <input type="text" id="server" placeholder="伺服器名稱">
+    <input type="text" id="characterName" placeholder="遊戲角色名稱">
+    <textarea id="selectedProducts" readonly>購買商品</textarea>
+    <p id="totalAmount" class="total-price">結帳總金額: NT$0</p>
+    <a href="http://lin.ee/s7ueHCZ" class="checkout-btn">送出結帳</a>
+</div>
+
+<footer>
+    <div style="display: flex; justify-content: center; gap: 40px;">
+        <a href="purchase-guide.html">購買教學</a> |
+        <a href="contact.html">聯絡我們</a> |
+        <a href="disclaimer.html">免責條款</a> |
+        <a href="terms-of-service.html">服務條款</a> |
+        <a href="account-verification.html">帳戶認證</a>
+    </div>
+</footer>
+
+    <script>
+        const gameProducts = {
+            "巔峰極速": [
+                { name: "鑽石 60顆", price: 33 },
+                { name: "鑽石 300顆", price: 170 },
+                { name: "鑽石 680顆", price: 330 },
+                { name: "鑽石 980顆", price: 490 },
+                { name: "鑽石 1280顆", price: 670 },
+                { name: "鑽石 1980顆", price: 990 },
+                { name: "鑽石 3280顆", price: 1690 },
+                { name: "鑽石 6480顆", price: 3290 },
+                { name: "高級合約", price: 330 },
+                { name: "特級合約", price: 670 },
+                { name: "合約組合禮包", price: 1690 },
+                { name: "月卡", price: 170 }
+            ],
+            "原神": [
+                { name: "創世結晶 60顆", price: 90 },
+                { name: "創世結晶 300顆", price: 450 },
+                { name: "空月祝福", price: 170 }
+            ],
+            "傳說對決": [
+                { name: "點券 100", price: 95 },
+                { name: "點券 500", price: 450 },
+                { name: "戰令進階卡", price: 330 }
+            ]
+        };
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const gameName = params.get("game") ? decodeURIComponent(params.get("game")) : "未知遊戲";
+
+    console.log("當前遊戲名稱:", gameName); // 🔍 檢查是否成功取得遊戲名稱
+
+    document.getElementById("gameName").value = gameName; // ✅ 把遊戲名稱填入輸入框
+
+    try {
+        const response = await fetch("games.json"); // 讀取 JSON 檔案
+        if (!response.ok) throw new Error("載入 JSON 失敗");
+        const gamesData = await response.json();
+
+        if (gamesData[gameName]) {
+            loadGameDetails(gameName, gamesData[gameName]); // 載入遊戲內容
+        } else {
+            document.getElementById("gameTitle").textContent = "找不到遊戲";
+        }
+    } catch (error) {
+        console.error("無法讀取遊戲數據:", error);
+    }
+});
+
+function loadGameDetails(gameName, game) {
+    document.getElementById("gameTitle").textContent = gameName;
+    document.getElementById("gameLogo").src = game.logo;
+    document.getElementById("gameDescription").textContent = game.description;
+
+    // ✅ 生成社交媒體連結
+    const socialContainer = document.querySelector(".social-media p");
+    socialContainer.innerHTML = Object.entries(game.social)
+        .map(([name, url]) => `<a href="${url}" target="_blank">${name}</a>`)
+        .join(" | ");
+
+    // ✅ 載入商品
+    loadProducts(game.products);
+}
+
+function loadProducts(products) {
+    console.log("載入的產品:", products);
+    const productContainer = document.getElementById("productList");
+    productContainer.innerHTML = ""; // 清空現有商品
+
+    if (products.length === 0) {
+        productContainer.innerHTML = "<div>目前沒有可購買的商品</div>";
+        return;
+    }
+
+    products.forEach(product => {
+        console.log("處理產品:", product);
+        const row = document.createElement("div");
+        row.classList.add("product-item");
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = product.price;
+        checkbox.dataset.name = product.name;
+        checkbox.addEventListener("change", updateTotal);
+
+        const name = document.createElement("span");
+        name.classList.add("product-name");
+        name.textContent = product.name;
+
+        // ✅ 讓 NT$ 和價格連在一起
+        const price = document.createElement("span");
+        price.classList.add("price-container");
+        price.textContent = `NT$${product.price}`;
+
+        row.appendChild(checkbox);
+        row.appendChild(name);
+        row.appendChild(price);
+
+        productContainer.appendChild(row);
+    });
+}
+
+
+
+function updateTotal() {
+    let total = 0;
+    let selectedProducts = [];
+
+    document.querySelectorAll("#productList input[type='checkbox']:checked").forEach(checkbox => {
+        total += parseInt(checkbox.value);
+        selectedProducts.push(checkbox.dataset.name);
+    });
+
+    const selectedProductsField = document.getElementById("selectedProducts");
+    selectedProductsField.value = selectedProducts.length > 0 ? selectedProducts.join(" + ") : "購買商品";
+
+    // ✅ 自動調整 textarea 高度
+    selectedProductsField.style.height = "auto";
+    selectedProductsField.style.height = Math.min(selectedProductsField.scrollHeight, 120) + "px";
+
+    document.getElementById("totalAmount").innerHTML = `<strong>結帳總金額: NT$${total}</strong>`;
+}
+document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const gameName = params.get("game") ? decodeURIComponent(params.get("game")) : "未知遊戲";
+
+    try {
+        const response = await fetch("games.json"); // 讀取 JSON 檔案
+        if (!response.ok) throw new Error("載入 JSON 失敗");
+        const gamesData = await response.json();
+
+        if (gamesData[gameName]) {
+            loadGameDetails(gameName, gamesData[gameName]); // 載入遊戲內容
+        } else {
+            document.getElementById("gameTitle").textContent = "找不到遊戲";
+        }
+    } catch (error) {
+        console.error("無法讀取遊戲數據:", error);
+    }
+});
+
+function loadGameDetails(gameName, game) {
+    document.getElementById("gameTitle").textContent = gameName;
+    document.getElementById("gameLogo").src = game.logo;
+    document.getElementById("gameDescription").textContent = game.description;
+
+    // ✅ 生成社交媒體連結
+    const socialContainer = document.querySelector(".social-media p");
+    socialContainer.innerHTML = Object.entries(game.social)
+        .map(([name, url]) => `<a href="${url}" target="_blank">${name}</a>`)
+        .join(" | ");
+
+    // ✅ 載入商品
+    loadProducts(game.products);
+}
+
+function loadProducts(products) {
+    const productContainer = document.getElementById("productList");
+    productContainer.innerHTML = ""; // 清空現有商品
+
+if (products.length === 0) {
+    productContainer.innerHTML = "<div>目前沒有可購買的商品</div>";
+    return;
+}
+
+    products.forEach(product => {
+        const row = document.createElement("div");
+
+        const checkboxCell = document.createElement("td");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = product.price;
+        checkbox.dataset.name = product.name;
+        checkbox.addEventListener("change", updateTotal);
+        checkboxCell.appendChild(checkbox);
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = product.name;
+
+        const priceCell = document.createElement("td");
+        priceCell.textContent = `NT$${product.price}`;
+        priceCell.classList.add("price");
+
+        row.appendChild(checkboxCell);
+        row.appendChild(nameCell);
+        row.appendChild(priceCell);
+
+        productContainer.appendChild(row);
+    });
+}
+
+function updateTotal() {
+    let total = 0;
+    let selectedProducts = [];
+
+    document.querySelectorAll("#productList input[type='checkbox']:checked").forEach(checkbox => {
+        total += parseInt(checkbox.value);
+        selectedProducts.push(checkbox.dataset.name);
+    });
+
+    const selectedProductsField = document.getElementById("selectedProducts");
+    selectedProductsField.value = selectedProducts.length > 0 ? selectedProducts.join(" + ") : "購買商品";
+
+    // ✅ 自動調整 textarea 高度
+    selectedProductsField.style.height = "auto";
+    selectedProductsField.style.height = Math.min(selectedProductsField.scrollHeight, 120) + "px";
+
+    document.getElementById("totalAmount").innerHTML = `<strong>結帳總金額: NT$${total}</strong>`;
+}
+
+    <script defer src="script.js"></script>
+</body>
+</html>

@@ -28,7 +28,28 @@ a:hover {
             align-items: center;
         }
 
+        .sidebar {
+            width: 200px;
+            background: #333;
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 3px 0 10px rgba(255, 255, 255, 0.1);
+            position: fixed;
+            left: 0;
+            top: 0;
+		    display: flex;
+			flex-direction: column;
+			align-items: center;
+}
 
+	.sidebar .company-logo {
+    	width: 150px;  /* 設定 LOGO 的大小，讓它維持正方形 */
+    	height: 150px;
+    	display: block;
+    	margin: 0 auto 10px; /* 讓 LOGO 置中，並與下面的標題有間距 */
+    	border-radius: 100px; /* 如果想要 LOGO 變圓潤 */
+    	cursor: pointer; /* 讓 LOGO 變成可點擊的樣式 */
+	}
 
 		.sidebar ul {
 			text-align: center;

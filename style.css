@@ -92,7 +92,7 @@ a:hover {
 
         .game-slider {
 		scroll-behavior: smooth;
-		padding: 10px;
+		padding: 20px;
 		white-space: nowrap;
 		overflow-x: auto;
             width: 1200px;
@@ -101,7 +101,7 @@ a:hover {
             display: flex;
             align-items: center;
             min-height: 260px; /* 確保有足夠空間 */
-	    margin-bottom: -30px; /* ✅ 減少兩排之間的間距 */
+	    margin-bottom: -10px; /* ✅ 減少兩排之間的間距 */
         }
 
 	.game-slider-container {
@@ -111,9 +111,9 @@ a:hover {
     align-items: center;
     width: 1200px;
     margin-left: 220px; /* 側邊欄的寬度 */
-    margin-top: -60px;
+    margin-top: -50px;
     overflow: hidden;
-    margin-bottom: -60px; /* ✅ 減少兩排之間的間距 */
+    margin-bottom: -40px; /* ✅ 減少兩排之間的間距 */
 }
 
         .games-container {

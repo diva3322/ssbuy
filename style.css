@@ -96,8 +96,8 @@ a:hover {
             position: relative;
             display: flex;
             align-items: center;
-            min-height: 240px; /* 確保有足夠空間 */
-			margin-bottom: -30px; /* ✅ 減少兩排之間的間距 */
+            min-height: 260px; /* 確保有足夠空間 */
+	    margin-bottom: 0px; /* ✅ 減少兩排之間的間距 */
         }
 
 	.game-slider-container {

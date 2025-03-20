@@ -60,11 +60,20 @@ function scrollRight(sliderId) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("leftBtn1").addEventListener("click", () => scrollLeft("slider1"));
-    document.getElementById("rightBtn1").addEventListener("click", () => scrollRight("slider1"));
-    document.getElementById("leftBtn2").addEventListener("click", () => scrollLeft("slider2"));
-    document.getElementById("rightBtn2").addEventListener("click", () => scrollRight("slider2"));
+    document.getElementById("leftBtn1").addEventListener("click", function () {
+        scrollLeft("slider1");
+    });
+    document.getElementById("rightBtn1").addEventListener("click", function () {
+        scrollRight("slider1");
+    });
+    document.getElementById("leftBtn2").addEventListener("click", function () {
+        scrollLeft("slider2");
+    });
+    document.getElementById("rightBtn2").addEventListener("click", function () {
+        scrollRight("slider2");
+    });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a").forEach(link => {

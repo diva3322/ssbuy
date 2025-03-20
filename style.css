@@ -101,7 +101,7 @@ a:hover {
         }
 
 	.game-slider-container {
-    min-height: 240px; /* 確保有足夠空間 */
+    min-height: 260px; /* 確保有足夠空間 */
     position: relative;
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@ a:hover {
     margin-left: 240px; /* 側邊欄的寬度 */
     margin-top: 20px;
     overflow: hidden;
-    margin-bottom: -30px; /* ✅ 減少兩排之間的間距 */
+    margin-bottom: 0px; /* ✅ 減少兩排之間的間距 */
 }
 
         .games-container {
@@ -121,8 +121,8 @@ a:hover {
 
         .game-card {
 	    cursor: pointer; /* ✅ 確保可以點擊 */
-            min-width: 160px;
-            height: 160px;
+            min-width: 180px;
+            height: 180px;
     	    position: relative; /* 讓文字可以覆蓋在圖片上 */
             overflow: hidden; /* 防止圖片溢出 */
             background: rgba(255, 255, 255, 0.1);
@@ -154,7 +154,7 @@ a:hover {
     	    border-radius: 10px;
         }
 
-	.game-text {
+	.game-card-text {
     position: absolute;
 	width: 100%;
     bottom: 0px;

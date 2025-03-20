@@ -100,6 +100,14 @@ a:hover {
 			margin-bottom: -30px; /* ✅ 減少兩排之間的間距 */
         }
 
+	.game-slider-container {
+    position: relative;
+    width: calc(100% - 240px); /* 扣掉側邊欄的寬度 */
+    margin-left: 240px; /* 側邊欄的寬度 */
+    margin-top: 20px;
+    overflow: hidden;
+}
+
         .games-container {
             display: flex;
             transition: transform 0.5s ease-in-out;

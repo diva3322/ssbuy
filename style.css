@@ -90,6 +90,20 @@ a:hover {
             gap: 00px;
         }
 
+        .game-slider {
+		scroll-behavior: smooth;
+		padding: 10px;
+		white-space: nowrap;
+		overflow-x: auto;
+            width: 1200px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 260px; /* 確保有足夠空間 */
+	    margin-bottom: -30px; /* ✅ 減少兩排之間的間距 */
+        }
+
 	.game-slider-container {
     min-height: 240px; /* 確保有足夠空間 */
     position: relative;

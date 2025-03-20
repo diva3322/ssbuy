@@ -775,7 +775,7 @@ footer {
     gap: 15px; /* 設定卡片間距 */
     justify-content: center;
     margin: 0 auto;
-    max-width: 1400px; /* 限制最大寬度 */
+    max-width: 1200px; /* 限制最大寬度 */
 }
 
 .all-games-page h1 {
@@ -790,7 +790,7 @@ color: #ffcc00;
     justify-content: center;
 	align-items: center; /* 垂直置中 */
     margin: 0 auto;
-    max-width: 1400px; /* 限制最大寬度 */
+    max-width: 1200px; /* 限制最大寬度 */
     padding: 40px 0; /* 上下留點空間 */
 }
 

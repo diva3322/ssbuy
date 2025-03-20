@@ -131,7 +131,7 @@ a:hover {
     	    position: relative; /* 讓文字可以覆蓋在圖片上 */
             overflow: hidden; /* 防止圖片溢出 */
             background: rgba(255, 255, 255, 0.1);
-            margin: 10px;
+            margin: 20px;
             display: flex;
             align-items: center;
             justify-content: center;

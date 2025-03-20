@@ -41,6 +41,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+function scrollLeft() {
+    document.querySelector(".game-slider").scrollBy({ left: -200, behavior: "smooth" });
+}
+
+function scrollRight() {
+    document.querySelector(".game-slider").scrollBy({ left: 200, behavior: "smooth" });
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a").forEach(link => {

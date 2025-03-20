@@ -91,6 +91,10 @@ a:hover {
         }
 
         .game-slider {
+		scroll-behavior: smooth;
+		padding: 10px;
+		white-space: nowrap;
+		overflow-x: auto;
             width: 1200px;
             overflow: hidden;
             position: relative;
@@ -173,11 +177,13 @@ a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.75); /* 半透明黑 */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 16px;
+    padding: 10px 15px;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
     z-index: 10;
 }
 

@@ -166,27 +166,27 @@ a:hover {
     text-align: center;
 }
 
-	.prev, .next {
-    		background: rgba(255, 255, 255, 0.75); /* 半透明黑 */
-            	border: none;
-            	padding: 16px;
-            	cursor: pointer;
-            	font-size: 20px;
-            	position: absolute;
-            	top: 50%;
-            	transform: translateY(-50%);
-            	z-index: 10;
-        }
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.75); /* 半透明黑 */
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
 
-        .prev {
-            left: 10px;
-        }
+.slider-button.left {
+    left: 10px;
+}
 
-        .next {
-            right: 10px;
-        }
+.slider-button.right {
+    right: 10px;
+}
 
-        .prev:hover, .next:hover {
+        .slider-button.left:hover, .slider-button.right:hover {
             background: #fff;
             color: #000;
         }

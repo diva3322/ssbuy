@@ -95,7 +95,7 @@ a:hover {
 		padding: 20px;
 		white-space: nowrap;
 		overflow-x: auto;
-            width: 1400px;
+            width: 1300px;
             overflow: hidden;
             position: relative;
             display: flex;
@@ -109,7 +109,7 @@ a:hover {
     position: relative;
     display: flex;
     align-items: center;
-    width: 1400px;
+    width: 1300px;
     margin-left: 100px; /* 側邊欄的寬度 */
     margin-top: -50px;
     overflow: hidden;

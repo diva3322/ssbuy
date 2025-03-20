@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!response.ok) throw new Error("載入 JSON 失敗");
         const gamesData = await response.json();
 
+	    gameName = gameName.trim().replace(/[　]/g, "").toLowerCase(); 
+
         let gamesArray = Object.entries(gamesData).map(([name, info]) => ({
             name: name,
             logo: info.logo

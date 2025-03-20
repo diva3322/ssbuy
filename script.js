@@ -37,12 +37,12 @@ function populateSlider(sliderId, games) {
         const gameCard = document.createElement("div");
         gameCard.classList.add("game-card");
 
-        gameCard.innerHTML = `
-            <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
-                <img src="${game.logo}" alt="${game.name}">
-                <div class="game-title" style="color: white; text-align: center;">${game.name}</div>
-            </a>
-        `;
+gameCard.innerHTML = `
+    <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
+        <img src="${game.logo}" alt="${game.name}">
+    </a>
+    <div class="game-title">${game.name}</div> 
+`;
 
         gameSlider.appendChild(gameCard);
     });

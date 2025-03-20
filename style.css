@@ -724,6 +724,14 @@ footer {
     border-radius: 0px;
 }
 
+.game-title {
+    position: relative;  /* 讓文字不疊加在圖片上 */
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px; /* 讓文字與圖片有點距離 */
+}
+
 /* 卡片標題（如果要讓遊戲名稱也顯示在圖片內部） */
 .new-game-card .game-title {
     position: absolute;
@@ -770,28 +778,17 @@ footer {
 
 /* ✅ 設定遊戲網格 */
 .all-games-page .games-grid {
+    margin-left: 220px; /* 確保扣掉側邊欄 */
+    max-width: 100%; /* 讓內容不超過畫面 */
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 一排 7 個 */
     gap: 15px; /* 設定卡片間距 */
     justify-content: center;
     margin: 0 auto;
-    max-width: 1200px; /* 限制最大寬度 */
 }
 
 .all-games-page h1 {
 color: #ffcc00;
-}
-
-/* ✅ 設定遊戲網格 */
-.all-games-page .games-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 一排 7 個 */
-    gap: 15px; /* 設定卡片間距 */
-    justify-content: center;
-	align-items: center; /* 垂直置中 */
-    margin: 0 auto;
-    max-width: 1200px; /* 限制最大寬度 */
-    padding: 40px 0; /* 上下留點空間 */
 }
 
 /* ✅ 遊戲卡片 */

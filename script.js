@@ -12,7 +12,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         // **隨機挑選 13 款遊戲**
         let selectedGames = gamesArray.sort(() => Math.random() - 0.5).slice(0, 13);
 
-        const gameSlider = document.querySelector(".game-slider"); // 你的輪播容器
+        const gameSlider = document.querySelector(".game-slider"); // 選取輪播容器
+        if (!gameSlider) {
+            console.error("❌ 無法找到 .game-slider 容器！");
+            return;
+        }
+	    
         gameSlider.innerHTML = ""; // 清空舊內容
 
         selectedGames.forEach(game => {
@@ -29,8 +34,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             gameSlider.appendChild(gameCard);
         });
 
+        console.log("✅ 已成功載入隨機遊戲卡片！");
+
     } catch (error) {
-        console.error("載入遊戲數據失敗:", error);
+        console.error("❌ 載入遊戲數據失敗:", error);
     }
 });
 

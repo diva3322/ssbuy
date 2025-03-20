@@ -92,7 +92,7 @@ a:hover {
 
         .game-slider {
 		scroll-behavior: smooth;
-		padding: 20px;
+		padding: 40px;
 		white-space: nowrap;
 		overflow-x: auto;
             width: 1200px;
@@ -113,7 +113,7 @@ a:hover {
     margin-left: 220px; /* 側邊欄的寬度 */
     margin-top: -50px;
     overflow: hidden;
-    margin-bottom: -40px; /* ✅ 減少兩排之間的間距 */
+    margin-bottom: -50px; /* ✅ 減少兩排之間的間距 */
 }
 
         .games-container {
@@ -127,6 +127,7 @@ a:hover {
 	    cursor: pointer; /* ✅ 確保可以點擊 */
             min-width: 160px;
             height: 160px;
+	    padding: 20px;
     	    position: relative; /* 讓文字可以覆蓋在圖片上 */
             overflow: hidden; /* 防止圖片溢出 */
             background: rgba(255, 255, 255, 0.1);

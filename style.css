@@ -111,9 +111,9 @@ a:hover {
     align-items: center;
     width: 1200px;
     margin-left: 220px; /* 側邊欄的寬度 */
-    margin-top: 0px;
+    margin-top: -30px;
     overflow: hidden;
-    margin-bottom: 0px; /* ✅ 減少兩排之間的間距 */
+    margin-bottom: -30px; /* ✅ 減少兩排之間的間距 */
 }
 
         .games-container {
@@ -125,8 +125,8 @@ a:hover {
 
         .game-card {
 	    cursor: pointer; /* ✅ 確保可以點擊 */
-            min-width: 180px;
-            height: 180px;
+            min-width: 160px;
+            height: 160px;
     	    position: relative; /* 讓文字可以覆蓋在圖片上 */
             overflow: hidden; /* 防止圖片溢出 */
             background: rgba(255, 255, 255, 0.1);

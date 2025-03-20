@@ -50,7 +50,6 @@ function populateSlider(sliderId, games) {
     console.log(`✅ 成功載入 ${sliderId} 遊戲卡片！`);
 }
 
-
 // **左右滾動函式**
 function scrollLeft(sliderId) {
     document.getElementById(sliderId).scrollBy({ left: -200, behavior: "smooth" });

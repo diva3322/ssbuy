@@ -1,33 +1,39 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const params = new URLSearchParams(window.location.search);
-    let gameName = params.get("game") ? decodeURIComponent(params.get("game")) : "未知遊戲";
-
-    // ✅ 標準化 gameName
-    gameName = gameName.trim(); // 去除空格
-    gameName = gameName.replace(/[　]/g, ""); // 移除全形空格
-
-    console.log("標準化後的遊戲名稱:", gameName);
-
     try {
         const response = await fetch("games.json");
         if (!response.ok) throw new Error("載入 JSON 失敗");
         const gamesData = await response.json();
 
-        console.log("讀取的 JSON 數據:", gamesData); // 🔍 確認 JSON 是否正確載入
-        console.log("查找的遊戲名稱:", gameName);
-        console.log("遊戲是否存在:", gamesData.hasOwnProperty(gameName));
+        let gamesArray = Object.entries(gamesData).map(([name, info]) => ({
+            name: name,
+            logo: info.logo
+        }));
 
-        if (gamesData[gameName]) {
-            console.log("找到遊戲資料:", gamesData[gameName]); // ✅ 確認遊戲資料
-            loadGameDetails(gameName, gamesData[gameName]);
-        } else {
-            console.error("⚠️ 找不到對應的遊戲:", gameName);
-            document.getElementById("gameTitle").textContent = "找不到遊戲";
-        }
+        // **隨機挑選 13 款遊戲**
+        let selectedGames = gamesArray.sort(() => Math.random() - 0.5).slice(0, 13);
+
+        const gameSlider = document.querySelector(".game-slider"); // 你的輪播容器
+        gameSlider.innerHTML = ""; // 清空舊內容
+
+        selectedGames.forEach(game => {
+            const gameCard = document.createElement("div");
+            gameCard.classList.add("game-card");
+
+            gameCard.innerHTML = `
+                <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
+                    <img src="${game.logo}" alt="${game.name}">
+                    <div class="game-title">${game.name}</div>
+                </a>
+            `;
+
+            gameSlider.appendChild(gameCard);
+        });
+
     } catch (error) {
-        console.error("無法讀取遊戲數據:", error);
+        console.error("載入遊戲數據失敗:", error);
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a").forEach(link => {

@@ -22,12 +22,22 @@
     <div class="main-content">
         <img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img">
         <h1>速速幫你儲手遊</h1>
-    <div class="game-slider-container">
-    <button class="slider-button left" onclick="scrollLeft()">←</button>
-    <div class="game-slider">
-        <!-- JS 會動態插入遊戲卡片 -->
+<!-- 第一排遊戲滑動容器 -->
+<div class="game-slider-container">
+    <button class="slider-button left" onclick="scrollLeft('slider1')">&lt;</button>
+    <div class="game-slider" id="slider1">
+        <!-- 第一排遊戲卡片 (由 JS 動態插入) -->
     </div>
-    <button class="slider-button right" onclick="scrollRight()">→</button>
+    <button class="slider-button right" onclick="scrollRight('slider1')">&gt;</button>
+</div>
+
+        <!-- 第二排遊戲滑動容器 -->
+<div class="game-slider-container">
+    <button class="slider-button left" onclick="scrollLeft('slider2')">&lt;</button>
+    <div class="game-slider" id="slider2">
+        <!-- 第二排遊戲卡片 (由 JS 動態插入) -->
+    </div>
+    <button class="slider-button right" onclick="scrollRight('slider2')">&gt;</button>
 </div>
 </div>
 

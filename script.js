@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!response.ok) throw new Error("載入 JSON 失敗");
         const gamesData = await response.json();
 
-        console.log("讀取的 JSON 數據:", gamesData);
+        console.log("讀取的 JSON 數據:", gamesData); // 🔍 確認 JSON 是否正確載入
         console.log("查找的遊戲名稱:", gameName);
         console.log("遊戲是否存在:", gamesData.hasOwnProperty(gameName));
 
         if (gamesData[gameName]) {
-            console.log("找到遊戲資料:", gamesData[gameName]);
+            console.log("找到遊戲資料:", gamesData[gameName]); // ✅ 確認遊戲資料
             loadGameDetails(gameName, gamesData[gameName]);
         } else {
             console.error("⚠️ 找不到對應的遊戲:", gameName);
@@ -33,10 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
             const targetPage = this.getAttribute("href");
+            // 這裡排除不該攔截的頁面
             if (targetPage && (targetPage.endsWith(".html") || targetPage.startsWith("http"))) {
-                return;
+                return; // 讓正常的連結直接跳轉
             }
-            event.preventDefault();
+            event.preventDefault(); // 阻止原本的行為，避免影響內部跳轉
         });
     });
 });
@@ -62,7 +63,7 @@ function loadGameDetails(gameName, game) {
 function loadProducts(products) {
     console.log("載入的產品:", products);
     const productContainer = document.getElementById("productList");
-    productContainer.innerHTML = "";
+    productContainer.innerHTML = ""; // 清空現有商品
 
     if (products.length === 0) {
         productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
@@ -113,33 +114,95 @@ function updateTotal() {
     document.getElementById("totalAmount").innerHTML = `<strong>結帳總金額: NT$${total}</strong>`;
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("games.json")
+        .then(response => response.json())
+        .then(data => {
+            const gameEntries = Object.entries(data);
+            const latestGames = gameEntries.slice(-21).reverse(); // 倒數 21 個，但只取 20 個
+
+            const container = document.getElementById("new-games-container");
+            container.innerHTML = ""; // 清空原本內容
+
+            latestGames.forEach(([name, info]) => {
+                const gameCard = document.createElement("div");
+                gameCard.classList.add("new-game-item");
+
+                gameCard.innerHTML = `
+                    <a href="game-detail.html?game=${encodeURIComponent(name)}">
+                        <div class="new-game-card">
+                            <img src="${info.logo}" alt="${name}">
+                            <div class="game-title">${name}</div>
+                        </div>
+                    </a>
+                `;
+                container.appendChild(gameCard);
+            });
+        })
+        .catch(error => console.error("Error loading games:", error));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.body.classList.contains("all-games-page")) {
+        loadAllGames();
+    }
+});
+
+async function loadAllGames() {
     try {
         const response = await fetch("games.json");
         if (!response.ok) throw new Error("載入 JSON 失敗");
         const gamesData = await response.json();
 
-        let games = Object.entries(gamesData);
-        games = games.sort(() => Math.random() - 0.5).slice(0, 26);
+        let games = Object.keys(gamesData).map(gameName => ({
+            name: gameName,
+            logo: gamesData[gameName].logo
+        }));
 
-        const container = document.getElementById("new-games-container");
-        container.innerHTML = "";
+        // **隨機排序遊戲**
+        games = games.sort(() => Math.random() - 0.5);
 
-        games.forEach(([name, info]) => {
-            const gameCard = document.createElement("div");
-            gameCard.classList.add("new-game-item");
-
-            gameCard.innerHTML = `
-                <a href="game-detail.html?game=${encodeURIComponent(name)}">
-                    <div class="new-game-card">
-                        <img src="${info.logo}" alt="${name}" style="width: 180px; height: 180px; object-fit: cover;">
-                        <div class="game-title">${name}</div>
-                    </div>
-                </a>
-            `;
-            container.appendChild(gameCard);
-        });
+        displayGames(games);
     } catch (error) {
-        console.error("Error loading games:", error);
+        console.error("無法讀取遊戲數據:", error);
     }
-});
+}
+
+function displayGames(games) {
+    const gamesContainer = document.getElementById("gamesContainer");
+    gamesContainer.innerHTML = ""; // 清空現有內容
+
+    games.forEach(game => {
+        const gameCard = document.createElement("div");
+        gameCard.classList.add("game-card");
+
+        const img = document.createElement("img");
+        img.src = game.logo;
+        img.alt = game.name;
+
+        const gameName = document.createElement("div");
+        gameName.classList.add("game-text");
+        gameName.textContent = game.name;
+
+        gameCard.appendChild(img);
+        gameCard.appendChild(gameName);
+        gamesContainer.appendChild(gameCard);
+
+	       // ✅ 設定點擊跳轉
+        gameCard.addEventListener("click", () => {
+            window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
+        });
+    });
+}
+
+function filterGames() {
+    const searchQuery = document.getElementById("searchBox").value.toLowerCase();
+    const gameCards = document.querySelectorAll(".game-card");
+
+    gameCards.forEach(card => {
+        const gameName = card.querySelector(".game-text").textContent.toLowerCase();
+        card.style.display = gameName.includes(searchQuery) ? "block" : "none";
+    });
+}
+
+

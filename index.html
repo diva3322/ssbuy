@@ -22,12 +22,15 @@
     <div class="main-content">
         <img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img">
         <h1>速速幫你儲手遊</h1>
+    <div class="game-slider-container">
+    <button class="slider-button left" onclick="scrollLeft()">←</button>
     <div class="game-slider">
-        <!-- 這裡是 JS 動態插入卡片的位置 -->
+        <!-- JS 會動態插入遊戲卡片 -->
     </div>
-    <div class="game-slider">
-        <!-- 這裡是 JS 動態插入卡片的位置 -->
-    </div>
+    <button class="slider-button right" onclick="scrollRight()">→</button>
+</div>
+</div>
+
         <div id="gamesWrapper"></div> <!-- 這裡會由 script.js 填充隨機遊戲 -->
     </div>
     </div>

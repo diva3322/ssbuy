@@ -40,7 +40,7 @@ function populateSlider(sliderId, games) {
         gameCard.innerHTML = `
             <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
                 <img src="${game.logo}" alt="${game.name}">
-                <div class="game-title">${game.name}</div>
+                <div class="game-title" style="color: white; text-align: center;">${game.name}</div>
             </a>
         `;
 
@@ -49,6 +49,7 @@ function populateSlider(sliderId, games) {
 
     console.log(`✅ 成功載入 ${sliderId} 遊戲卡片！`);
 }
+
 
 // **左右滾動函式**
 function scrollLeft(sliderId) {

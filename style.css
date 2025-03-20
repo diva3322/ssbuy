@@ -106,7 +106,7 @@ a:hover {
     display: flex;
     align-items: center;
     width: 1200px;
-    margin-left: 200px; /* 側邊欄的寬度 */
+    margin-left: 220px; /* 側邊欄的寬度 */
     margin-top: 0px;
     overflow: hidden;
     margin-bottom: 0px; /* ✅ 減少兩排之間的間距 */

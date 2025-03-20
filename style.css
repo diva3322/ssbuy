@@ -92,7 +92,7 @@ a:hover {
 
         .game-slider {
 		scroll-behavior: smooth;
-		padding: 40px;
+		padding: 10px;
 		white-space: nowrap;
 		overflow-x: auto;
             width: 1200px;

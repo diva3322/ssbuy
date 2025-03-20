@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>速速幫你儲手遊</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<script src="script.js?ver=2"></script>
+    <script src="script.js" defer></script>
 </head>
 <body class="index-page">
 
-	<div class="sidebar">
-    	<!-- 新增的 LOGO -->
-    	<a href="index.html">
-	<img src="logo.jpg" alt="公司 LOGO" class="company-logo">
-    	</a>
+    <div class="sidebar">
+        <a href="index.html"><img src="logo.jpg" alt="公司 LOGO" class="company-logo"></a>
         <ul>
             <li><a href="new-games.html">新上遊戲</a></li>
             <li><a href="all-games.html">所有遊戲</a></li>
@@ -25,174 +20,22 @@
     </div>
     
     <div class="main-content">
-	<img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img">
+        <img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img">
         <h1>速速幫你儲手遊</h1>
-        <div class="games-wrapper" id="gamesWrapper"></div>
+        <div id="gamesWrapper"></div> <!-- 這裡會由 script.js 填充隨機遊戲 -->
     </div>
 
-<footer>
-    <div class="footer-content">
-    <div style="display: flex; justify-content: center; gap: 40px;">
-        <a href="purchase-guide.html">購買教學</a> |
-        <a href="contact.html">聯絡我們</a> |
-        <a href="disclaimer.html">免責條款</a> |
-        <a href="terms-of-service.html">服務條款</a> |
-        <a href="account-verification.html">帳戶認證</a>
-    </div>
-</div>
-</footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    renderGames(); // ✅ 在網頁載入時隨機產生遊戲卡片
-});
-
-function renderGames() {
-    const wrapper = document.getElementById('gamesWrapper');
-    wrapper.innerHTML = ""; // 清空當前內容，避免重複
-
-    // 遊戲資料陣列
-    let gameData = [
-        { name: "RO仙境傳說一定要可愛", image: "RO仙境傳說一定要可愛.jpg", link: "RO仙境傳說一定要可愛.html" },
-        { name: "RO新世代", image: "RO新世代.jpg", link: "RO新世代.html" },
-        { name: "上古龍神覺醒", image: "上古龍神覺醒.jpg", link: "上古龍神覺醒.html" },
-        { name: "小艦艦超勇", image: "小艦艦超勇.jpg", link: "小艦艦超勇.html" },
-        { name: "天堂W", image: "天堂W.jpg", link: "天堂W.html" },
-        { name: "吟遊戰記", image: "吟遊戰記.jpg", link: "吟遊戰記.html" },
-        { name: "命運聖契", image: "命運聖契.jpg", link: "命運聖契.html" },
-        { name: "放置軍團", image: "放置軍團.jpg", link: "放置軍團.html" },
-        { name: "屍鬼三國", image: "屍鬼三國.jpg", link: "屍鬼三國.html" },
-        { name: "英雄聯盟", image: "英雄聯盟.jpg", link: "英雄聯盟.html" },
-        { name: "原神", image: "原神.jpg", link: "原神.html" },
-        { name: "恐龍突變", image: "恐龍突變.jpg", link: "恐龍突變.html" },
-        { name: "球球英雄", image: "球球英雄.jpg", link: "球球英雄.html" },
-        { name: "創世紀戰M", image: "創世紀戰M.jpg", link: "創世紀戰M.html" },
-        { name: "傳說對決", image: "傳說對決.jpg", link: "傳說對決.html" },
-        { name: "楓之谷M", image: "楓之谷M.jpg", link: "楓之谷M.html" },
-        { name: "極速快感", image: "極速快感.jpg", link: "極速快感.html" },
-        { name: "熱血大作戰", image: "熱血大作戰.jpg", link: "熱血大作戰.html" },
-        { name: "巔峰極速", image: "巔峰極速.jpg", link: "巔峰極速.html" },
-        { name: "黎明血色魔女", image: "黎明血色魔女.jpg", link: "黎明血色魔女.html" },
-        { name: "靈魂衝擊", image: "靈魂衝擊.jpg", link: "靈魂衝擊.html" },
-        { name: "戀與深空", image: "戀與深空.jpg", link: "戀與深空.html" },
-        { name: "龍魂旅人", image: "龍魂旅人.jpg", link: "龍魂旅人.html" },
-        { name: "劍與遠征", image: "劍與遠征.jpg", link: "劍與遠征.html" },
-        { name: "鳴潮", image: "鳴潮.jpg", link: "鳴潮.html" },
-        { name: "絕區零", image: "絕區零.jpg", link: "絕區零.html" },
-        { name: "最強宗師", image: "最強宗師.jpg", link: "最強宗師.html" },
-        { name: "救世者之樹", image: "救世者之樹.jpg", link: "救世者之樹.html" },
-        { name: "崩壞星穹鐵道", image: "崩壞星穹鐵道.jpg", link: "崩壞星穹鐵道.html" },
-        { name: "逆水寒", image: "逆水寒.jpg", link: "逆水寒.html" },
-        { name: "俠客傳說", image: "俠客傳說.jpg", link: "俠客傳說.html" },
-        { name: "明日方舟", image: "明日方舟.jpg", link: "明日方舟.html" },
-        { name: "守住呀主公", image: "守住呀主公.jpg", link: "守住呀主公.html" },
-        { name: "幻獸傳說Ｍ", image: "幻獸傳說Ｍ.jpg", link: "幻獸傳說Ｍ.html" },
-        { name: "我獨自升級", image: "我獨自升級.jpg", link: "我獨自升級.html" },
-        { name: "黎明啟示錄", image: "黎明啟示錄.jpg", link: "黎明啟示錄.html" },
-        { name: "天使軍團", image: "天使軍團.jpg", link: "天使軍團.html" },
-        { name: "英雄之王", image: "英雄之王.jpg", link: "英雄之王.html" },
-        { name: "永恆靈魂", image: "永恆靈魂.jpg", link: "永恆靈魂.html" },
-        { name: "神域", image: "神域.jpg", link: "神域.html" },
-        { name: "未定事件簿", image: "未定事件簿.jpg", link: "未定事件簿.html" },
-        { name: "第七史詩", image: "第七史詩.jpg", link: "第七史詩.html" },
-        { name: "少女前線2", image: "少女前線2.jpg", link: "少女前線2.html" },
-        { name: "無期迷途", image: "無期迷途.jpg", link: "無期迷途.html" },
-        { name: "星鏈計畫", image: "星鏈計畫.jpg", link: "星鏈計畫.html" },
-        { name: "骷髏傳說", image: "骷髏傳說.jpg", link: "骷髏傳說.html" }
-    ];
-
-     // 確保遊戲總數至少 39 個，若不夠則重複填充
-    while (gameData.length < 39) {
-        gameData = gameData.concat(gameData);
-    }
-
-    // **隨機打亂遊戲資料**
-    gameData = gameData.sort(() => Math.random() - 0.5);
-
-    // **拆成三組，每組 13 個遊戲**
-    let gameChunks = [
-        gameData.slice(0, 13),
-        gameData.slice(13, 26),
-        gameData.slice(26, 39)
-    ];
-
-    for (let i = 0; i < 2; i++) {
-        const slider = document.createElement('div');
-        slider.classList.add('game-slider');
-
-        slider.innerHTML = `
-            <button class="prev" onclick="moveSlide(-2, 'gamesContainer${i}')">&#10094;</button>
-            <div class="games-container" id="gamesContainer${i}"></div>
-            <button class="next" onclick="moveSlide(2, 'gamesContainer${i}')">&#10095;</button>
-        `;
-        wrapper.appendChild(slider);
-
-        const container = slider.querySelector(`.games-container`);
-
-        // **產生這個 slider 的 13 個遊戲卡片**
-        gameChunks[i].forEach(game => {
-            const card = document.createElement('div');
-            card.classList.add('game-card');
-
-            // 建立圖片元素
-            const img = document.createElement('img');
-            img.src = `images/${game.image}`;
-            img.alt = game.name;
-            img.style.width = '100%';
-            img.style.height = '100%';
-            img.style.objectFit = 'cover';
-            img.style.borderRadius = '10px';
-
-            // 建立遊戲名稱
-            const text = document.createElement('span');
-            text.classList.add('game-text');
-            text.textContent = game.name;
-
-            // 把圖片和文字加入卡片
-            card.appendChild(img);
-            card.appendChild(text);
-
-            // 點擊跳轉到遊戲詳細頁面
-            card.addEventListener('click', () => {
-                window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
-            });
-
-            container.appendChild(card);
-        });
-    }
-}
-
-function moveSlide(direction, containerId) {
-    const container = document.getElementById(containerId);
-    const totalCards = container.querySelectorAll('.game-card').length;
-    const cardWidth = 193; // 每張卡片的寬度（包含 margin）
-    const visibleCards = 5; // 一次顯示 5 張
-    const step = 1.2; // 每次滑動 1.2 張卡片
-    const maxIndex = totalCards - visibleCards; // 計算最大滑動範圍
-
-    let currentIndex = parseInt(container.getAttribute('data-index')) || 0;
-    currentIndex += direction * step;
-
-    // 確保不會超出範圍
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    } else if (currentIndex > maxIndex) {
-        currentIndex = maxIndex;
-    }
-
-    // 計算滑動距離
-    let moveDistance = currentIndex * step * cardWidth;
-
-    // **最後一組卡片數量不足時，讓它靠右對齊**
-    const remainingCards = totalCards - currentIndex * step;
-    if (remainingCards < visibleCards) {
-        moveDistance = (totalCards - visibleCards) * cardWidth;
-    }
-
-    container.style.transform = `translateX(-${moveDistance}px)`;
-    container.setAttribute('data-index', currentIndex); // 記住當前位置
-}
-</script>
+    <footer>
+        <div class="footer-content">
+            <div style="display: flex; justify-content: center; gap: 40px;">
+                <a href="purchase-guide.html">購買教學</a> |
+                <a href="contact.html">聯絡我們</a> |
+                <a href="disclaimer.html">免責條款</a> |
+                <a href="terms-of-service.html">服務條款</a> |
+                <a href="account-verification.html">帳戶認證</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

@@ -9,45 +9,56 @@ document.addEventListener("DOMContentLoaded", async () => {
             logo: info.logo
         }));
 
-        // **隨機挑選 13 款遊戲**
-        let selectedGames = gamesArray.sort(() => Math.random() - 0.5).slice(0, 13);
+        // **隨機挑選 26 款遊戲 (兩排，每排 13 款)**
+        let selectedGames = gamesArray.sort(() => Math.random() - 0.5).slice(0, 26);
+        let firstRowGames = selectedGames.slice(0, 13);
+        let secondRowGames = selectedGames.slice(13, 26);
 
-        const gameSlider = document.querySelector(".game-slider"); // 選取輪播容器
-        if (!gameSlider) {
-            console.error("❌ 無法找到 .game-slider 容器！");
-            return;
-        }
-	    
-        gameSlider.innerHTML = ""; // 清空舊內容
-
-        selectedGames.forEach(game => {
-            const gameCard = document.createElement("div");
-            gameCard.classList.add("game-card");
-
-            gameCard.innerHTML = `
-                <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
-                    <img src="${game.logo}" alt="${game.name}">
-                    <div class="game-title">${game.name}</div>
-                </a>
-            `;
-
-            gameSlider.appendChild(gameCard);
-        });
-
-        console.log("✅ 已成功載入隨機遊戲卡片！");
+        // 載入遊戲卡片
+        populateSlider("slider1", firstRowGames);
+        populateSlider("slider2", secondRowGames);
 
     } catch (error) {
         console.error("❌ 載入遊戲數據失敗:", error);
     }
 });
 
-function scrollLeft() {
-    document.querySelector(".game-slider").scrollBy({ left: -200, behavior: "smooth" });
+// **載入遊戲卡片到指定滑動容器**
+function populateSlider(sliderId, games) {
+    const gameSlider = document.getElementById(sliderId);
+    if (!gameSlider) {
+        console.error(`❌ 無法找到 ${sliderId} 容器！`);
+        return;
+    }
+
+    gameSlider.innerHTML = ""; // 清空舊內容
+
+    games.forEach(game => {
+        const gameCard = document.createElement("div");
+        gameCard.classList.add("game-card");
+
+        gameCard.innerHTML = `
+            <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
+                <img src="${game.logo}" alt="${game.name}">
+                <div class="game-title">${game.name}</div>
+            </a>
+        `;
+
+        gameSlider.appendChild(gameCard);
+    });
+
+    console.log(`✅ 成功載入 ${sliderId} 遊戲卡片！`);
 }
 
-function scrollRight() {
-    document.querySelector(".game-slider").scrollBy({ left: 200, behavior: "smooth" });
+// **左右滾動函式**
+function scrollLeft(sliderId) {
+    document.getElementById(sliderId).scrollBy({ left: -200, behavior: "smooth" });
 }
+
+function scrollRight(sliderId) {
+    document.getElementById(sliderId).scrollBy({ left: 200, behavior: "smooth" });
+}
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

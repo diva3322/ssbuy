@@ -782,7 +782,7 @@ footer {
     max-width: 85%; /* 讓內容不超過畫面 */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 自動調整 */
-    gap: 120px; /* 設定卡片間距 */
+    gap: 50px; /* 設定卡片間距 */
     justify-content: center;
     margin: 0 auto;
 }
@@ -794,9 +794,9 @@ color: #ffcc00;
 /* ✅ 遊戲卡片 */
 .all-games-page .game-card {
     cursor: pointer; /* ✅ 確保可以點擊 */
-	gap:20px;
-    width: 150px;
-    height: 150px;
+	gap:10px;
+    width: 180px;
+    height: 180px;
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;

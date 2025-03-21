@@ -584,7 +584,8 @@ footer a:hover {
 /* ✅ 調整內容框架 */
 .new-games-container {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 一排 7 個 */
+	grid-template-rows: repeat(3, auto); /* 限制為 2 排 */
+    grid-template-columns: repeat(5, 1fr); /* 一排 7 個 */
     gap: 20px; /* 卡片間距 */
     justify-content: center; /* 水平置中 */
     align-items: center; /* 垂直置中 */
@@ -685,4 +686,11 @@ footer a:hover {
     overflow: hidden; /* 隱藏滾動條 */
     line-height: 25px; /* 設置行高，方便計算行數 */
 	font-family: 'Kanit', 'Noto Sans TC', sans-serif;
+}
+
+.new-games-page h1 {
+    color: #ffcc00;
+    font-size: 36px; /* 設置相同的字體大小 */
+    line-height: 2; /* 設置相同的行高，確保高度一致 */
+    margin-top: -20px; /* 向上移動 20px */
 }

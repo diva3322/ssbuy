@@ -1,9 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
     renderGames(); // 在網頁載入時隨機產生遊戲卡片
+
+    // 處理 game-detail 頁面載入
+    if (document.body.classList.contains("game-detail")) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameName = urlParams.get("game") ? decodeURIComponent(urlParams.get("game")) : "未知遊戲";
+
+        console.log("當前遊戲名稱:", gameName); // 🔍 檢查是否成功取得遊戲名稱
+
+        if (gameName) {
+            fetch("games.json")
+                .then(response => {
+                    if (!response.ok) throw new Error("載入 JSON 失敗");
+                    return response.json();
+                })
+                .then(data => {
+                    const game = data[gameName];
+                    if (game) {
+                        loadGameDetails(gameName, game);
+                    } else {
+                        console.error("找不到遊戲:", gameName);
+                        document.getElementById("gameTitle").textContent = "找不到遊戲";
+                        document.getElementById("gameLogo").src = "images/default.jpg";
+                        document.getElementById("productList").innerHTML = "<p>目前沒有可購買的商品</p>";
+                    }
+                })
+                .catch(error => {
+                    console.error("載入 games.json 失敗:", error);
+                    document.getElementById("gameTitle").textContent = "載入失敗";
+                });
+        } else {
+            console.error("未提供遊戲名稱");
+            document.getElementById("gameTitle").textContent = "未提供遊戲名稱";
+        }
+    }
 });
 
 async function renderGames() {
     const wrapper = document.getElementById('gamesWrapper');
+    if (!wrapper) return; // 如果 wrapper 不存在，直接返回
     wrapper.innerHTML = ""; // 清空當前內容，避免重複
 
     let gameData = [];
@@ -204,12 +239,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadGameDetails(gameName, game) {
     const gameLogo = document.getElementById("gameLogo");
     document.getElementById("gameTitle").textContent = gameName;
+    document.getElementById("gameName").value = gameName;
     gameLogo.src = game.logo;
     gameLogo.onerror = () => {
         gameLogo.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
         gameLogo.onerror = null; // 避免無限循環
     };
-    document.getElementById("gameName").value = gameName;
     document.getElementById("gameDescription").innerHTML = `
         請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
         留言版請於帳戶 > 訂單內留言。<br><br>
@@ -221,7 +256,14 @@ function loadGameDetails(gameName, game) {
     socialContainer.innerHTML = Object.entries(game.social)
         .map(([name, url]) => `<a href="${url}" target="_blank">${name}</a>`)
         .join(" | ");
-    loadProducts(game.products);
+
+    // 確保 game.products 存在
+    if (game && game.products) {
+        loadProducts(game.products);
+    } else {
+        const productContainer = document.getElementById("productList");
+        productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
+    }
 }
 
 function loadProducts(products) {
@@ -229,7 +271,7 @@ function loadProducts(products) {
     const productContainer = document.getElementById("productList");
     productContainer.innerHTML = ""; // 清空現有商品
 
-    if (products.length === 0) {
+    if (!products || products.length === 0) {
         productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
         return;
     }

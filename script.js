@@ -74,6 +74,10 @@ async function renderGames() {
             const img = document.createElement('img');
             img.src = game.logo;
             img.alt = game.name;
+            img.onerror = () => {
+                img.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
+                img.onerror = null; // 避免無限循環
+            };
 
             // 建立遊戲名稱
             const text = document.createElement('div');
@@ -198,8 +202,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadGameDetails(gameName, game) {
+    const gameLogo = document.getElementById("gameLogo");
     document.getElementById("gameTitle").textContent = gameName;
-    document.getElementById("gameLogo").src = game.logo;
+    gameLogo.src = game.logo;
+    gameLogo.onerror = () => {
+        gameLogo.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
+        gameLogo.onerror = null; // 避免無限循環
+    };
     document.getElementById("gameName").value = gameName;
     document.getElementById("gameDescription").innerHTML = `
         請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
@@ -287,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     gameCard.innerHTML = `
                         <a href="game-detail.html?game=${encodeURIComponent(name)}">
                             <div class="card new-game-card">
-                                <img src="${info.logo}" alt="${name}">
+                                <img src="${info.logo}" alt="${name}" onerror="this.src='images/default.jpg'; this.onerror=null;">
                                 <div class="game-title">${name}</div>
                             </div>
                         </a>
@@ -338,6 +347,10 @@ function displayGames(games) {
         const img = document.createElement("img");
         img.src = game.logo;
         img.alt = game.name;
+        img.onerror = () => {
+            img.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
+            img.onerror = null; // 避免無限循環
+        };
 
         const gameName = document.createElement("div");
         gameName.classList.add("game-title");

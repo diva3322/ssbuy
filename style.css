@@ -781,7 +781,7 @@ footer {
     margin-left: 220px; /* 確保扣掉側邊欄 */
     max-width: 100%; /* 讓內容不超過畫面 */
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 一排 7 個 */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 自動調整 */
     gap: 15px; /* 設定卡片間距 */
     justify-content: center;
     margin: 0 auto;

@@ -4,24 +4,21 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!response.ok) throw new Error("載入 JSON 失敗");
         const gamesData = await response.json();
 
-	gameName = gameName.trim().replace(/[　]/g, "").toLowerCase(); 
-
-const gamesData = Object.keys(games).reduce((acc, key) => {
-    acc[key.toLowerCase()] = games[key];
-    return acc;
-}, {});
-
         let gamesArray = Object.entries(gamesData).map(([name, info]) => ({
             name: name,
             logo: info.logo
         }));
+
+        if (gamesArray.length === 0) {
+            console.error("❌ 沒有讀取到遊戲數據！");
+            return;
+        }
 
         // **隨機挑選 26 款遊戲 (兩排，每排 13 款)**
         let selectedGames = gamesArray.sort(() => Math.random() - 0.5).slice(0, 26);
         let firstRowGames = selectedGames.slice(0, 13);
         let secondRowGames = selectedGames.slice(13, 26);
 
-        // 載入遊戲卡片
         populateSlider("slider1", firstRowGames);
         populateSlider("slider2", secondRowGames);
 
@@ -44,12 +41,12 @@ function populateSlider(sliderId, games) {
         const gameCard = document.createElement("div");
         gameCard.classList.add("game-card");
 
-gameCard.innerHTML = `
-    <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
-        <img src="${game.logo}" alt="${game.name}">
-    </a>
-    <div class="game-title">${game.name}</div> 
-`;
+        gameCard.innerHTML = `
+            <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
+                <img src="${game.logo}" alt="${game.name}">
+                <div class="game-title">${game.name}</div>
+            </a>
+        `;
 
         gameSlider.appendChild(gameCard);
     });
@@ -59,19 +56,31 @@ gameCard.innerHTML = `
 
 // **左右滾動函式**
 function scrollLeft(sliderId) {
-    document.getElementById(sliderId).scrollBy({ left: -200, behavior: "smooth" });
+    const slider = document.getElementById(sliderId);
+    if (!slider) {
+        console.error(`❌ 無法找到 ${sliderId} 容器`);
+        return;
+    }
+    slider.scrollBy({ left: -300, behavior: "smooth" });
 }
 
 function scrollRight(sliderId) {
-    document.getElementById(sliderId).scrollBy({ left: 200, behavior: "smooth" });
+    const slider = document.getElementById(sliderId);
+    if (!slider) {
+        console.error(`❌ 無法找到 ${sliderId} 容器`);
+        return;
+    }
+    slider.scrollBy({ left: 300, behavior: "smooth" });
 }
 
+// 確保按鈕可以綁定事件
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("leftBtn1").addEventListener("click", () => scrollLeft("slider1"));
     document.getElementById("rightBtn1").addEventListener("click", () => scrollRight("slider1"));
     document.getElementById("leftBtn2").addEventListener("click", () => scrollLeft("slider2"));
     document.getElementById("rightBtn2").addEventListener("click", () => scrollRight("slider2"));
 });
+
 
 
 

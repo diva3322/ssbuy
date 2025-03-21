@@ -4,7 +4,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!response.ok) throw new Error("載入 JSON 失敗");
         const gamesData = await response.json();
 
-	    gameName = gameName.trim().replace(/[　]/g, "").toLowerCase(); 
+	gameName = gameName.trim().replace(/[　]/g, "").toLowerCase(); 
+
+const gamesData = Object.keys(games).reduce((acc, key) => {
+    acc[key.toLowerCase()] = games[key];
+    return acc;
+}, {});
 
         let gamesArray = Object.entries(gamesData).map(([name, info]) => ({
             name: name,
@@ -62,19 +67,12 @@ function scrollRight(sliderId) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("leftBtn1").addEventListener("click", function () {
-        scrollLeft("slider1");
-    });
-    document.getElementById("rightBtn1").addEventListener("click", function () {
-        scrollRight("slider1");
-    });
-    document.getElementById("leftBtn2").addEventListener("click", function () {
-        scrollLeft("slider2");
-    });
-    document.getElementById("rightBtn2").addEventListener("click", function () {
-        scrollRight("slider2");
-    });
+    document.getElementById("leftBtn1").addEventListener("click", () => scrollLeft("slider1"));
+    document.getElementById("rightBtn1").addEventListener("click", () => scrollRight("slider1"));
+    document.getElementById("leftBtn2").addEventListener("click", () => scrollLeft("slider2"));
+    document.getElementById("rightBtn2").addEventListener("click", () => scrollRight("slider2"));
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

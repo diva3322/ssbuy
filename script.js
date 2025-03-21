@@ -58,7 +58,7 @@ async function renderGames() {
 
         const container = slider.querySelector('.game-slider');
 
-        // 初始時複製 3 倍卡片（13 張變成 39 張），確保有足夠的卡片進行循環
+        // 初始時複製 3 倍卡片（13 張變成 39 張），減少動態追加頻率
         const initialMultiplier = 3;
         let extendedGames = [];
         for (let j = 0; j < initialMultiplier; j++) {
@@ -94,7 +94,7 @@ async function renderGames() {
 
         // 設置初始位置為中間（顯示第 5 到第 9 張卡片）
         const visibleCards = 5; // 一次顯示 5 張
-        const initialIndex = Math.floor((extendedGames.length - visibleCards) / 2); // 基於 39 張計算中間位置
+        const initialIndex = Math.floor((gameChunks[i].length - visibleCards) / 2); // 基於原始 13 張計算中間位置
         const cardWidth = 220; // 每張卡片的寬度（包含 margin）
 
         // 設置初始偏移量
@@ -115,34 +115,18 @@ function moveSlide(direction, containerId) {
     let currentIndex = parseInt(container.getAttribute('data-index')) || 0;
     let currentOffset = parseFloat(container.getAttribute('data-offset')) || 0;
 
+    // 計算滑動距離（每次只移動一個卡片）
+    const moveDistance = direction * cardWidth;
+    currentOffset += moveDistance;
+    currentIndex += direction;
+
     // 計算當前卡片總數
     let totalCards = container.querySelectorAll('.game-card').length;
 
-    // 計算新的索引
-    currentIndex += direction;
-
-    // 當往左滑動到開頭時，將末尾的卡片移動到開頭
-    if (currentIndex < 0) {
+    // 當往右滑動接近末尾時，追加卡片到末尾
+    if (currentIndex >= totalCards - visibleCards - 1) {
         const cards = container.querySelectorAll('.game-card');
-        const cardsToPrepend = Array.from(cards).slice(-originalLength); // 取最後 13 張卡片
-        cardsToPrepend.forEach(card => {
-            const clonedCard = card.cloneNode(true);
-            // 重新綁定事件
-            clonedCard.addEventListener('click', () => {
-                const gameName = clonedCard.querySelector('.game-title').textContent;
-                window.location.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
-            });
-            container.insertBefore(clonedCard, container.firstChild);
-            container.removeChild(card); // 移除末尾的卡片
-        });
-        currentIndex += originalLength; // 調整索引
-        currentOffset += originalLength * cardWidth; // 調整偏移量
-    }
-
-    // 當往右滑動到末尾時，將開頭的卡片移動到末尾
-    if (currentIndex >= totalCards - visibleCards) {
-        const cards = container.querySelectorAll('.game-card');
-        const cardsToAppend = Array.from(cards).slice(0, originalLength); // 取前 13 張卡片
+        const cardsToAppend = Array.from(cards).slice(0, originalLength); // 複製原始的 13 張卡片
         cardsToAppend.forEach(card => {
             const clonedCard = card.cloneNode(true);
             // 重新綁定事件
@@ -151,14 +135,48 @@ function moveSlide(direction, containerId) {
                 window.location.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
             });
             container.appendChild(clonedCard);
-            container.removeChild(card); // 移除開頭的卡片
         });
-        currentIndex -= originalLength; // 調整索引
-        currentOffset -= originalLength * cardWidth; // 調整偏移量
+        totalCards = container.querySelectorAll('.game-card').length; // 更新總卡片數
     }
 
-    // 計算新的偏移量
-    currentOffset = currentIndex * cardWidth;
+    // 當往左滑動接近開頭時，追加卡片到開頭
+    if (currentIndex < 1) {
+        const cards = container.querySelectorAll('.game-card');
+        const cardsToPrepend = Array.from(cards).slice(-originalLength); // 複製最後 13 張卡片
+        cardsToPrepend.reverse().forEach(card => {
+            const clonedCard = card.cloneNode(true);
+            // 重新綁定事件
+            clonedCard.addEventListener('click', () => {
+                const gameName = clonedCard.querySelector('.game-title').textContent;
+                window.location.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
+            });
+            container.insertBefore(clonedCard, container.firstChild);
+        });
+        totalCards = container.querySelectorAll('.game-card').length; // 更新總卡片數
+        currentIndex += originalLength; // 調整索引
+        currentOffset += originalLength * cardWidth; // 調整偏移量
+    }
+
+    // 清理遠離視窗的卡片以優化性能
+    const maxCards = originalLength * 5; // 最多保留 5 倍的卡片數量
+    if (totalCards > maxCards) {
+        if (direction > 0) {
+            // 往右滑動，移除開頭的卡片
+            const cardsToRemove = totalCards - maxCards;
+            for (let i = 0; i < cardsToRemove; i++) {
+                container.removeChild(container.firstChild);
+            }
+            currentIndex -= cardsToRemove;
+            currentOffset -= cardsToRemove * cardWidth;
+        } else {
+            // 往左滑動，移除末尾的卡片
+            const cardsToRemove = totalCards - maxCards;
+            for (let i = 0; i < cardsToRemove; i++) {
+                container.removeChild(container.lastChild);
+            }
+        }
+        totalCards = container.querySelectorAll('.game-card').length; // 更新總卡片數
+    }
 
     // 應用滑動
     container.style.transform = `translateX(-${currentOffset}px)`;
@@ -180,8 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadGameDetails(gameName, game) {
-    const gameLogo = document.getElementById("gameLogo");
     document.getElementById("gameTitle").textContent = gameName;
+    document.getElementById("gameLogo").src = game.logo;
     document.getElementById("gameName").value = gameName;
     document.getElementById("gameDescription").innerHTML = `
         請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
@@ -190,25 +208,22 @@ function loadGameDetails(gameName, game) {
         我們將不定時舉辦抽優惠券與點卡活動哦!
     `;
 
-    // 設置圖片並處理載入失敗
-    gameLogo.src = game.logo || "images/default.jpg";
-    gameLogo.onerror = () => {
-        gameLogo.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
-    };
-
     const socialContainer = document.querySelector(".social-media p");
     socialContainer.innerHTML = Object.entries(game.social)
         .map(([name, url]) => `<a href="${url}" target="_blank">${name}</a>`)
         .join(" | ");
-
-    // 確保 game.products 存在
-    if (game && game.products) {
-        loadProducts(game.products);
-    } else {
-        const productContainer = document.getElementById("productList");
-        productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
-    }
+    loadProducts(game.products);
 }
+
+function loadProducts(products) {
+    console.log("載入的產品:", products);
+    const productContainer = document.getElementById("productList");
+    productContainer.innerHTML = ""; // 清空現有商品
+
+    if (products.length === 0) {
+        productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
+        return;
+    }
 
     products.forEach(product => {
         console.log("處理產品:", product);

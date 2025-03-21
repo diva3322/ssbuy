@@ -123,42 +123,6 @@ a:hover {
             white-space: nowrap;
         }
 
-        .game-card {
-	    cursor: pointer; /* ✅ 確保可以點擊 */
-            min-width: 150px;
-            height: 150px;
-	    padding: 20px;
-    	    position: relative; /* 讓文字可以覆蓋在圖片上 */
-            overflow: hidden; /* 防止圖片溢出 */
-            background: rgba(255, 255, 255, 0.1);
-            margin: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            transition: all 0.1s ease-in-out;
-        }
-
-        .game-card:hover {
-            background: rgba(255, 255, 255, 0.5);
-            transform: scale(1.1);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-            color: #000;
-            font-weight: bold;
-        }
-
-        .game-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute; /* 讓圖片填滿整個卡片 */
-     	    top: 0;
-    	    left: 0;
-    	    border-radius: 10px;
-        }
-
 .slider-button {
     position: absolute;
     top: 50%;
@@ -686,19 +650,6 @@ footer {
     text-align: center;
 }
 
-/* ✅ 設定卡片樣式 */
-.new-game-card {
-    width: 180px;
-    height: 180px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-    transition: all 0.1s ease-in-out;
-}
-
 /* ✅ 卡片內的圖片 */
 .new-game-card img {
     width: 100%;
@@ -706,43 +657,10 @@ footer {
     object-fit: cover;
     border-radius: 0px;
 }
-
-.game-title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px;
-}
-
-/* 卡片標題（如果要讓遊戲名稱也顯示在圖片內部） */
-.new-game-card .game-title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px;
-}
-
 /* ✅ 滑鼠懸停時的霓虹燈特效 */
 .new-game-card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px #00ffcc, 0 0 30px #ffcc00, 0 0 45px #ff00ff;
-}
-
-/* ✅ 讓標題保持一致 */
-.new-games-title {
-    font-size: 36px;
-    color: #ffcc00;
-    margin-bottom: 20px;
 }
 
 /* ✅ 所有遊戲頁面樣式 */
@@ -780,13 +698,11 @@ footer {
 color: #ffcc00;
 }
 
-/* ✅ 遊戲卡片 */
-.all-games-page .game-card {
-    padding:20px !important;
-    cursor: pointer; /* ✅ 確保可以點擊 */
+/* 通用卡片樣式 */
+.card {
+    position: relative;
     width: 180px;
     height: 180px;
-    position: relative;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     overflow: hidden;
@@ -794,31 +710,50 @@ color: #ffcc00;
     align-items: center;
     justify-content: center;
     transition: all 0.1s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
-.all-games-page .game-card img {
+/* 卡片圖片 */
+.card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
     border-radius: 10px;
 }
 
-.all-games-page .game-card .game-text {
+/* 統一卡片標題 */
+.card .game-title {
     position: absolute;
-	width: 100%;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
     background: rgba(0, 0, 0, 0.9);
     color: #fff;
-    padding: 5px;
     font-size: 20px;
-	font-weight: bold;
-    border-radius: 5px;
+    font-weight: bold;
     text-align: center;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
 }
 
-    </style>
+/* 滑鼠懸停特效 */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #ffcc00, 0 0 45px #ff00ff;
+}
+
+/* 移除 .game-card-text，統一使用 .game-title */
+
+.game-card {
+    /* 只繼承通用樣式 */
+    composes: card;
+}
+
+.new-game-card {
+    /* 只繼承通用樣式 */
+    composes: card;
+}
+
+
+
+</style>

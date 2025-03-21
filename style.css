@@ -786,8 +786,9 @@ footer {
     max-width: 85%; /* 讓內容不超過畫面 */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 自動調整 */
-    gap: 50px; /* 設定卡片間距 */
-	margin: 40px;
+    gap: 15px; /* 設定卡片間距 */
+    margin: 0px;
+	padding: 20px;
     justify-content: center;
     margin: 0 auto;
 }

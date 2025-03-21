@@ -799,9 +799,8 @@ color: #ffcc00;
 
 /* ✅ 遊戲卡片 */
 .all-games-page .game-card {
-	margin: 40px;
+    padding:20px !important;
     cursor: pointer; /* ✅ 確保可以點擊 */
-	gap:40px;
     width: 180px;
     height: 180px;
     position: relative;

@@ -4,63 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>速速幫你儲手遊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
-    <div class="card">
-    <img src="game-image.jpg" alt="遊戲名稱">
-    <div class="game-title">遊戲名稱</div>
-</div>
 <body class="index-page">
-
     <div class="sidebar">
-        <a href="index.html"><img src="logo.jpg" alt="公司 LOGO" class="company-logo"></a>
+        <a href="index.html">
+            <img src="logo.jpg" alt="公司 LOGO" class="company-logo">
+        </a>
         <ul>
             <li><a href="new-games.html">新上遊戲</a></li>
             <li><a href="all-games.html">所有遊戲</a></li>
             <li><a href="event.html">特惠活動</a></li>
         </ul>
     </div>
-    
+
     <div class="main-content">
         <img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img">
         <h1>速速幫你儲手遊</h1>
-<!-- 第一排遊戲滑動容器 -->
-<div class="game-slider-container">
-    <button class="slider-button left" onclick="scrollLeft('slider1')">&lt;</button>
-    <div class="game-slider" id="slider1">
-        <!-- 第一排遊戲卡片 (由 JS 動態插入) -->
+        <div id="gamesWrapper"></div>
     </div>
-    <button class="slider-button right" onclick="scrollRight('slider1')">&gt;</button>
-</div>
-
-        <!-- 第二排遊戲滑動容器 -->
-<div class="game-slider-container">
-    <button class="slider-button left" onclick="scrollLeft('slider2')">&lt;</button>
-    <div class="game-slider" id="slider2">
-        <!-- 第二排遊戲卡片 (由 JS 動態插入) -->
-    </div>
-    <button class="slider-button right" onclick="scrollRight('slider2')">&gt;</button>
-</div>
-</div>
-
-        <div id="gamesWrapper"></div> <!-- 這裡會由 script.js 填充隨機遊戲 -->
-    </div>
-    </div>
-
 
     <footer>
         <div class="footer-content">
-            <div style="display: flex; justify-content: center; gap: 40px;">
-                <a href="purchase-guide.html">購買教學</a> |
-                <a href="contact.html">聯絡我們</a> |
-                <a href="disclaimer.html">免責條款</a> |
-                <a href="terms-of-service.html">服務條款</a> |
-                <a href="account-verification.html">帳戶認證</a>
-            </div>
+		<div style="display: flex; justify-content: center; gap: 40px;">
+            <a href="purchase-guide.html">購買教學</a> |
+            <a href="contact.html">聯絡我們</a> |
+            <a href="disclaimer.html">免責條款</a> |
+            <a href="terms-of-service.html">服務條款</a> |
+            <a href="account-verification.html">帳戶認證</a>
         </div>
     </footer>
-
 </body>
 </html>

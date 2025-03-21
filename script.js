@@ -1,98 +1,180 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
+    renderGames(); // 在網頁載入時隨機產生遊戲卡片
+});
+
+async function renderGames() {
+    const wrapper = document.getElementById('gamesWrapper');
+    wrapper.innerHTML = ""; // 清空當前內容，避免重複
+
+    let gameData = [];
+
     try {
         const response = await fetch("games.json");
-        if (!response.ok) throw new Error("載入 JSON 失敗");
-        const gamesData = await response.json();
+        if (!response.ok) throw new Error("無法載入遊戲資料");
+        gameData = await response.json();
 
-        let gamesArray = Object.entries(gamesData).map(([name, info]) => ({
-            name: name,
-            logo: info.logo
-        }));
+        // 確保資料格式是陣列
+        if (Array.isArray(gameData)) {
+            // 如果是陣列，繼續處理
+        } else if (typeof gameData === "object") {
+            // 如果是物件，將它轉換為陣列
+            gameData = Object.entries(gameData).map(([name, info]) => ({
+                name,
+                logo: info.logo
+            }));
+        } else {
+            throw new Error("遊戲資料格式不正確");
+        }
+    } catch (error) {
+        console.error("❌ 無法載入 games.json", error);
+        return;
+    }
 
-        if (gamesArray.length === 0) {
-            console.error("❌ 沒有讀取到遊戲數據！");
-            return;
+    // 確保遊戲總數至少 26 個（兩排，每排 13 個），若不夠則重複填充
+    while (gameData.length < 26) {
+        gameData = gameData.concat(gameData);
+    }
+
+    // 隨機打亂遊戲資料
+    gameData = gameData.sort(() => Math.random() - 0.5);
+
+    // 拆成兩組，每組 13 個遊戲
+    let gameChunks = [
+        gameData.slice(0, 13),
+        gameData.slice(13, 26)
+    ];
+
+    // 渲染兩排遊戲
+    for (let i = 0; i < 2; i++) {
+        const slider = document.createElement('div');
+        slider.classList.add('game-slider-container');
+
+        slider.innerHTML = `
+            <button class="slider-button left" onclick="moveSlide(-1, 'gamesContainer${i}')">❮</button>
+            <div class="game-slider" id="gamesContainer${i}"></div>
+            <button class="slider-button right" onclick="moveSlide(1, 'gamesContainer${i}')">❯</button>
+        `;
+        wrapper.appendChild(slider);
+
+        const container = slider.querySelector('.game-slider');
+
+        // 初始時複製 3 倍卡片（13 張變成 39 張），確保有足夠的卡片進行循環
+        const initialMultiplier = 3;
+        let extendedGames = [];
+        for (let j = 0; j < initialMultiplier; j++) {
+            extendedGames = extendedGames.concat(gameChunks[i]);
         }
 
-        // **隨機挑選 26 款遊戲 (兩排，每排 13 款)**
-        let selectedGames = gamesArray.sort(() => Math.random() - 0.5).slice(0, 26);
-        let firstRowGames = selectedGames.slice(0, 13);
-        let secondRowGames = selectedGames.slice(13, 26);
+        // 產生這個 slider 的卡片
+        extendedGames.forEach((game, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card', 'game-card');
 
-        populateSlider("slider1", firstRowGames);
-        populateSlider("slider2", secondRowGames);
+            // 建立圖片元素
+            const img = document.createElement('img');
+            img.src = game.logo;
+            img.alt = game.name;
 
-    } catch (error) {
-        console.error("❌ 載入遊戲數據失敗:", error);
+            // 建立遊戲名稱
+            const text = document.createElement('div');
+            text.classList.add('game-title');
+            text.textContent = game.name;
+
+            // 把圖片和文字加入卡片
+            card.appendChild(img);
+            card.appendChild(text);
+
+            // 點擊跳轉到遊戲詳細頁面
+            card.addEventListener('click', () => {
+                window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
+            });
+
+            container.appendChild(card);
+        });
+
+        // 設置初始位置為中間（顯示第 5 到第 9 張卡片）
+        const visibleCards = 5; // 一次顯示 5 張
+        const initialIndex = Math.floor((extendedGames.length - visibleCards) / 2); // 基於 39 張計算中間位置
+        const cardWidth = 220; // 每張卡片的寬度（包含 margin）
+
+        // 設置初始偏移量
+        let initialOffset = initialIndex * cardWidth;
+        container.style.transform = `translateX(-${initialOffset}px)`;
+        container.setAttribute('data-index', initialIndex); // 記住初始索引
+        container.setAttribute('data-offset', initialOffset); // 記住初始偏移量
+        container.setAttribute('data-original-length', gameChunks[i].length); // 記住原始卡片數量
     }
-});
-
-// **載入遊戲卡片到指定滑動容器**
-function populateSlider(sliderId, games) {
-    const gameSlider = document.getElementById(sliderId);
-    if (!gameSlider) {
-        console.error(`❌ 無法找到 ${sliderId} 容器！`);
-        return;
-    }
-
-    gameSlider.innerHTML = ""; // 清空舊內容
-
-    games.forEach(game => {
-        const gameCard = document.createElement("div");
-        gameCard.classList.add("game-card");
-
-        gameCard.innerHTML = `
-            <a href="game-detail.html?game=${encodeURIComponent(game.name)}">
-                <img src="${game.logo}" alt="${game.name}">
-                <div class="game-title">${game.name}</div>
-            </a>
-        `;
-
-        gameSlider.appendChild(gameCard);
-    });
-
-    console.log(`✅ 成功載入 ${sliderId} 遊戲卡片！`);
 }
 
-// **左右滾動函式**
-function scrollLeft(sliderId) {
-    const slider = document.getElementById(sliderId);
-    if (!slider) {
-        console.error(`❌ 無法找到 ${sliderId} 容器`);
-        return;
+// 滑動功能（實現真正的無限滑動）
+function moveSlide(direction, containerId) {
+    const container = document.getElementById(containerId);
+    const originalLength = parseInt(container.getAttribute('data-original-length')); // 原始卡片數量（13）
+    const cardWidth = 220; // 每張卡片的寬度（包含 margin）
+    const visibleCards = 5; // 一次顯示 5 張
+    let currentIndex = parseInt(container.getAttribute('data-index')) || 0;
+    let currentOffset = parseFloat(container.getAttribute('data-offset')) || 0;
+
+    // 計算當前卡片總數
+    let totalCards = container.querySelectorAll('.game-card').length;
+
+    // 計算新的索引
+    currentIndex += direction;
+
+    // 當往左滑動到開頭時，將末尾的卡片移動到開頭
+    if (currentIndex < 0) {
+        const cards = container.querySelectorAll('.game-card');
+        const cardsToPrepend = Array.from(cards).slice(-originalLength); // 取最後 13 張卡片
+        cardsToPrepend.forEach(card => {
+            const clonedCard = card.cloneNode(true);
+            // 重新綁定事件
+            clonedCard.addEventListener('click', () => {
+                const gameName = clonedCard.querySelector('.game-title').textContent;
+                window.location.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
+            });
+            container.insertBefore(clonedCard, container.firstChild);
+            container.removeChild(card); // 移除末尾的卡片
+        });
+        currentIndex += originalLength; // 調整索引
+        currentOffset += originalLength * cardWidth; // 調整偏移量
     }
-    slider.scrollBy({ left: -300, behavior: "smooth" });
+
+    // 當往右滑動到末尾時，將開頭的卡片移動到末尾
+    if (currentIndex >= totalCards - visibleCards) {
+        const cards = container.querySelectorAll('.game-card');
+        const cardsToAppend = Array.from(cards).slice(0, originalLength); // 取前 13 張卡片
+        cardsToAppend.forEach(card => {
+            const clonedCard = card.cloneNode(true);
+            // 重新綁定事件
+            clonedCard.addEventListener('click', () => {
+                const gameName = clonedCard.querySelector('.game-title').textContent;
+                window.location.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
+            });
+            container.appendChild(clonedCard);
+            container.removeChild(card); // 移除開頭的卡片
+        });
+        currentIndex -= originalLength; // 調整索引
+        currentOffset -= originalLength * cardWidth; // 調整偏移量
+    }
+
+    // 計算新的偏移量
+    currentOffset = currentIndex * cardWidth;
+
+    // 應用滑動
+    container.style.transform = `translateX(-${currentOffset}px)`;
+    container.setAttribute('data-index', currentIndex); // 記住當前索引
+    container.setAttribute('data-offset', currentOffset); // 記住當前偏移量
 }
 
-function scrollRight(sliderId) {
-    const slider = document.getElementById(sliderId);
-    if (!slider) {
-        console.error(`❌ 無法找到 ${sliderId} 容器`);
-        return;
-    }
-    slider.scrollBy({ left: 300, behavior: "smooth" });
-}
-
-// 確保按鈕可以綁定事件
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("leftBtn1").addEventListener("click", () => scrollLeft("slider1"));
-    document.getElementById("rightBtn1").addEventListener("click", () => scrollRight("slider1"));
-    document.getElementById("leftBtn2").addEventListener("click", () => scrollLeft("slider2"));
-    document.getElementById("rightBtn2").addEventListener("click", () => scrollRight("slider2"));
-});
-
-
-
-
+// 其他功能保持不變
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
             const targetPage = this.getAttribute("href");
-            // 這裡排除不該攔截的頁面
             if (targetPage && (targetPage.endsWith(".html") || targetPage.startsWith("http"))) {
                 return; // 讓正常的連結直接跳轉
             }
-            event.preventDefault(); // 阻止原本的行為，避免影響內部跳轉
+            event.preventDefault();
         });
     });
 });
@@ -177,22 +259,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const latestGames = gameEntries.slice(-21).reverse(); // 倒數 21 個，但只取 20 個
 
             const container = document.getElementById("new-games-container");
-            container.innerHTML = ""; // 清空原本內容
+            if (container) {
+                container.innerHTML = ""; // 清空原本內容
 
-            latestGames.forEach(([name, info]) => {
-                const gameCard = document.createElement("div");
-                gameCard.classList.add("new-game-item");
+                latestGames.forEach(([name, info]) => {
+                    const gameCard = document.createElement("div");
+                    gameCard.classList.add("new-game-item");
 
-                gameCard.innerHTML = `
-                    <a href="game-detail.html?game=${encodeURIComponent(name)}">
-                        <div class="new-game-card">
-                            <img src="${info.logo}" alt="${name}">
-                            <div class="game-title">${name}</div>
-                        </div>
-                    </a>
-                `;
-                container.appendChild(gameCard);
-            });
+                    gameCard.innerHTML = `
+                        <a href="game-detail.html?game=${encodeURIComponent(name)}">
+                            <div class="card new-game-card">
+                                <img src="${info.logo}" alt="${name}">
+                                <div class="game-title">${name}</div>
+                            </div>
+                        </a>
+                    `;
+                    container.appendChild(gameCard);
+                });
+            }
         })
         .catch(error => console.error("Error loading games:", error));
 });
@@ -214,7 +298,7 @@ async function loadAllGames() {
             logo: gamesData[gameName].logo
         }));
 
-        // **隨機排序遊戲**
+        // 隨機排序遊戲
         games = games.sort(() => Math.random() - 0.5);
 
         displayGames(games);
@@ -225,25 +309,26 @@ async function loadAllGames() {
 
 function displayGames(games) {
     const gamesContainer = document.getElementById("gamesContainer");
+    if (!gamesContainer) return;
+
     gamesContainer.innerHTML = ""; // 清空現有內容
 
     games.forEach(game => {
         const gameCard = document.createElement("div");
-        gameCard.classList.add("game-card");
+        gameCard.classList.add("card", "game-card");
 
         const img = document.createElement("img");
         img.src = game.logo;
         img.alt = game.name;
 
         const gameName = document.createElement("div");
-        gameName.classList.add("game-text");
+        gameName.classList.add("game-title");
         gameName.textContent = game.name;
 
         gameCard.appendChild(img);
         gameCard.appendChild(gameName);
         gamesContainer.appendChild(gameCard);
 
-	       // ✅ 設定點擊跳轉
         gameCard.addEventListener("click", () => {
             window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
         });
@@ -255,9 +340,7 @@ function filterGames() {
     const gameCards = document.querySelectorAll(".game-card");
 
     gameCards.forEach(card => {
-        const gameName = card.querySelector(".game-text").textContent.toLowerCase();
+        const gameName = card.querySelector(".game-title").textContent.toLowerCase();
         card.style.display = gameName.includes(searchQuery) ? "block" : "none";
     });
 }
-
-

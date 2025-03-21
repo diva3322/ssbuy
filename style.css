@@ -163,8 +163,6 @@ a:hover {
     position: absolute;
 	width: 100%;
     bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.9);
     color: #fff;
     padding: 5px;
@@ -657,8 +655,6 @@ footer {
 	font-size:24px;
 	font-weight: bold; /* 設定粗體 */
 	}
-
-
 
 /* ✅ 讓連結變白色，滑鼠移過去變黃色 */
 .info-page a {

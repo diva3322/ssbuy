@@ -794,8 +794,8 @@ color: #ffcc00;
 /* ✅ 遊戲卡片 */
 .all-games-page .game-card {
 	cursor: pointer; /* ✅ 確保可以點擊 */
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;

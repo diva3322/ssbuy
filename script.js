@@ -180,8 +180,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadGameDetails(gameName, game) {
+    const gameLogo = document.getElementById("gameLogo");
     document.getElementById("gameTitle").textContent = gameName;
-    document.getElementById("gameLogo").src = game.logo;
     document.getElementById("gameName").value = gameName;
     document.getElementById("gameDescription").innerHTML = `
         請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
@@ -190,22 +190,25 @@ function loadGameDetails(gameName, game) {
         我們將不定時舉辦抽優惠券與點卡活動哦!
     `;
 
+    // 設置圖片並處理載入失敗
+    gameLogo.src = game.logo || "images/default.jpg";
+    gameLogo.onerror = () => {
+        gameLogo.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
+    };
+
     const socialContainer = document.querySelector(".social-media p");
     socialContainer.innerHTML = Object.entries(game.social)
         .map(([name, url]) => `<a href="${url}" target="_blank">${name}</a>`)
         .join(" | ");
-    loadProducts(game.products);
-}
 
-function loadProducts(products) {
-    console.log("載入的產品:", products);
-    const productContainer = document.getElementById("productList");
-    productContainer.innerHTML = ""; // 清空現有商品
-
-    if (products.length === 0) {
+    // 確保 game.products 存在
+    if (game && game.products) {
+        loadProducts(game.products);
+    } else {
+        const productContainer = document.getElementById("productList");
         productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
-        return;
     }
+}
 
     products.forEach(product => {
         console.log("處理產品:", product);

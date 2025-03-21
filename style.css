@@ -328,8 +328,8 @@ body {
 
 /* ✅ 遊戲 LOGO */
 .game-logo {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     object-fit: cover;
     display: block;
@@ -353,7 +353,7 @@ body {
 
 /* ✅ 社交媒體區塊 */
 .social-media {
-    margin-top: 190px; /* 讓官方社交媒體區塊向下移動 */
+    margin-top: 160px; /* 讓官方社交媒體區塊向下移動 */
 }
 
 .social-media-links {

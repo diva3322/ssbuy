@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             const gameEntries = Object.entries(data);
-            const latestGames = gameEntries.slice(-21).reverse(); // 倒數 21 個，但只取 20 個
+            const latestGames = gameEntries.slice(-15).reverse(); // 倒數 21 個，但只取 20 個
 
             const container = document.getElementById("new-games-container");
             if (container) {

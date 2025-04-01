@@ -847,8 +847,6 @@ footer a:hover {
   }
 
 .all-games-page .main-content {
-    width: calc(100% - 11.45vw); /* 這一行設定主內容寬度為100%減去11.45vw */
-    padding: 0vw; /* 這一行設定主內容內邊距為1.04vw */
     text-align: center; /* 這一行使主內容文字置中 */
 	padding-bottom: 5vh; /* 確保頁面底部留空，不會被 footer 蓋住 */
 }

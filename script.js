@@ -78,7 +78,15 @@ async function renderGames() {
         gameData.slice(0, 13),
         gameData.slice(13, 26)
     ];
+	
+	// 📌 根據是否為手機版（垂直）決定用哪種渲染邏輯
+const isMobileVertical = document.body.classList.contains("mobile-vertical");
 
+if (isMobileVertical) {
+  renderVerticalLoopSlider(wrapper, gameChunks);
+  return; // ✅ 完成手機版渲染就跳出
+}
+	
     // 渲染兩排遊戲
     for (let i = 0; i < 2; i++) {
         const slider = document.createElement('div');
@@ -247,7 +255,7 @@ function loadGameDetails(gameName, game) {
     };
     document.getElementById("gameDescription").innerHTML = `
         請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
-        留言版請於帳戶 > 訂單內留言。<br><br>
+        一切問題歡迎私訊官方@客服。<br>
         歡迎加入 LINE@ 生活圈 ID：@ssbuy (@也要輸入)。<br>
         我們將不定時舉辦抽優惠券與點卡活動哦!
     `;
@@ -417,3 +425,95 @@ function filterGames() {
         card.style.display = gameName.includes(searchQuery) ? "block" : "none";
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // -- 既有功能: renderGames() / etc -- 
+  // 請保持原本代碼不動
+
+  // ★ 新增: 手機版漢堡按鈕
+  const mobileToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileDropdown = document.querySelector(".mobile-dropdown-menu");
+
+  if (mobileToggle && mobileDropdown) {
+    mobileToggle.addEventListener("click", () => {
+      if (mobileDropdown.style.display === "block") {
+        mobileDropdown.style.display = "none";
+      } else {
+        mobileDropdown.style.display = "block";
+      }
+    });
+  }
+
+  // -- 其餘功能繼續 --
+});
+
+function renderVerticalLoopSlider(wrapper, gameChunks) {
+  for (let i = 0; i < 2; i++) {
+    const slider = document.createElement("div");
+    slider.classList.add("game-slider-container");
+
+    const sliderInner = document.createElement("div");
+    sliderInner.classList.add("game-slider");
+
+    slider.appendChild(sliderInner);
+    wrapper.appendChild(slider);
+
+    // 複製資料增加循環性
+    let extended = [];
+    for (let j = 0; j < 10; j++) {
+      extended = extended.concat(gameChunks[i]);
+    }
+
+    function createCard(game) {
+      const card = document.createElement("div");
+      card.classList.add("card", "game-card");
+
+      const img = document.createElement("img");
+      img.src = game.logo;
+      img.alt = game.name;
+      img.onerror = () => {
+        img.src = "images/default.jpg";
+        img.onerror = null;
+      };
+
+      const text = document.createElement("div");
+      text.classList.add("game-title");
+      text.textContent = game.name;
+
+      card.appendChild(img);
+      card.appendChild(text);
+
+      card.addEventListener("click", () => {
+        window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
+      });
+
+      return card;
+    }
+
+    // 初始填入
+    extended.forEach(game => {
+      sliderInner.appendChild(createCard(game));
+    });
+
+    // 無限滾動：往下補
+    slider.addEventListener("scroll", () => {
+      if (slider.scrollTop + slider.clientHeight >= slider.scrollHeight - 10) {
+        extended.forEach(game => {
+          sliderInner.appendChild(createCard(game));
+        });
+      }
+
+      // 無限滾動：往上補
+      if (slider.scrollTop <= 10) {
+        const scrollOffset = slider.scrollTop;
+        const cardsToAdd = extended.slice().reverse();
+        cardsToAdd.forEach(game => {
+          const card = createCard(game);
+          sliderInner.insertBefore(card, sliderInner.firstChild);
+          slider.scrollTop += card.offsetHeight; // 調整 scrollTop，避免畫面跳動
+        });
+      }
+    });
+  }
+}
+

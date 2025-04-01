@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>速速幫你儲手遊</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>速速幫你儲手遊</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+  <script src="script.js" defer></script>
 </head>
-<body class="index-page">
-    <div class="sidebar">
-        <a href="index.html">
-            <img src="logo.jpg" alt="公司 LOGO" class="company-logo">
-        </a>
-        <ul>
-            <li><a href="new-games.html">新上遊戲</a></li>
-            <li><a href="all-games.html">所有遊戲</a></li>
-            <li><a href="event.html">特惠活動</a></li>
-        </ul>
-    </div>
+<body class="index-page mobile-vertical">
+  <!-- Sidebar (桌機用) -->
+  <div class="sidebar">
+    <a href="index.html">
+      <img src="logo.jpg" alt="公司 LOGO" class="company-logo" />
+    </a>
+    <ul>
+      <li><a href="new-games.html">新上遊戲</a></li>
+      <li><a href="all-games.html">所有遊戲</a></li>
+      <li><a href="event.html">特惠活動</a></li>
+    </ul>
+  </div>
 
-    <div class="main-content">
-        <img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img">
-        <h1>速速幫你儲手遊</h1>
-        <div id="gamesWrapper"></div>
-    </div>
+  <!-- 頂部圖片 -->
+  <div class="header-wrapper">
+    <a href="index.html">
+      <img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img"/>
+    </a>
+  </div>
 
-    <footer>
-        <div class="footer-content">
-		<div style="display: flex; justify-content: center; gap: 40px;">
-            <a href="purchase-guide.html">購買教學</a> |
-            <a href="contact.html">聯絡我們</a> |
-            <a href="disclaimer.html">免責條款</a> |
-            <a href="terms-of-service.html">服務條款</a> |
-            <a href="account-verification.html">帳戶認證</a>
-        </div>
-    </footer>
+  <!-- 小螢幕 MENU -->
+  <div class="mobile-top-bar">
+    <button class="mobile-menu-toggle">
+      <span class="hamburger-icon">☰</span> MENU
+    </button>
+  </div>
+  <div class="mobile-dropdown-menu">
+    <ul>
+      <li><a href="new-games.html">新上遊戲</a></li>
+      <li><a href="all-games.html">所有遊戲</a></li>
+      <li><a href="event.html">特惠活動</a></li>
+    </ul>
+  </div>
+
+  <!-- 卡片主區 -->
+  <div class="main-content">
+    <h1>速速幫你儲手遊</h1>
+    <div id="gamesWrapper" class="games-wrapper-2col"></div>
+  <!-- JavaScript 會在這裡塞入兩個 game-slider-container -->
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div style="display: flex; justify-content: center; gap: 1vw;">
+        <a href="purchase-guide.html">購買教學</a> |
+        <a href="contact.html">聯絡我們</a> |
+        <a href="disclaimer.html">免責條款</a> |
+        <a href="terms-of-service.html">服務條款</a> |
+        <a href="account-verification.html">帳戶認證</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

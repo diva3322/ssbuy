@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>遊戲詳情</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body class="game-detail">
+  <div class="header-wrapper">
+    <a href="index.html">
+      <img src="2_1920400.jpg" alt="速速幫你儲手遊" class="header-img" />
+    </a>
+  </div>
+
+  <div class="sidebar">
+    <a href="index.html">
+      <img src="logo.jpg" alt="公司 LOGO" class="company-logo" />
+    </a>
+    <ul>
+      <li><a href="new-games.html">新上遊戲</a></li>
+      <li><a href="all-games.html">所有遊戲</a></li>
+      <li><a href="event.html">特惠活動</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="mobile-top-bar">
+      <button class="mobile-menu-toggle">
+        <span class="hamburger-icon">☰</span> MENU
+      </button>
+    </div>
+
+    <div class="mobile-dropdown-menu">
+      <ul>
+        <li><a href="new-games.html">新上遊戲</a></li>
+        <li><a href="all-games.html">所有遊戲</a></li>
+        <li><a href="event.html">特惠活動</a></li>
+      </ul>
+    </div>
+
+    <!-- 第一格：遊戲資訊 -->
+    <div class="info-box">
+      <img id="gameLogo" src="default.jpg" alt="遊戲 LOGO" class="game-logo" />
+      <h2 id="gameTitle">未知遊戲</h2>
+      <h3>儲值須知</h3>
+      <p id="gameDescription">
+      </p>
+      <div class="social-media">
+        <h3>官方社交媒體</h3>
+        <p>
+          <a href="#" target="_blank">Facebook</a> |
+          <a href="#" target="_blank">Instagram</a> |
+          <a href="#" target="_blank">官方網站</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 第二格：商品選擇 -->
+    <div class="products-box">
+      <h3>選擇商品</h3>
+      <div id="productList"></div>
+
+      <!-- ✅ 手機專用送出按鈕 -->
+      <a href="http://lin.ee/s7ueHCZ" class="checkout-btn mobile-only">送出結帳</a>
+    </div>
+
+    <!-- 第三格：登入資訊（桌機專用） -->
+    <div class="login-box desktop-only">
+      <h3>遊戲登入資訊</h3>
+      <input type="text" id="gameName" readonly />
+      <select id="loginMethod">
+        <option>官方登入</option>
+        <option>FB登入</option>
+        <option>Google登入</option>
+        <option>X登入</option>
+        <option>Line登入</option>
+        <option>引繼碼登入</option>
+        <option>AppleID登入</option>
+      </select>
+      <input type="text" id="account" placeholder="登入帳號" />
+      <input type="password" id="password" placeholder="登入密碼" />
+      <input type="text" id="server" placeholder="伺服器名稱" />
+      <input type="text" id="characterName" placeholder="遊戲角色名稱" />
+      <textarea id="selectedProducts" readonly>購買商品</textarea>
+      <p id="totalAmount" class="total-price">結帳總金額: NT$0</p>
+      <a href="http://lin.ee/s7ueHCZ" class="checkout-btn">送出結帳</a>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div style="display: flex; justify-content: center; gap: 1vw;">
+          <a href="purchase-guide.html">購買教學</a> |
+          <a href="contact.html">聯絡我們</a> |
+          <a href="disclaimer.html">免責條款</a> |
+          <a href="terms-of-service.html">服務條款</a> |
+          <a href="account-verification.html">帳戶認證</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script defer src="script.js"></script>
+</body>
+</html>

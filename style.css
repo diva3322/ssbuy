@@ -1,6 +1,6 @@
 /* 讓所有連結預設為白色，滑鼠懸停變黃色 */ /* 這一行是註解，描述下方代碼的功能 */
 a {
-    color: #fff !important; /* 這一行設定連結文字為白色 */
+    color: #fff !important; /* 這一行設定連結文字為白色的 */
     text-decoration: none; /* 這一行設定連結無底線 */
 }
 

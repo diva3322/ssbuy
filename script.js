@@ -1,6 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     renderGames(); // 在網頁載入時隨機產生遊戲卡片
 
+	window.addEventListener("resize", () => {
+    const isNowMobile = window.innerWidth <= 1024;
+    const isMobileVertical = document.body.classList.contains("mobile-vertical");
+
+    // 桌機變手機，要重新渲染成手機樣式
+    if (isNowMobile && !isMobileVertical) {
+        document.body.classList.add("mobile-vertical");
+        renderGames(); // 重新渲染手機樣式
+    }
+
+    // 手機變桌機，也要重新渲染
+    if (!isNowMobile && isMobileVertical) {
+        document.body.classList.remove("mobile-vertical");
+        renderGames(); // 重新渲染桌機樣式
+    }
+});
+
+
     // 處理 game-detail 頁面載入
     if (document.body.classList.contains("game-detail")) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -80,7 +98,8 @@ async function renderGames() {
     ];
 	
 	// 📌 根據是否為手機版（垂直）決定用哪種渲染邏輯
-const isMobileVertical = document.body.classList.contains("mobile-vertical");
+const isMobileVertical = window.innerWidth <= 1024;
+
 
 if (isMobileVertical) {
   renderVerticalLoopSlider(wrapper, gameChunks);

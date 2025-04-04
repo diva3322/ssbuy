@@ -688,7 +688,7 @@ footer a:hover {
 	width: 100%;
   display: none; /* 這一行預設隱藏頂部漢堡選單 */
   background: #333; /* 這一行設定頂部漢堡選單背景為深灰色 */
-  padding: 1rem; /* 這一行設定頂部漢堡選單內邊距為1rem */
+  padding: 0.5rem; /* 這一行設定頂部漢堡選單內邊距為1rem */
 }
 
 .mobile-menu-toggle {
@@ -723,7 +723,9 @@ footer a:hover {
 }
 
 .mobile-dropdown-menu ul li {
-  padding: 0.5rem 1.5rem;       /* 改為左右 padding */
+  word-break: break-all; /* 中文兩字換行 */
+  text-align: center;     /* 置中文字中 */
+  padding: 0.5rem 0.75rem;       /* 改為左右 padding */
   font-size: 1rem;
   border: none;               /* 移除底線 */
   background: rgba(255,255,255,0.2);  /* 可以加點底色區分 */
@@ -753,6 +755,23 @@ footer a:hover {
     overflow-x: hidden;  /* 禁止水平滾動 */
     width: 100vw;        /* 確保寬度不超過螢幕 */
   }
+
+.new-games-page h1 {
+    color: #ffcc00; /* 這一行設定h1文字為黃色 */
+	margin-top:2vh;
+	margin-bottom:0vh;
+}
+
+.all-games-page h1 {
+    color: #ffcc00; /* 這一行設定h1文字為黃色 */
+	margin-top:2vh;
+	margin-bottom:2vh;
+}
+
+.all-games-page #searchBox {
+  margin-bottom: 2vh;  /* 或視覺需求改成 2vh、4vh 都行 */
+}
+
     .social-line.line1::after {
         content: "";
     }
@@ -901,6 +920,7 @@ footer a:hover {
 
 .all-games-page .main-content {
     text-align: center; /* 這一行使主內容文字置中 */
+	
 	padding-bottom: 5vh; /* 確保頁面底部留空，不會被 footer 蓋住 */
 }
 
@@ -930,7 +950,7 @@ footer a:hover {
 }
 
   .new-games-container {
-    padding: 5vh 10vw; /* 手機版上下 5vh，左右 10vw */
+    padding: 2vh 10vw; /* 手機版上下 5vh，左右 10vw */
     grid-template-columns: repeat(3, 1fr); /* 每排3張卡片 */
     grid-template-rows: repeat(5, auto); /* 5排 */
   }
@@ -975,7 +995,7 @@ footer a:hover {
   .main-content {
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: 0vh;
     align-items: center;
     justify-content: flex;
   }
@@ -990,6 +1010,7 @@ footer a:hover {
   .slider-button {
     display: none; /* 手機不顯示箭頭 */
   }
+
   .header-img {
     order: -1;                  /* 提前順序，確保 header-img 在最上面 */
     display: block;            /* 顯示圖片 */
@@ -1085,6 +1106,11 @@ footer a:hover {
     padding-right: 9vw;
     margin-top: 0vh;
   }
+
+  .slider-button {
+    display: block;
+  }
+
   .content-box {
     width: 50vw;                /* 扣掉 sidebar 後，左右占畫面約 70% */
     height: 75vh;               /* 扣掉 footer 後，垂直占 80% */

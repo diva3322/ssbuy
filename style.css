@@ -222,8 +222,8 @@ body {
     background: #444; /* 這一行設定商品背景為深灰色 */
     padding: 0.63vw; /* 這一行設定商品內邊距為0.63vw */
     border-radius: 0.42vw; /* 這一行設定商品邊框圓角為0.42vw */
-    width: 40vh; /* 這一行設定商品寬度為23.96vw */
-    height: 2.75vh; /* 這一行設定商品高度為2.41vh */
+    width: 95%; /* 這一行設定商品寬度為23.96vw */
+    height: 2.4vh; /* 這一行設定商品高度為2.41vh */
     gap: 0.52vw; /* 這一行設定商品內元素間距為0.52vw */
     margin-bottom: 0.37vh; /* 這一行設定商品下方外邊距為0.37vh */
 }
@@ -231,29 +231,34 @@ body {
 .product-name {
     flex-grow: 1; /* 這一行使商品名稱佔據剩餘空間 */
     text-align: left; /* 這一行使商品名稱左對齊 */
-    font-size: 2vh; /* 這一行設定商品名稱字體大小為1.25vw */
+    font-size: 2.4vh; /* 這一行設定商品名稱字體大小為1.25vw */
     white-space: nowrap; /* 這一行防止商品名稱換行 */
     overflow: hidden; /* 這一行隱藏商品名稱溢出部分 */
     text-overflow: ellipsis; /* 這一行使溢出的商品名稱顯示省略號 */
 }
 
 .price-container {
-    min-width: 9.375vh; /* 這一行設定價格容器最小寬度為9.375vw */
-    text-align: left; /* 這一行使價格左對齊 */
-    font-weight: bold; /* 這一行設定價格字體為粗體 */
-    white-space: nowrap; /* 這一行防止價格換行 */
+  width: 9vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2.4vh;
+  color: #fff;
 }
 
 /* NT$ 固定寬度 */ /* 這一行是註解，標示貨幣符號樣式開始 */
 .nt-symbol {
-    width: 2.08vw; /* 這一行設定NT$符號寬度為2.08vw */
-    text-align: left; /* 這一行使NT$符號左對齊 */
+	font-size: 2.4vh; 
+	margin-right: 2px;
+    text-align: left ; /* 這一行使NT$符號左對齊 */
     font-weight: bold; /* 這一行設定NT$符號字體為粗體 */
     flex-shrink: 0; /* 這一行防止NT$符號被壓縮 */
 }
 
 /* 價格數字 => no px => no change */ /* 這一行是註解，標示價格數字樣式開始 */
 .price-value {
+	font-size: 2.4vh;
     font-weight: bold; /* 這一行設定價格數字字體為粗體 */
     text-align: left; /* 這一行使價格數字左對齊 */
 }
@@ -277,7 +282,7 @@ body {
     background-color: transparent; /* 這一行設定複選框背景為透明 */
     cursor: pointer; /* 這一行使複選框懸停時顯示手型游標 */
     flex-shrink: 0; /* 這一行防止複選框被壓縮 */
-    margin-right: 0.52vw; /* 這一行設定複選框右側外邊距為0.52vw */
+    margin-right: 0.2vw; /* 這一行設定複選框右側外邊距為0.52vw */
 }
 
 /* checked => no px => no change */ /* 這一行是註解，標示複選框選中樣式開始 */
@@ -725,37 +730,86 @@ footer a:hover {
   border-radius: 8px;         /* 圓角更好看 */
 }
 
+.social-media {
+  display: block;
+}
+
+.social-line {
+  display: inline;
+  white-space: nowrap; /* ✅ 禁止自動換行 */
+}
+
+.social-line.line2 {
+  margin-left: 8px;
+}
+
+.social-line.line1::after {
+    content: " |";
+}
+
 /* ★ 針對小螢幕(≤1024px)：隱藏sidebar、顯示 mobile-top-bar */ /* 這一行是註解，標示小螢幕媒體查詢開始 */
 @media (max-width: 1024px) {
 	html, body {
     overflow-x: hidden;  /* 禁止水平滾動 */
     width: 100vw;        /* 確保寬度不超過螢幕 */
   }
+    .social-line.line1::after {
+        content: "";
+    }
+
+    .social-line.line2 {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .social-break {
+        display: block;
+        width: 100%;
+        height: 0;
+    }
 
   .product-item {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
     padding: 2vh 2vw;
+	gap: 0.52vw;
     margin-bottom: 1vh;
     border-radius: 1vh;
     box-sizing: border-box;
   }
 
-  .product-name {
-    flex: 1;
-    margin-left: 1vw;
-    font-size: 2.4vh;
-    color: #fff;
-  }
+#productList input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 2vw; /* 新增這行，確保手機也有空格 */
+}
 
-  .price-container {
+.product-name {
+  min-width: 70%;
+  flex: 1;
+  font-size: 2.2vh;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.price-container {
+  min-width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1vh;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+  .price-value {
+	font-size: 2.2vh;
     white-space: nowrap;
-    font-size: 2.4vh;
-    font-weight: bold;
-    color: #fff;
   }
 
   #productList input[type="checkbox"] {
@@ -797,8 +851,8 @@ footer a:hover {
 
   .game-detail .social-media p {
     word-break: break-word;
-    font-size: 1.5vh;
-    line-height: 1.6;
+    font-size: 2vh;
+    line-height: 3vh;
   }
 
 
@@ -974,8 +1028,6 @@ footer a:hover {
     display: none !important;
   }
 
-
-
 	.info-box{
     width: 80vw ;
     margin: 1vh auto; /* 上下各 5vh，左右置中 */
@@ -1005,8 +1057,6 @@ footer a:hover {
     flex-wrap: flex;               /* 允許換行 */
     padding-bottom: 10vh;         /* 避免被 footer 蓋到 */
   }
-
-
 }
 
 /*電腦版*/

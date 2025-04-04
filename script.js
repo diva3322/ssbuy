@@ -260,10 +260,19 @@ function loadGameDetails(gameName, game) {
         我們將不定時舉辦抽優惠券與點卡活動哦!
     `;
 
-    const socialContainer = document.querySelector(".social-media p");
-    socialContainer.innerHTML = Object.entries(game.social)
-        .map(([name, url]) => `<a href="${url}" target="_blank">${name}</a>`)
-        .join(" | ");
+const socialContainer = document.querySelector(".social-media p");
+const socialLinks = Object.entries(game.social).map(([name, url]) => {
+    return `<a href="${url}" target="_blank">${name}</a>`;
+});
+
+// 分割點：App Store 後換行
+const line1 = socialLinks.slice(0, 3).join(" | ");
+const line2 = socialLinks.slice(3).join(" | ");
+
+socialContainer.innerHTML = `
+  <div class="social-line line1">${line1}</div>
+  <div class="social-line line2">${line2}</div>
+`;
 
     // 確保 game.products 存在
     if (game && game.products) {
@@ -301,7 +310,8 @@ function loadProducts(products) {
 
         const priceContainer = document.createElement("div");
         priceContainer.classList.add("price-container");
-        priceContainer.innerHTML = `<span class="nt-symbol">NT$</span><span class="price-value">${product.price}</span>`;
+		priceContainer.innerHTML = `<span class="price-value">NT$${product.price}</span>`;
+
 
         row.appendChild(checkbox);
         row.appendChild(name);

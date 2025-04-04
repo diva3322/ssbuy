@@ -546,3 +546,24 @@ function renderVerticalLoopSlider(wrapper, gameChunks) {
   }
 }
 
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    const isNowMobile = window.innerWidth <= 1024;
+
+    // 如果目前是首頁才執行
+    if (document.body.classList.contains("index-page")) {
+      const wrapper = document.getElementById("gamesWrapper");
+      if (wrapper) {
+        wrapper.innerHTML = "";     // 清空舊卡片
+        if (isNowMobile) {
+          document.body.classList.add("mobile-vertical");
+        } else {
+          document.body.classList.remove("mobile-vertical");
+        }
+        renderGames();             // 重新載入卡片
+      }
+    }
+  }, 10); // debounce：延遲 200ms 觸發
+});

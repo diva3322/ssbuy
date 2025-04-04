@@ -280,11 +280,13 @@ function loadGameDetails(gameName, game) {
     `;
 
 const socialContainer = document.querySelector(".social-media p");
+
 const socialLinks = Object.entries(game.social).map(([name, url]) => {
-    return `<a href="${url}" target="_blank">${name}</a>`;
+  const link = url && url !== "N" ? url : "#";
+  return `<a href="${link}" target="_blank">${name}</a>`;
 });
 
-// 分割點：App Store 後換行
+// 分割點：前 3 個在第一行，後面在第二行（即使是 # 也保留 <a>）
 const line1 = socialLinks.slice(0, 3).join(" | ");
 const line2 = socialLinks.slice(3).join(" | ");
 

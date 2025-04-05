@@ -2378,5 +2378,973 @@
       "App Store": "https://apps.apple.com/tw/app/%E6%BD%98%E6%9C%B5%E6%8B%89-%E5%91%BD%E9%81%8B%E5%85%88%E7%9F%A5/id6450161259?l=en-GB",
       "巴哈姆特": "https://gnn.gamer.com.tw/detail.php?sn=283275"
     }
+  },
+  "Last War": {
+    "logo": "images/Last War.jpg",
+    "products": [
+      {
+        "name": "3290禮包",
+        "price": 2550
+      },
+      {
+        "name": "1690禮包",
+        "price": 1320
+      },
+      {
+        "name": "650禮包",
+        "price": 530
+      },
+      {
+        "name": "330禮包",
+        "price": 265
+      },
+      {
+        "name": "170禮包",
+        "price": 150
+      },
+      {
+        "name": "33禮包",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/lastwarsurvival/",
+      "官方網站": "https://www.lastwar.com/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/last-war-survival/id6448786147?l=en-GB",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=79869"
+    }
+  },
+  "星鏈計畫未來少女": {
+    "logo": "images/星鏈計畫未來少女.jpg",
+    "products": [
+      {
+        "name": "5500星際比特",
+        "price": 2150
+      },
+      {
+        "name": "4400星際比特",
+        "price": 1750
+      },
+      {
+        "name": "2750星際比特",
+        "price": 1130
+      },
+      {
+        "name": "1650星際比特",
+        "price": 700
+      },
+      {
+        "name": "750星際比特",
+        "price": 340
+      },
+      {
+        "name": "165星際比特",
+        "price": 90
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/StarseedAsniaTriggerCNT/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.com2us.starseedgl.android.google.global.normal&hl=zh_TW",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%98%9F%E9%8F%88%E8%A8%88%E7%95%AB-%E6%9C%AA%E4%BE%86%E5%B0%91%E5%A5%B3/id6504904399",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=79380"
+    }
+  },
+  "勇士不要停": {
+    "logo": "images/勇士不要停.jpg",
+    "products": [
+      {
+        "name": "6000鑽石",
+        "price": 2790
+      },
+      {
+        "name": "3000鑽石",
+        "price": 1470
+      },
+      {
+        "name": "1200鑽石",
+        "price": 580
+      },
+      {
+        "name": "600鑽石",
+        "price": 290
+      },
+      {
+        "name": "300鑽石",
+        "price": 150
+      },
+      {
+        "name": "60鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/herogo.zh/",
+      "官方網站": "https://www.facebook.com/herogo.zh/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E5%8B%87%E5%A3%AB%E4%B8%8D%E8%A6%81%E5%81%9C/id6670520817",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81386"
+    }
+  },
+  "元氣火柴人": {
+    "logo": "images/元氣火柴人.jpg",
+    "products": [
+      {
+        "name": "6480彩鑽",
+        "price": 2790
+      },
+      {
+        "name": "3280彩鑽",
+        "price": 1470
+      },
+      {
+        "name": "1980彩鑽",
+        "price": 860
+      },
+      {
+        "name": "1280彩鑽",
+        "price": 630
+      },
+      {
+        "name": "680彩鑽",
+        "price": 290
+      },
+      {
+        "name": "340彩鑽",
+        "price": 160
+      },
+      {
+        "name": "30彩鑽",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/GenkiStickman/",
+      "官方網站": "https://www.facebook.com/GenkiStickman/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E5%85%83%E6%B0%A3%E7%81%AB%E6%9F%B4%E4%BA%BA/id6630378924",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81503"
+    }
+  },
+  "深淵之影": {
+    "logo": "images/深淵之影.jpg",
+    "products": [
+      {
+        "name": "4000金鑽",
+        "price": 170
+      },
+      {
+        "name": "1900金鑽",
+        "price": 80
+      },
+      {
+        "name": "600金鑽",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/story.php?story_fbid=1016300817180401&id=100064014759876",
+      "官方網站": "https://www.facebook.com/100064014759876/posts/%E6%B7%B1%E6%B7%B5%E4%B9%8B%E5%BD%B1-chillyroom-%E6%B6%BC%E5%B1%8B%E9%81%8A%E6%88%B2-12%E6%9C%885%E6%97%A5%E9%80%9A%E7%9F%A5%E4%B8%8A%E6%9E%B6-%E8%A5%BF%E6%96%B9%E9%AD%94%E5%B9%BB%E7%82%BA%E4%B8%BB%E9%A1%8C%E7%9A%84%E4%BF%AF%E8%A6%96%E8%A7%92%E5%8B%95%E4%BD%9Croguelike%E9%81%8A%E6%88%B2-%E6%89%AE%E6%BC%94%E6%88%B0%E5%A3%AB%E5%88%BA%E5%AE%A2%E6%B3%95%E5%B8%AB-%E6%B7%B1%E5%85%A5%E5%9C%B0%E7%89%A2%E4%B8%96%E7%95%8C-%E5%96%AE%E6%A9%9F%E6%9A%A2%E7%8E%A9-%E7%B6%93%E5%85%B8%E5%8B%95/1016300817180401/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%B7%B1%E6%B7%B5%E4%B9%8B%E5%BD%B1-shadow-of-the-depth/id6670242198",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81717"
+    }
+  },
+  "玩星派對": {
+    "logo": "images/玩星派對.jpg",
+    "products": [
+      {
+        "name": "6580星鑽",
+        "price": 12790
+      },
+      {
+        "name": "3380星鑽",
+        "price": 1470
+      },
+      {
+        "name": "1980星鑽",
+        "price": 860
+      },
+      {
+        "name": "980星鑽",
+        "price": 430
+      },
+      {
+        "name": "340星鑽",
+        "price": 150
+      },
+      {
+        "name": "66星鑽",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/star.partygo/",
+      "官方網站": "https://www.facebook.com/star.partygo/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E7%8E%A9%E6%98%9F%E6%B4%BE%E5%B0%8D/id6448721818",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=80330"
+    }
+  },
+  "進化吧!我的人生": {
+    "logo": "images/進化吧!我的人生.jpg",
+    "products": [
+      {
+        "name": "12500水晶",
+        "price": 2790
+      },
+      {
+        "name": "6000水晶",
+        "price": 1450
+      },
+      {
+        "name": "2300水晶",
+        "price": 580
+      },
+      {
+        "name": "1100水晶",
+        "price": 290
+      },
+      {
+        "name": "525水晶",
+        "price": 155
+      },
+      {
+        "name": "100水晶",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/evominelife/",
+      "官方網站": "https://www.facebook.com/evominelife/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E9%80%B2%E5%8C%96%E5%90%A7-%E6%88%91%E7%9A%84%E4%BA%BA%E7%94%9F/id6504609086",
+      "巴哈姆特": "https://forum.gamer.com.tw/Co.php?bsn=60603&sn=421"
+    }
+  },
+  "星之夢幻島": {
+    "logo": "images/星之夢幻島.jpg",
+    "products": [
+      {
+        "name": "9000卡巴拉彩晶",
+        "price": 2950
+      },
+      {
+        "name": "4500卡巴拉彩晶",
+        "price": 1480
+      },
+      {
+        "name": "1800卡巴拉彩晶",
+        "price": 600
+      },
+      {
+        "name": "900卡巴拉彩晶",
+        "price": 300
+      },
+      {
+        "name": "450卡巴拉彩晶",
+        "price": 150
+      },
+      {
+        "name": "180卡巴拉彩晶",
+        "price": 70
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/TheNeverland.TW/",
+      "官方網站": "https://www.facebook.com/TheNeverlandAW/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%98%9F%E4%B9%8B%E5%A4%A2%E5%B9%BB%E5%B3%B6-%E7%95%B0%E4%B8%96%E7%95%8C/id6502818564",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=71614"
+    }
+  },
+  "小冰冰傳奇回到最初": {
+    "logo": "images/小冰冰傳奇回到最初.jpg",
+    "products": [
+      {
+        "name": "6480鑽石",
+        "price": 2790
+      },
+      {
+        "name": "3280鑽石",
+        "price": 1420
+      },
+      {
+        "name": "1980鑽石",
+        "price": 860
+      },
+      {
+        "name": "980鑽石",
+        "price": 460
+      },
+      {
+        "name": "300鑽石",
+        "price": 155
+      },
+      {
+        "name": "60鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/Littleicelegend/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.farlightgames.dgame.gp.apac&hl=zh_TW",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E5%B0%8F%E5%86%B0%E5%86%B0%E5%82%B3%E5%A5%87-%E5%9B%9E%E5%88%B0%E6%9C%80%E5%88%9D/id6478289988",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=26583"
+    }
+  },
+  "江湖風雲傳": {
+    "logo": "images/江湖風雲傳.jpg",
+    "products": [
+      {
+        "name": "64800金錠",
+        "price": 2790
+      },
+      {
+        "name": "32800金錠",
+        "price": 1450
+      },
+      {
+        "name": "19800金錠",
+        "price": 910
+      },
+      {
+        "name": "12800金錠",
+        "price": 600
+      },
+      {
+        "name": "9800金錠",
+        "price": 460
+      },
+      {
+        "name": "5000金錠",
+        "price": 240
+      },
+      {
+        "name": "3000金錠",
+        "price": 150
+      },
+      {
+        "name": "1200金錠",
+        "price": 60
+      },
+      {
+        "name": "600金錠",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/tales.of.jianghu/",
+      "官方網站": "https://www.facebook.com/tales.of.jianghu/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%B1%9F%E6%B9%96%E9%A2%A8%E9%9B%B2%E5%82%B3-%E5%BE%A9%E5%8F%A4%E7%BE%A4%E4%BF%A0%E6%AD%A6%E6%9E%97%E5%86%92%E9%9A%AA/id6566180945",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81432"
+    }
+  },
+  "星願之冠狼少女物語": {
+    "logo": "images/星願之冠狼少女物語.jpg",
+    "products": [
+      {
+        "name": "100K鑽石",
+        "price": 2450
+      },
+      {
+        "name": "50K鑽石",
+        "price": 1090
+      },
+      {
+        "name": "30K鑽石",
+        "price": 710
+      },
+      {
+        "name": "10K鑽石",
+        "price": 270
+      },
+      {
+        "name": "5K鑽石",
+        "price": 150
+      },
+      {
+        "name": "1K鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/permalink.php/?story_fbid=998337172310099&id=100064014759876",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.superplanet.crown&hl=zh",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%98%9F%E9%A1%98%E4%B9%8B%E5%86%A0-%E7%8B%BC%E5%B0%91%E5%A5%B3%E7%89%A9%E8%AA%9E/id6636483923",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81257"
+    }
+  },
+  "香蕉缺個芭樂": {
+    "logo": "images/香蕉缺個芭樂.jpg",
+    "products": [
+      {
+        "name": "6480鑽石",
+        "price": 2790
+      },
+      {
+        "name": "3280鑽石",
+        "price": 1450
+      },
+      {
+        "name": "1980鑽石",
+        "price": 910
+      },
+      {
+        "name": "980鑽石",
+        "price": 460
+      },
+      {
+        "name": "300鑽石",
+        "price": 155
+      },
+      {
+        "name": "60鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/PlantTD/",
+      "官方網站": "https://www.facebook.com/PlantTD/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E9%A6%99%E8%95%89%E7%BC%BA%E5%80%8B%E8%8A%AD%E6%A8%82/id6738383231",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81757"
+    }
+  },
+  "精靈塔塔開": {
+    "logo": "images/精靈塔塔開.jpg",
+    "products": [
+      {
+        "name": "14000鑽石",
+        "price": 2560
+      },
+      {
+        "name": "6500鑽石",
+        "price": 1290
+      },
+      {
+        "name": "2500鑽石",
+        "price": 610
+      },
+      {
+        "name": "1200鑽石",
+        "price": 290
+      },
+      {
+        "name": "500鑽石",
+        "price": 150
+      },
+      {
+        "name": "80鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/groups/861593769441658/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.domozoo.towerbrawl.thm&hl=gsw",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E7%B2%BE%E9%9D%88%E5%A1%94%E5%A1%94%E9%96%8B/id6557069041",
+      "巴哈姆特": "https://m.facebook.com/loveplay123/photos/%E6%96%B0%E5%93%81%E7%A6%AE%E5%8C%85%E7%B2%BE%E9%9D%88%E5%A1%94%E5%A1%94%E9%96%8B%E7%A6%AE%E5%8C%85%E7%A2%BC-2024%E6%9C%80%E6%96%B0%E5%B7%B4%E5%93%88%E5%BA%8F%E8%99%9F%E5%85%8C%E6%8F%9B%E7%A2%BC%E7%A6%8F%E5%88%A9%E9%81%8A%E6%88%B2httpsreurlccwdj6kx%E6%88%91%E5%80%91%E7%9A%84ythttpsreurlccrvorge/1030062849134600/"
+    }
+  },
+  "終末之歌": {
+    "logo": "images/終末之歌.jpg",
+    "products": [
+      {
+        "name": "6480元寶",
+        "price": 2790
+      },
+      {
+        "name": "3280元寶",
+        "price": 1450
+      },
+      {
+        "name": "1980元寶",
+        "price": 910
+      },
+      {
+        "name": "980元寶",
+        "price": 460
+      },
+      {
+        "name": "300元寶",
+        "price": 155
+      },
+      {
+        "name": "60元寶",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://m.facebook.com/61566115185470/about/",
+      "官方網站": "https://www.facebook.com/permalink.php/?story_fbid=1034371565373326&id=100064014759876",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E7%B5%82%E6%9C%AB%E4%B9%8B%E6%AD%8C/id6738341719",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81952"
+    }
+  },
+  "俠客傳說小小英雄": {
+    "logo": "images/俠客傳說小小英雄.jpg",
+    "products": [
+      {
+        "name": "3290仙玉",
+        "price": 2790
+      },
+      {
+        "name": "1690仙玉",
+        "price": 1450
+      },
+      {
+        "name": "670仙玉",
+        "price": 580
+      },
+      {
+        "name": "330仙玉",
+        "price": 290
+      },
+      {
+        "name": "170仙玉",
+        "price": 155
+      },
+      {
+        "name": "33仙玉",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/SSHERO.TW/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.xxyx.tw.and",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E4%BF%A0%E5%AE%A2%E5%82%B3%E8%AA%AA-%E5%B0%8F%E5%B0%8F%E8%8B%B1%E9%9B%84/id6736904440",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81562"
+    }
+  },
+  "森靈奇境": {
+    "logo": "images/森靈奇境.jpg",
+    "products": [
+      {
+        "name": "64800鑽石",
+        "price": 2790
+      },
+      {
+        "name": "32800鑽石",
+        "price": 1450
+      },
+      {
+        "name": "19800鑽石",
+        "price": 870
+      },
+      {
+        "name": "12800鑽石",
+        "price": 580
+      },
+      {
+        "name": "6800鑽石",
+        "price": 290
+      },
+      {
+        "name": "3000鑽石",
+        "price": 155
+      },
+      {
+        "name": "600鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/61556264878782",
+      "官方網站": "https://www.facebook.com/p/%E6%A3%AE%E9%9D%88%E5%A5%87%E5%A2%83-61556264878782/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%A3%AE%E9%9D%88%E5%A5%87%E5%A2%83/id6473011708",
+      "巴哈姆特": "https://home.gamer.com.tw/artwork.php?sn=6098938"
+    }
+  },
+  "鬥破蒼穹蕭門篇": {
+    "logo": "images/鬥破蒼穹蕭門篇.jpg",
+    "products": [
+      {
+        "name": "9999蕭門券",
+        "price": 2790
+      },
+      {
+        "name": "4999蕭門券",
+        "price": 1450
+      },
+      {
+        "name": "2999蕭門券",
+        "price": 860
+      },
+      {
+        "name": "1490蕭門券",
+        "price": 430
+      },
+      {
+        "name": "999蕭門券",
+        "price": 290
+      },
+      {
+        "name": "499蕭門券",
+        "price": 155
+      },
+      {
+        "name": "99蕭門券",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/permalink.php/?story_fbid=122166154130264768&id=61557943042505",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.tg.dpcq2.tw&hl=zh",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E9%AC%A5%E7%A0%B4%E8%92%BC%E7%A9%B9-%E8%95%AD%E9%96%80%E7%AF%87/id6478906219",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81843"
+    }
+  },
+  "無畏的狼煙": {
+    "logo": "images/無畏的狼煙.jpg",
+    "products": [
+      {
+        "name": "6480鑽石",
+        "price": 2790
+      },
+      {
+        "name": "3280鑽石",
+        "price": 1450
+      },
+      {
+        "name": "1980鑽石",
+        "price": 870
+      },
+      {
+        "name": "1280鑽石",
+        "price": 580
+      },
+      {
+        "name": "680鑽石",
+        "price": 290
+      },
+      {
+        "name": "340鑽石",
+        "price": 155
+      },
+      {
+        "name": "60鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/FSLbySonet.TW/",
+      "官方網站": "https://www.facebook.com/FSLbySonet.TW/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E7%84%A1%E7%95%8F%E7%9A%84%E7%8B%BC%E7%85%99-fearless-signals/id6608964084",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81412"
+    }
+  },
+  "代號無頭": {
+    "logo": "images/代號無頭.jpg",
+    "products": [
+      {
+        "name": "10080鑽石",
+        "price": 2550
+      },
+      {
+        "name": "4620鑽石",
+        "price": 1290
+      },
+      {
+        "name": "1660鑽石",
+        "price": 590
+      },
+      {
+        "name": "820鑽石",
+        "price": 290
+      },
+      {
+        "name": "340鑽石",
+        "price": 150
+      },
+      {
+        "name": "60鑽石",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://forum.gamer.com.tw/B.php?bsn=79451",
+      "官方網站": "https://play.google.com/store/apps/details?id=xyz.lightgame.blade&hl=zh_TW",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E4%BB%A3%E8%99%9F-%E7%84%A1%E9%A0%AD-%E6%94%BE%E7%BD%AE%E5%9E%8Brpg/id6476445361",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=79451"
+    }
+  },
+  "牛頭人GO": {
+    "logo": "images/牛頭人GO.jpg",
+    "products": [
+      {
+        "name": "3290禮包",
+        "price": 2790
+      },
+      {
+        "name": "1690禮包",
+        "price": 1450
+      },
+      {
+        "name": "660禮包",
+        "price": 580
+      },
+      {
+        "name": "330禮包",
+        "price": 290
+      },
+      {
+        "name": "170禮包",
+        "price": 150
+      },
+      {
+        "name": "100禮包",
+        "price": 90
+      },
+      {
+        "name": "33禮包",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/TaurenTGO/",
+      "官方網站": "https://www.facebook.com/TaurenTGO/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E7%89%9B%E9%A0%AD%E4%BA%BAgo/id6566178884",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81823"
+    }
+  },
+  "派對吧三國": {
+    "logo": "images/派對吧三國.jpg",
+    "products": [
+      {
+        "name": "9999通寶",
+        "price": 2790
+      },
+      {
+        "name": "6999通寶",
+        "price": 1960
+      },
+      {
+        "name": "4999通寶",
+        "price": 1450
+      },
+      {
+        "name": "2999通寶",
+        "price": 880
+      },
+      {
+        "name": "1999通寶",
+        "price": 580
+      },
+      {
+        "name": "1499通寶",
+        "price": 430
+      },
+      {
+        "name": "999通寶",
+        "price": 290
+      },
+      {
+        "name": "899通寶",
+        "price": 260
+      },
+      {
+        "name": "499通寶",
+        "price": 155
+      },
+      {
+        "name": "299通寶",
+        "price": 90
+      },
+      {
+        "name": "199通寶",
+        "price": 60
+      },
+      {
+        "name": "99通寶",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/@partysgtw/?locale=zh_TW",
+      "官方網站": "https://partysg.lumoss.cc/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%B4%BE%E5%B0%8D%E5%90%A7%E4%B8%89%E5%9C%8B-%E6%B4%BE%E5%B0%8D%E5%92%96%E5%AD%94%E6%98%8E%E8%81%AF%E5%8B%95/id6670526961",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82037"
+    }
+  },
+  "酒酒大俠": {
+    "logo": "images/酒酒大俠.jpg",
+    "products": [
+      {
+        "name": "6480元寶",
+        "price": 2790
+      },
+      {
+        "name": "3280元寶",
+        "price": 1450
+      },
+      {
+        "name": "1980元寶",
+        "price": 880
+      },
+      {
+        "name": "980元寶",
+        "price": 430
+      },
+      {
+        "name": "680元寶",
+        "price": 290
+      },
+      {
+        "name": "300元寶",
+        "price": 160
+      },
+      {
+        "name": "60元寶",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/99DAXIA/",
+      "官方網站": "https://www.facebook.com/99DAXIA/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E9%85%92%E9%85%92%E5%A4%A7%E4%BF%A0/id6739498868",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82071"
+    }
+  },
+  "鼠衛家園": {
+    "logo": "images/鼠衛家園.jpg",
+    "products": [
+      {
+        "name": "6480寶石",
+        "price": 2550
+      },
+      {
+        "name": "3280寶石",
+        "price": 1280
+      },
+      {
+        "name": "1280寶石",
+        "price": 590
+      },
+      {
+        "name": "680寶石",
+        "price": 280
+      },
+      {
+        "name": "300寶石",
+        "price": 140
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/groups/3938717226414152/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.digitalconch.nobody.en&hl=zh_TW",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E9%BC%A0%E8%A1%9B%E5%AE%B6%E5%9C%92/id6670477783",
+      "巴哈姆特": "https://www.facebook.com/p/%E9%BC%A0%E8%A1%9B%E5%AE%B6%E5%9C%92-61565874970374/"
+    }
+  },
+  "未頌者之歌": {
+    "logo": "images/未頌者之歌.jpg",
+    "products": [
+      {
+        "name": "6480鑽石",
+        "price": 2840
+      },
+      {
+        "name": "3280鑽石",
+        "price": 1430
+      },
+      {
+        "name": "1280鑽石",
+        "price": 580
+      },
+      {
+        "name": "680鑽石",
+        "price": 290
+      },
+      {
+        "name": "300鑽石",
+        "price": 160
+      },
+      {
+        "name": "60鑽石",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/chroniclesofunsungheroes/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.lightcore.endlessgradespixelsagatw",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E6%9C%AA%E9%A0%8C%E8%80%85%E4%B9%8B%E6%AD%8C-%E7%95%B0%E4%B8%96%E7%95%8C%E5%86%92%E9%9A%AA%E5%A5%87%E8%AD%9A/id6737249949",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81960"
+    }
+  },
+  "熱練戰士": {
+    "logo": "images/熱練戰士.jpg",
+    "products": [
+      {
+        "name": "1300紅寶石",
+        "price": 2590
+      },
+      {
+        "name": "350紅寶石",
+        "price": 740
+      },
+      {
+        "name": "65紅寶石",
+        "price": 160
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/permalink.php/?story_fbid=1049879313822551&id=100064014759876",
+      "官方網站": "https://gnn.gamer.com.tw/detail.php?sn=279993",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/%E7%86%B1%E7%B7%B4%E6%88%B0%E5%A3%AB/id6737226714",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82105"
+    }
+  },
+  "聯盟戰棋": {
+    "logo": "images/聯盟戰棋.jpg",
+    "products": [
+      {
+        "name": "11525戰棋幣",
+        "price": 2430
+      },
+      {
+        "name": "5750戰棋幣",
+        "price": 1220
+      },
+      {
+        "name": "4025戰棋幣",
+        "price": 850
+      },
+      {
+        "name": "2525戰棋幣",
+        "price": 550
+      },
+      {
+        "name": "1275戰棋幣",
+        "price": 270
+      },
+      {
+        "name": "575戰棋幣",
+        "price": 140
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/TFTTW/",
+      "官方網站": "https://teamfighttactics.leagueoflegends.com/zh-tw/",
+      "禮包碼": "N",
+      "App Store": "https://apps.apple.com/tw/app/tft-%E8%81%AF%E7%9B%9F%E6%88%B0%E6%A3%8B/id1501301571",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=38053"
+    }
   }
 }

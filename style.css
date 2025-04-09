@@ -26,6 +26,14 @@ body {
     align-items: center; /* 這一行使body內容水平置中 */
 }
 
+.normal {
+  font-weight: normal;
+}
+
+#section3 li {
+  font-weight: normal !important;
+}
+
 /* 側邊欄 */ /* 這一行是註解，標示側邊欄樣式開始 */
 .sidebar {
     width: 10.4vw; /* 這一行設定側邊欄寬度為視窗寬度的10.4%，響應式設計 */
@@ -683,6 +691,8 @@ img.zoomable {
   word-wrap: break-word;   /* 防止長字串撐出框外 */
   list-style-position: inside;  /* 數字排在內部，避免超出框 */
 }
+
+
 
 /* h1 => margin-bottom:40px =>2.08vw, font-size:36px=>1.87vw */ /* 這一行是註解，標示內容盒h1樣式開始 */
 .info-page .content-box h1 {

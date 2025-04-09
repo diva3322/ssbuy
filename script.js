@@ -613,7 +613,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const gameData = data[game];
 
         // 設定介紹文字
-        document.getElementById("section4").innerHTML += `<p>  ${gameData.description}</p>`;
+        document.getElementById("section4").innerHTML += `<p> <span class="normal">${gameData.description}</span></p>`;
+
 
         // 填入禮包碼表格
         const tbody = document.querySelector(".gift-table tbody");

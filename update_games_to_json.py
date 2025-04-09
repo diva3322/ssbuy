@@ -39,7 +39,7 @@ def load_existing_data(json_file="games.json"):
     return {}
 
 def main():
-    wb = load_workbook("games.xlsx")
+    wb = load_workbook("games.xlsx", data_only=True)
     ws = wb.active
 
     games_data = load_existing_data()
@@ -50,8 +50,19 @@ def main():
             excel_game_names.add(str(row[0]).strip())
 
     new_games = excel_game_names - set(games_data.keys())
-
     print(f"新增遊戲：{new_games}")
+
+    # ✅ 更新所有現有遊戲的禮包碼欄位
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        game_name = str(row[0]).strip()
+        if not game_name:
+            continue
+
+        gift_url = row[5] if row[5] else f"gift-codes.html?game={game_name}"
+        if game_name in games_data:
+            games_data[game_name]["social"]["禮包碼"] = gift_url
+    
+    
 
     for row in ws.iter_rows(min_row=2, values_only=True):
         if not row[0]:
@@ -65,7 +76,7 @@ def main():
         cleaned_game_name = clean_filename(game_name)
         logo = f"images/{cleaned_game_name}.jpg"
 
-        gift_url = row[2] if row[2] else "N"
+        gift_url = row[5] if row[5] else f"gift-codes.html?game={game_name}"
 
         products = []
         for i in range(3, 30, 2):
@@ -107,3 +118,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

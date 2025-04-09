@@ -494,6 +494,158 @@ footer a:hover {
     flex-wrap: nowrap; /* 這一行防止主內容內元素換行 */
 }
 
+.gfverify-page .main-content {
+    display: flex; /* 這一行使主內容使用flex布局 */
+    justify-content: center; /* 這一行使主內容內容水平置中 */
+    align-items: center; /* 這一行使主內容內容垂直置中 */
+    min-height: calc(100vh - 5.2vw); /* 這一行設定主內容最小高度為100vh減去5.2vw */
+    margin-left: 10.4vw; /* 這一行設定主內容左側外邊距為10.4vw */
+    padding: 2.08vw; /* 這一行設定主內容內邊距為2.08vw */
+}
+
+.gfverify-page .content-box {	
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+  margin-top: 2vh;
+}
+
+.gfverify-page .content-box h1 {
+    color: #ffcc00; /* 這一行設定h1文字為黃色 */
+    text-align: center; /* 這一行使h1文字置中 */
+    font-size: 3vh; /* 這一行設定h1字體大小為1.87vw */
+    margin-bottom: 2.08vw; /* 這一行設定h1下方外邊距為2.08vw */
+}
+
+.gfverify-page .content-box h2 {
+    color: #ffcc00; /* 這一行設定h2文字為黃色 */
+    text-align: center; /* 這一行使h2文字置中 */
+    font-size: 2.4vh; /* 這一行設定h2字體大小為1.67vw */
+}
+
+/* p, li =>22px =>1.14vw */ /* 這一行是註解，標示段落和列表項樣式開始 */
+.gfverify-page p, .gfverify-page li {
+    font-size: 2.1vh; /* 這一行設定段落和列表項字體大小為1.14vw */
+    line-height: 1.4; /* 這一行設定段落和列表項行距為1.8倍字體大小 */
+    text-align: left; /* 這一行使段落和列表項文字左對齊 */
+}
+
+/* ol => padding-left:20px =>1.04vw */ /* 這一行是註解，標示有序列表樣式開始 */
+.gfverify-page ol {
+    padding-left: 1.04vw; /* 這一行設定有序列表左側內邊距為1.04vw */
+}
+
+/* pre => font-size:24px=>1.25vw */ /* 這一行是註解，標示預格式化文字樣式開始 */
+.gfverify-page pre {
+    font-size: 1.8vh; /* 這一行設定預格式化文字字體大小為1.25vw */
+    font-weight: bold; /* 這一行設定預格式化文字字體為粗體 */
+}
+
+/* a => no px => keep */ /* 這一行是註解，標示資訊頁面連結樣式開始 */
+.gfverify-page a {
+    color: #fff; /* 這一行設定連結文字為白色 */
+    text-decoration: none; /* 這一行移除連結底線 */
+}
+
+.gfverify-page a:hover {
+    color: #ffcc00; /* 這一行設定連結懸停時文字為黃色 */
+    text-decoration: underline; /* 這一行設定連結懸停時添加底線 */
+}
+
+.gfverify-page .content-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px auto;
+  border-radius: 6px;
+}
+
+.image-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-lightbox-overlay img {
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  cursor: zoom-out;
+}
+
+.image-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.image-lightbox-overlay.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+.image-lightbox-overlay img {
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  cursor: zoom-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.small-60 {
+  max-width: 40% !important;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.small-70 {
+  max-width: 70% !important;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+img.zoomable {
+  display: block;
+  margin: 10px auto;
+}
+
+
+
 /* 設定所有資訊頁面統一的外觀 => margin-left:200px=>10.4vw, padding:40px=>2.08vw, min-height:calc(100vh-100px)=>calc(100vh - ~5.2vw) */ /* 這一行是註解，標示資訊頁面主內容樣式開始 */
 .info-page .main-content {
     display: flex; /* 這一行使主內容使用flex布局 */
@@ -515,16 +667,18 @@ footer a:hover {
 
 /* info-page .content-box => width:700px =>36.46vw, padding:60px=>3.13vw, border-radius:100px=>5.2vw, box-shadow =>0.52vw */ /* 這一行是註解，標示資訊頁面內容盒樣式開始 */
 .info-page .content-box {
-  background: #333;
+	max-height: 80%;
+  background: #222;
   color: white;
   padding: 2vw;
   border-radius: 1vw;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+  margin-top: 2vh;
 }
 
 .content-box ol {
-  padding-left: 1.5em;     /* 給數字留點空間 */
+  padding-right: 0.2em;     /* 給數字留點空間 */
+  padding-left: 0.2em;     /* 給數字留點空間 */
   margin: 0;               /* 移除預設 margin */
   word-wrap: break-word;   /* 防止長字串撐出框外 */
   list-style-position: inside;  /* 數字排在內部，避免超出框 */
@@ -751,12 +905,128 @@ footer a:hover {
     content: " |";
 }
 
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.gift-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.gift-table th,
+.gift-table td {
+    border: 1px solid #aaa;
+    padding: 10px 20px;
+    text-align: left;
+    color: #fff;
+}
+
+.gift-table th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+.gift-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.giftcodes-page h2 {
+	color:#ffcc00;
+	font-size:2.4vh;
+	margin-bottom:1vh;
+	margin-top:1vh;
+}
+
+.giftcodes-page h1 {
+	color:#ffcc00;
+	font-size:3.7vh;
+}
+
+.giftcodes-page li{
+	color:white;
+	font-size:2.2vh;
+}
+
+.giftcodes-page p{
+	color:white;
+	font-size:2.2vh;
+}
+
+.giftcodes-page #new-games-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5vh;
+    overflow-x: auto;
+	padding-top:3vh;
+}
+
+.giftcodes-page .card:hover {
+    transform: scale(1.1); /* 這一行使卡片懸停時放大1.1倍 */
+    box-shadow: 0 0 0.26vw #ffcc00, 0 0 0.78vw #fff, 0 0 1.56vw #4fff00; /* 這一行設定卡片懸停時的多層陰影效果 */
+}
+
+.giftcodes-page #new-games-container .game-card {
+  width: 12vh;           /* ✅ 固定寬 */
+  height: 12vh;          /* ✅ 固定高，卡片永遠是正方形 */
+  overflow: hidden;
+  position: relative;
+  border-radius: 1vh;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0.52vw rgba(255, 255, 255, 0.2);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.giftcodes-page .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* ✅ 強制圖片填滿、裁切多餘部分 */
+  border-radius: 1vh;
+}
+
+.giftcodes-page .content-box {
+  margin-top: 5vh; /* 與上方區塊的距離 */
+  margin-bottom: 10vh; /* 與 footer 底部距離（建議用 5vh 更穩定） */
+  background: rgba(255, 255, 255, 0.05); /* 半透明深灰背景（保留你原本的） */
+  color: white; /* 文字顏色為白 */
+  border-radius: 1vw; /* 圓角弧度，使用相對單位看起來比較平衡 */
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); /* 外發光特效 */
+  padding: 2vw 2vw 3vh; /* ⬅️ 改成底部 3vh 就夠了 */
+  max-width: 85vw;      /* ✅ 控制最大寬度 */
+  min-width: 65vw;         /* ✅ 最小寬度 */
+  min-height: 70vh;       /* ✅ 最小高度 */
+  height: auto; /* 自動根據內容撐高 */
+  box-sizing: border-box; /* 讓 padding 不影響整體寬度與高度計算 */
+}
+
+.giftcodes-page .main-content {
+  margin-left: 10.4vw; /* ✅ 與 sidebar 一樣寬度 */
+  display: flex;
+  justify-content: center;
+}
+
 /* ★ 針對小螢幕(≤1024px)：隱藏sidebar、顯示 mobile-top-bar */ /* 這一行是註解，標示小螢幕媒體查詢開始 */
 @media (max-width: 1024px) {
 	html, body {
     overflow-x: hidden;  /* 禁止水平滾動 */
     width: 100vw;        /* 確保寬度不超過螢幕 */
   }
+  
+    .gift-mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 12px;
+  }  
 
 .new-games-page h1 {
     color: #ffcc00; /* 這一行設定h1文字為黃色 */
@@ -1080,6 +1350,34 @@ footer a:hover {
     flex-wrap: flex;               /* 允許換行 */
     padding-bottom: 10vh;         /* 避免被 footer 蓋到 */
   }
+  
+    .giftcodes-page .new-games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 2vh 3vw;
+    width: 90vw;
+    padding: 0 5vw;
+  }
+  
+  .small-60 {
+  max-width: 90% !important;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.small-70 {
+  max-width: 90% !important;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+img.zoomable {
+  display: block;
+  margin: 10px auto;
+}
+  
 }
 
 /*電腦版*/
@@ -1092,6 +1390,17 @@ footer a:hover {
 	mask-image: radial-gradient(ellipse 90% 100% at 50% 50%, black 55%, transparent 100%);
 	-webkit-mask-image: radial-gradient(ellipse 90% 100% at 50% 50%, black 55%, transparent 100%);
   }
+  
+.giftcodes-page .new-games-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2vh 1.5vw;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+  max-width: 80vw;
+  padding: 0 2vw;
+}
 
   .mobile-only {
     display: none !important;

@@ -14,7 +14,7 @@ for _, row in df.iterrows():
     if not game_name or game_name == "nan":
         continue
 
-    banner = f"giftcodesbanner/{game_name}-banner.jpg"
+    banner = f"giftcodesbanner/{game_name}-bar.jpg"
     description = str(row["介紹"]).strip() if pd.notna(row["介紹"]) else ""
 
     howto = [

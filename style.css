@@ -201,6 +201,11 @@ body {
     gap: 0.52vw; /* 這一行設定產品盒內元素間距為0.52vw */
 }
 
+.products-box h3 {
+	color: #ffcc00; 
+}
+
+
 /* 設定標題為黃色 */ /* 這一行是註解，標示聯絡容器標題樣式開始 */
 .contact-container h2,
 .contact-container h3 {
@@ -350,14 +355,14 @@ body {
 
 /* #gameTitle => margin-top:-5px=>-0.26vw, margin-bottom:5px=>0.26vw */ /* 這一行是註解，標示遊戲標題樣式開始 */
 #gameTitle {
-    color: #fff; /* 這一行設定遊戲標題文字為白色 */
+    color: #ffcc00; /* 這一行設定遊戲標題文字為白色 */
     margin-top: -0.26vw; /* 這一行設定遊戲標題上方負外邊距為-0.26vw */
     margin-bottom: 0.26vw; /* 這一行設定遊戲標題下方外邊距為0.26vw */
 }
 
 /* info-box h3 => margin-top:60px=>3.13vw, margin-bottom:-5px=>-0.26vw */ /* 這一行是註解，標示資訊區h3樣式開始 */
 .info-box h3 {
-    color: #fff; /* 這一行設定h3文字為白色 */
+    color: #ffcc00; /* 這一行設定h3文字為白色 */
     align-items: flex-start; /* 這一行使h3內容左對齊 */
     margin-top: 3.13vw; /* 這一行設定h3上方外邊距為3.13vw */
     margin-bottom: -0.26vw; /* 這一行設定h3下方負外邊距為-0.26vw */
@@ -408,7 +413,7 @@ body {
 /* login-box h3 => margin-bottom:0 => no px => keep */ /* 這一行是註解，標示登入區h3樣式開始 */
 .login-box h3 {
     margin-bottom: 0px; /* 這一行設定h3下方外邊距為0px */
-    color: #fff; /* 這一行設定h3文字為白色 */
+    color: #ffcc00; /* 這一行設定h3文字為白色 */
 }
 
 /* 讓遊戲登入資訊內的每個輸入框 => width:95%, padding:12px=> ~0.63vw, margin:10px=> ~0.52vw */ /* 這一行是註解，標示登入區輸入框樣式開始 */

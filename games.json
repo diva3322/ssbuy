@@ -3274,5 +3274,397 @@
       "App Store": "https://apps.apple.com/tw/app/tft-%E8%81%AF%E7%9B%9F%E6%88%B0%E6%A3%8B/id1501301571",
       "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=38053"
     }
+  },
+  "劍客物語": {
+    "logo": "images/劍客物語.jpg",
+    "products": [
+      {
+        "name": "9000紅寶石",
+        "price": 2550
+      },
+      {
+        "name": "4500紅寶石",
+        "price": 1300
+      },
+      {
+        "name": "2700紅寶石",
+        "price": 750
+      },
+      {
+        "name": "9000紅寶石",
+        "price": 270
+      },
+      {
+        "name": "450紅寶石",
+        "price": 160
+      },
+      {
+        "name": "270紅寶石",
+        "price": 90
+      }
+    ],
+    "social": {
+      "Facebook": "https://forum.gamer.com.tw/C.php?bsn=39136&snA=450",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.superplanet.swordmaster&hl=zh",
+      "禮包碼": "gift-codes.html?game=劍客物語",
+      "App Store": "https://apps.apple.com/tw/app/%E5%8A%8D%E5%AE%A2%E7%89%A9%E8%AA%9E/id1521447065",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=39136"
+    }
+  },
+  "人在塔在": {
+    "logo": "images/人在塔在.jpg",
+    "products": [
+      {
+        "name": "14000鑽石",
+        "price": 2750
+      },
+      {
+        "name": "6500鑽石",
+        "price": 1390
+      },
+      {
+        "name": "2500鑽石",
+        "price": 580
+      },
+      {
+        "name": "1200鑽石",
+        "price": 280
+      },
+      {
+        "name": "500鑽石",
+        "price": 160
+      },
+      {
+        "name": "80鑽石",
+        "price": 40
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/CookieRunTOA.TW/",
+      "官方網站": "https://www.facebook.com/CookieRunTOA.TW/",
+      "禮包碼": "gift-codes.html?game=人在塔在",
+      "App Store": "https://apps.apple.com/tw/app/%E8%96%91%E9%A4%85%E4%BA%BA%E4%B9%8B%E5%A1%94/id6449445178",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=78614"
+    }
+  },
+  "龍語霜城": {
+    "logo": "images/龍語霜城.jpg",
+    "products": [
+      {
+        "name": "30000鑽石",
+        "price": 2600
+      },
+      {
+        "name": "14000鑽石",
+        "price": 1350
+      },
+      {
+        "name": "11000鑽石",
+        "price": 1100
+      },
+      {
+        "name": "8000鑽石",
+        "price": 820
+      },
+      {
+        "name": "5200鑽石",
+        "price": 600
+      },
+      {
+        "name": "3800鑽石",
+        "price": 420
+      },
+      {
+        "name": "2400鑽石",
+        "price": 320
+      },
+      {
+        "name": "1100鑽石",
+        "price": 180
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/PuzzlesAndChaos.TW/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.global.pncktw",
+      "禮包碼": "gift-codes.html?game=龍語霜城",
+      "App Store": "https://apps.apple.com/tw/app/%E9%BE%8D%E8%AA%9E%E9%9C%9C%E5%9F%8E-%E5%85%83%E7%B4%A0%E9%AD%94%E5%9F%9F/id6470185871",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=79073"
+    }
+  },
+  "洛伊的移動要塞": {
+    "logo": "images/洛伊的移動要塞.jpg",
+    "products": [
+      {
+        "name": "2990禮包",
+        "price": 2600
+      },
+      {
+        "name": "2490禮包",
+        "price": 2150
+      },
+      {
+        "name": "2290禮包",
+        "price": 2000
+      },
+      {
+        "name": "1990禮包",
+        "price": 1700
+      },
+      {
+        "name": "1490禮包",
+        "price": 1350
+      },
+      {
+        "name": "1290禮包",
+        "price": 1100
+      },
+      {
+        "name": "990禮包",
+        "price": 880
+      },
+      {
+        "name": "790禮包",
+        "price": 700
+      },
+      {
+        "name": "690禮包",
+        "price": 620
+      },
+      {
+        "name": "525禮包",
+        "price": 490
+      },
+      {
+        "name": "490禮包",
+        "price": 450
+      },
+      {
+        "name": "320禮包",
+        "price": 300
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/p/%E6%B4%9B%E4%BC%8A%E7%9A%84%E7%A7%BB%E5%8B%95%E8%A6%81%E5%A1%9E-Fortress-Saga-61555050021463/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.cookapps.bm.fortresssaga&hl=zh_TW",
+      "禮包碼": "gift-codes.html?game=洛伊的移動要塞",
+      "App Store": "https://apps.apple.com/tw/app/%E6%B4%9B%E4%BC%8A%E7%9A%84%E7%A7%BB%E5%8B%95%E8%A6%81%E5%A1%9E-fortress-saga/id6446308106",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=78633"
+    }
+  },
+  "喵喵王國": {
+    "logo": "images/喵喵王國.jpg",
+    "products": [
+      {
+        "name": "13500寶石",
+        "price": 2300
+      },
+      {
+        "name": "6800寶石",
+        "price": 1150
+      },
+      {
+        "name": "3500寶石",
+        "price": 650
+      },
+      {
+        "name": "1500寶石",
+        "price": 300
+      },
+      {
+        "name": "620寶石",
+        "price": 120
+      },
+      {
+        "name": "150寶石",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://m.facebook.com/100064014759876/posts/%E5%96%B5%E5%96%B5%E7%8E%8B%E5%9C%8B%E8%B2%93%E5%92%AA%E6%94%BE%E7%BD%AErpg-3%E6%9C%8810%E6%97%A5-%E9%80%9A%E7%9F%A5%E4%B8%8A%E6%9E%B6-%E6%97%A5%E7%B3%BB%E4%BA%8C%E6%AC%A1%E5%85%83-%E7%99%82%E7%99%92%E7%B3%BB%E5%8F%AF%E6%84%9B%E8%B2%93%E5%92%AA-idle-rpg-games-%E8%B2%93%E5%92%AA%E9%81%8A%E6%88%B2%E4%BE%86%E8%A5%B2%E4%BC%91%E9%96%92%E6%94%BE%E7%BD%AE-%E6%94%B6%E9%9B%86%E8%B6%85%E5%A4%9A%E8%B2%93%E6%88%B0%E8%8B%B1%E9%9B%84-%E6%89%93%E9%80%A0%E6%9C%80%E5%BC%B7%E9%9A%8A%E4%BC%8D-%E5%AE%8C/1085364083607407/",
+      "官方網站": "https://apps.apple.com/mo/app/%E5%96%B5%E5%96%B5%E7%8E%8B%E5%9C%8B-%E8%B2%93%E5%92%AA%E6%94%BE%E7%BD%AErpg/id1606840138",
+      "禮包碼": "gift-codes.html?game=喵喵王國",
+      "App Store": "https://apps.apple.com/tw/app/%E5%96%B5%E5%96%B5%E7%8E%8B%E5%9C%8B-%E8%B2%93%E5%92%AA%E6%94%BE%E7%BD%AErpg/id1606840138",
+      "巴哈姆特": "https://m.gamer.com.tw/forum/C.php?bsn=71340&snA=3"
+    }
+  },
+  "東京謎影者": {
+    "logo": "images/東京謎影者.jpg",
+    "products": [
+      {
+        "name": "5000鑽石",
+        "price": 2700
+      },
+      {
+        "name": "2100鑽石",
+        "price": 1100
+      },
+      {
+        "name": "1100鑽石",
+        "price": 580
+      },
+      {
+        "name": "500鑽石",
+        "price": 300
+      },
+      {
+        "name": "325鑽石",
+        "price": 200
+      },
+      {
+        "name": "80鑽石",
+        "price": 60
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/TokyoDebunker/?locale=zh_TW",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.zigzagame.tokyodebunker&hl=zh_TW",
+      "禮包碼": "gift-codes.html?game=東京謎影者",
+      "App Store": "https://apps.apple.com/tw/app/%E6%9D%B1%E4%BA%AC%E8%AC%8E%E5%BD%B1%E8%80%85/id1453840513",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=37645"
+    }
+  },
+  "戰極死遊": {
+    "logo": "images/戰極死遊.jpg",
+    "products": [
+      {
+        "name": "4955神秘粒子結晶",
+        "price": 1900
+      },
+      {
+        "name": "2793神秘粒子結晶",
+        "price": 1050
+      },
+      {
+        "name": "1396神秘粒子結晶",
+        "price": 540
+      },
+      {
+        "name": "486神秘粒子結晶",
+        "price": 190
+      },
+      {
+        "name": "207神秘粒子結晶",
+        "price": 90
+      },
+      {
+        "name": "68神秘粒子結晶",
+        "price": 35
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/tribenine.ch/",
+      "官方網站": "https://www.facebook.com/tribenine.ch/",
+      "禮包碼": "gift-codes.html?game=戰極死遊",
+      "App Store": "https://apps.apple.com/tw/app/tribe-nine-%E6%88%B0%E6%A5%B5%E6%AD%BB%E9%81%8A/id6737577149",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=72654"
+    }
+  },
+  "進擊的蝸牛": {
+    "logo": "images/進擊的蝸牛.jpg",
+    "products": [
+      {
+        "name": "3290彩鑽",
+        "price": 2750
+      },
+      {
+        "name": "1690彩鑽",
+        "price": 1400
+      },
+      {
+        "name": "670彩鑽",
+        "price": 560
+      },
+      {
+        "name": "330彩鑽",
+        "price": 280
+      },
+      {
+        "name": "170彩鑽",
+        "price": 160
+      },
+      {
+        "name": "33彩鑽",
+        "price": 40
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/groups/531323709571373/",
+      "官方網站": "https://www.facebook.com/photo.php?fbid=122119047320688406&id=61570652196343&set=a.122100289838688406",
+      "禮包碼": "gift-codes.html?game=進擊的蝸牛",
+      "App Store": "https://apps.apple.com/tw/app/%E9%80%B2%E6%93%8A%E7%9A%84%E8%9D%B8%E7%89%9B/id6737221378",
+      "巴哈姆特": "https://home.gamer.com.tw/creationDetail.php?sn=5997365"
+    }
+  },
+  "純白大作戰": {
+    "logo": "images/純白大作戰.jpg",
+    "products": [
+      {
+        "name": "668寶石",
+        "price": 2750
+      },
+      {
+        "name": "328寶石",
+        "price": 1400
+      },
+      {
+        "name": "198寶石",
+        "price": 950
+      },
+      {
+        "name": "98寶石",
+        "price": 450
+      },
+      {
+        "name": "30寶石",
+        "price": 160
+      },
+      {
+        "name": "60寶石",
+        "price": 60
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/adventureofwhitechord/",
+      "官方網站": "https://www.facebook.com/adventureofwhitechord/",
+      "禮包碼": "gift-codes.html?game=純白大作戰",
+      "App Store": "https://apps.apple.com/tw/app/%E7%B4%94%E7%99%BD%E5%A4%A7%E4%BD%9C%E6%88%B0/id6711351494",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81418"
+    }
+  },
+  "黑星勇者": {
+    "logo": "images/黑星勇者.jpg",
+    "products": [
+      {
+        "name": "6480鑽石",
+        "price": 2700
+      },
+      {
+        "name": "3880鑽石",
+        "price": 1350
+      },
+      {
+        "name": "1280鑽石",
+        "price": 630
+      },
+      {
+        "name": "680鑽石",
+        "price": 300
+      },
+      {
+        "name": "300鑽石",
+        "price": 150
+      },
+      {
+        "name": "60鑽石",
+        "price": 40
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/BlackStarKunpan/?locale=zh_TW",
+      "官方網站": "https://www.facebook.com/BlackStarKunpan/",
+      "禮包碼": "gift-codes.html?game=黑星勇者",
+      "App Store": "https://apps.apple.com/tw/app/%E9%BB%91%E6%98%9F%E5%8B%87%E8%80%85-%E5%83%8F%E7%B4%A0%E9%A2%A8%E6%97%A5%E5%BC%8F%E7%B6%93%E5%85%B8rpg/id6477338312",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=79426"
+    }
   }
 }

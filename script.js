@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function loadGameDetails(gameName, game) {
     const gameLogo = document.getElementById("gameLogo");
-    document.getElementById("gameTitle").textContent = gameName;
+    document.getElementById("gameTitle").textContent =  `${gameName} 代儲值`;
     document.getElementById("gameName").value = gameName;
     gameLogo.src = game.logo;
     gameLogo.onerror = () => {
@@ -599,7 +599,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const game = decodeURIComponent(params.get("game") || "未知遊戲");
 
     document.querySelectorAll('[id^="gameName"]').forEach(el => el.textContent = game);
-    document.getElementById("giftTitle").textContent = `${game} 禮包碼領取`;
+    document.getElementById("giftTitle").textContent = `${game} 最新禮包碼|兌換碼|序號|免費領取`;
 
     try {
         const res = await fetch("gift-codes-data.json");

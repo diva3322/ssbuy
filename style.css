@@ -345,8 +345,8 @@ body {
 
 /* 遊戲LOGO => 150=>7.8vw, border-radius=>10px=>0.52vw, margin-bottom:5=>0.26vw */ /* 這一行是註解，標示遊戲Logo樣式開始 */
 .game-logo {
-    width: 8.5vh; /* 這一行設定遊戲Logo寬度為7.8vw */
-    height: 8.5vh; /* 這一行設定遊戲Logo高度為7.8vw，保持正方形 */
+    width: 14vh; /* 這一行設定遊戲Logo寬度為7.8vw */
+    height: 14vh; /* 這一行設定遊戲Logo高度為7.8vw，保持正方形 */
     border-radius: 0.52vh; /* 這一行設定遊戲Logo邊框圓角為0.52vw */
     object-fit: cover; /* 這一行使遊戲Logo圖片按比例裁剪填滿 */
     display: block; /* 這一行設定遊戲Logo為塊級元素 */

@@ -697,8 +697,6 @@ img.zoomable {
   list-style-position: inside;  /* 數字排在內部，避免超出框 */
 }
 
-
-
 /* h1 => margin-bottom:40px =>2.08vw, font-size:36px=>1.87vw */ /* 這一行是註解，標示內容盒h1樣式開始 */
 .info-page .content-box h1 {
     color: #ffcc00; /* 這一行設定h1文字為黃色 */
@@ -1036,7 +1034,7 @@ img.zoomable {
     width: 100vw;        /* 確保寬度不超過螢幕 */
   }
   
-    .gift-mobile-grid {
+.gift-mobile-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -1045,7 +1043,7 @@ img.zoomable {
 
 .new-games-page h1 {
     color: #ffcc00; /* 這一行設定h1文字為黃色 */
-	margin-top:2vh;
+	margin-top:-10vh;
 	margin-bottom:0vh;
 }
 
@@ -1175,14 +1173,23 @@ img.zoomable {
 
 .mobile-vertical .main-content {
   display: flex;
-  flex-direction: row;      /* ← 原本是 column，改成 row */
+  flex-direction: column;      /* ← 原本是 column，改成 row */
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 3vw;
 }
 
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0vh;
+    align-items: center;
+    justify-content: flex;
+  }
+
 .index-page h1 {
-    padding-left:10vw;
+	align-items: center;
 }
 
 .mobile-vertical .game-slider-container {
@@ -1277,14 +1284,6 @@ img.zoomable {
   padding-bottom: 10vh;
   padding-left: 5vw;
   padding-right: 5vw;
-  }
-
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0vh;
-    align-items: center;
-    justify-content: flex;
   }
 
   .game-slider {

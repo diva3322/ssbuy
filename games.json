@@ -3838,5 +3838,121 @@
       "App Store": "https://apps.apple.com/tw/app/%E9%AD%94%E5%8A%9B%E5%AF%B6%E8%B2%9D-%E5%BE%A9%E8%88%88/id6736690369",
       "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82309"
     }
+  },
+  "東京喰種Awakening": {
+    "logo": "images/東京喰種Awakening.jpg",
+    "products": [
+      {
+        "name": "8000鑽石",
+        "price": 2680
+      },
+      {
+        "name": "4000鑽石",
+        "price": 1370
+      },
+      {
+        "name": "2000鑽石",
+        "price": 740
+      },
+      {
+        "name": "1200鑽石",
+        "price": 440
+      },
+      {
+        "name": "400鑽石",
+        "price": 160
+      },
+      {
+        "name": "80鑽石",
+        "price": 40
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/tokyoghoulawakening/",
+      "官方網站": "https://www.facebook.com/tokyoghoulawakening/",
+      "禮包碼": "gift-codes.html?game=東京喰種Awakening",
+      "App Store": "https://apps.apple.com/tw/app/%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE-awakening/id6739484886",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82398"
+    }
+  },
+  "晶核": {
+    "logo": "images/晶核.jpg",
+    "products": [
+      {
+        "name": "6480歐珀(首儲雙倍)",
+        "price": 2630
+      },
+      {
+        "name": "3280歐珀(首儲雙倍)",
+        "price": 1340
+      },
+      {
+        "name": "1980歐珀(首儲雙倍)",
+        "price": 860
+      },
+      {
+        "name": "980歐珀(首儲雙倍)",
+        "price": 430
+      },
+      {
+        "name": "300歐珀(首儲雙倍)",
+        "price": 160
+      },
+      {
+        "name": "60歐珀(首儲雙倍)",
+        "price": 40
+      },
+      {
+        "name": "幻晶月令30天",
+        "price": 150
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/CrystalofAtlan.TW/",
+      "官方網站": "https://coa.nvsgames.cn/",
+      "禮包碼": "gift-codes.html?game=晶核",
+      "App Store": "https://apps.apple.com/tw/app/%E6%99%B6%E6%A0%B8/id6453111576",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=75408"
+    }
+  },
+  "無盡夢迴": {
+    "logo": "images/無盡夢迴.jpg",
+    "products": [
+      {
+        "name": "2990+898夢華",
+        "price": 2520
+      },
+      {
+        "name": "1580+370夢華",
+        "price": 1330
+      },
+      {
+        "name": "990+160夢華",
+        "price": 830
+      },
+      {
+        "name": "490+60夢華",
+        "price": 420
+      },
+      {
+        "name": "150+15夢華",
+        "price": 150
+      },
+      {
+        "name": "30夢華",
+        "price": 40
+      },
+      {
+        "name": "盈月美夢眷",
+        "price": 150
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/dreamzSSG/",
+      "官方網站": "https://www.facebook.com/dreamzSSG/",
+      "禮包碼": "gift-codes.html?game=無盡夢迴",
+      "App Store": "https://apps.apple.com/tw/app/%E7%84%A1%E7%9B%A1%E5%A4%A2%E8%BF%B4/id6740556991",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81091"
+    }
   }
 }

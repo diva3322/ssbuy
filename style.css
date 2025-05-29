@@ -310,7 +310,7 @@ body {
     content: "✔"; /* 這一行設定選中時複選框顯示勾勾符號 */
     font-size: 4vh; /* 這一行設定勾勾符號字體大小為1.14vw */
     font-weight: bold; /* 這一行設定勾勾符號字體為粗體 */
-    color: #fff; /* 這一行設定勾勾符號顏色為白色 */
+    color: #fffff; /* 這一行設定勾勾符號顏色為白色 */
     display: flex; /* 這一行使勾勾符號使用flex布局 */
     align-items: center; /* 這一行使勾勾符號垂直置中 */
     justify-content: center; /* 這一行使勾勾符號水平置中 */

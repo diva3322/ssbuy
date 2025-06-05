@@ -3954,5 +3954,381 @@
       "App Store": "https://apps.apple.com/tw/app/%E7%84%A1%E7%9B%A1%E5%A4%A2%E8%BF%B4/id6740556991",
       "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81091"
     }
+  },
+  "RO仙境傳說：放推冒險團": {
+    "logo": "images/RO仙境傳說放推冒險團.jpg",
+    "products": [
+      {
+        "name": "6580金幣",
+        "price": 2659
+      },
+      {
+        "name": "3380金幣",
+        "price": 1385
+      },
+      {
+        "name": "1340金幣",
+        "price": 557
+      },
+      {
+        "name": "980金幣",
+        "price": 407
+      },
+      {
+        "name": "340金幣",
+        "price": 150
+      },
+      {
+        "name": "66金幣",
+        "price": 29
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/rot.gravity/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.gravitycomms.rot.aos",
+      "禮包碼": "gift-codes.html?game=RO仙境傳說：放推冒險團",
+      "App Store": "https://apps.apple.com/tw/app/ro%E4%BB%99%E5%A2%83%E5%82%B3%E8%AA%AA-%E6%94%BE%E6%8E%A8%E5%86%92%E9%9A%AA%E5%9C%98/id6742482846",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82638"
+    }
+  },
+  "英雄刷刷刷": {
+    "logo": "images/英雄刷刷刷.jpg",
+    "products": [
+      {
+        "name": "6480暗金幣",
+        "price": 2659
+      },
+      {
+        "name": "3280暗金幣",
+        "price": 1385
+      },
+      {
+        "name": "1980暗金幣",
+        "price": 812
+      },
+      {
+        "name": "1280暗金幣",
+        "price": 557
+      },
+      {
+        "name": "980暗金幣",
+        "price": 407
+      },
+      {
+        "name": "680暗金幣",
+        "price": 274
+      },
+      {
+        "name": "300暗金幣",
+        "price": 150
+      },
+      {
+        "name": "180暗金幣",
+        "price": 89
+      },
+      {
+        "name": "120暗金幣",
+        "price": 53
+      },
+      {
+        "name": "60暗金幣",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/com.megoogames.herotw/",
+      "官方網站": "https://www.facebook.com/com.megoogames.herotw/",
+      "禮包碼": "gift-codes.html?game=英雄刷刷刷",
+      "App Store": "https://apps.apple.com/tw/app/%E8%8B%B1%E9%9B%84%E5%88%B7%E5%88%B7%E5%88%B7/id6742137449",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82726"
+    }
+  },
+  "萬靈物語": {
+    "logo": "images/萬靈物語.jpg",
+    "products": [
+      {
+        "name": "6480鑽石",
+        "price": 2659
+      },
+      {
+        "name": "3280鑽石",
+        "price": 1385
+      },
+      {
+        "name": "1280鑽石",
+        "price": 557
+      },
+      {
+        "name": "980鑽石",
+        "price": 407
+      },
+      {
+        "name": "300鑽石",
+        "price": 150
+      },
+      {
+        "name": "60鑽石",
+        "price": 29
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/icantw.MR/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.icantw.mr",
+      "禮包碼": "gift-codes.html?game=萬靈物語",
+      "App Store": "https://apps.apple.com/tw/app/%E8%90%AC%E9%9D%88%E7%89%A9%E8%AA%9E/id6743747548",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82705"
+    }
+  },
+  "斗羅大陸：逆轉時空": {
+    "logo": "images/斗羅大陸逆轉時空.jpg",
+    "products": [
+      {
+        "name": "648鑽石",
+        "price": 2659
+      },
+      {
+        "name": "328鑽石",
+        "price": 1385
+      },
+      {
+        "name": "198鑽石",
+        "price": 803
+      },
+      {
+        "name": "128鑽石",
+        "price": 557
+      },
+      {
+        "name": "98鑽石",
+        "price": 407
+      },
+      {
+        "name": "30鑽石",
+        "price": 274
+      },
+      {
+        "name": "18鑽石",
+        "price": 150
+      },
+      {
+        "name": "6鑽石",
+        "price": 29
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/DLNZSK/",
+      "官方網站": "https://apps.apple.com/cn/app/%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86-%E9%80%86%E8%BD%AC%E6%97%B6%E7%A9%BA/id6478529670",
+      "禮包碼": "gift-codes.html?game=斗羅大陸：逆轉時空",
+      "App Store": "https://apps.apple.com/tw/app/%E6%96%97%E7%BE%85%E5%A4%A7%E9%99%B8-%E9%80%86%E8%BD%89%E6%99%82%E7%A9%BA/id6740516191",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82386"
+    }
+  },
+  "魔靈召喚：保衛戰": {
+    "logo": "images/魔靈召喚保衛戰.jpg",
+    "products": [
+      {
+        "name": "149000+149000紅水晶",
+        "price": 2659
+      },
+      {
+        "name": "99000+99000紅水晶",
+        "price": 1631
+      },
+      {
+        "name": "49000+49000紅水晶",
+        "price": 975
+      },
+      {
+        "name": "29000+29000紅水晶",
+        "price": 574
+      },
+      {
+        "name": "9900+9900紅水晶",
+        "price": 241
+      },
+      {
+        "name": "3300+3300紅水晶",
+        "price": 89
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/SWarTC/",
+      "官方網站": "https://gnn.gamer.com.tw/detail.php?sn=278484",
+      "禮包碼": "gift-codes.html?game=魔靈召喚：保衛戰",
+      "App Store": "https://apps.apple.com/tw/developer/com2us-corp/id299175870",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=81750"
+    }
+  },
+  "潘多蘭島": {
+    "logo": "images/潘多蘭島.jpg",
+    "products": [
+      {
+        "name": "8200鑽石",
+        "price": 2659
+      },
+      {
+        "name": "4000鑽石",
+        "price": 1385
+      },
+      {
+        "name": "1560鑽石",
+        "price": 557
+      },
+      {
+        "name": "780鑽石",
+        "price": 274
+      },
+      {
+        "name": "300鑽石",
+        "price": 150
+      },
+      {
+        "name": "跳過廣告",
+        "price": 283
+      },
+      {
+        "name": "特權PASS",
+        "price": 812
+      },
+      {
+        "name": "每月PASS",
+        "price": 150
+      },
+      {
+        "name": "體力PASS",
+        "price": 150
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/PandolandTW/",
+      "官方網站": "https://www.facebook.com/PandolandTW/",
+      "禮包碼": "gift-codes.html?game=潘多蘭島",
+      "App Store": "https://apps.apple.com/tw/app/%E6%BD%98%E5%A4%9A%E8%98%AD%E5%B3%B6-pandoland/id6474245208",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=80540"
+    }
+  },
+  "電鋸果汁大亂鬥": {
+    "logo": "images/電鋸果汁大亂鬥.jpg",
+    "products": [
+      {
+        "name": "12000鑽石",
+        "price": 2659
+      },
+      {
+        "name": "5000鑽石",
+        "price": 1385
+      },
+      {
+        "name": "2000鑽石",
+        "price": 557
+      },
+      {
+        "name": "900鑽石",
+        "price": 274
+      },
+      {
+        "name": "400鑽石",
+        "price": 150
+      },
+      {
+        "name": "去廣告禮包",
+        "price": 324
+      },
+      {
+        "name": "VIP禮包",
+        "price": 266
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/groups/1329277748069412/posts/1329278518069335/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.loadcomplete.aichainsaw&hl=zh_TW",
+      "禮包碼": "gift-codes.html?game=電鋸果汁大亂鬥",
+      "App Store": "https://apps.apple.com/tw/app/%E9%9B%BB%E9%8B%B8%E6%9E%9C%E6%B1%81%E5%A4%A7%E4%BA%82%E9%AC%A5/id6450706268",
+      "巴哈姆特": "https://play.google.com/store/apps/details?id=com.loadcomplete.aichainsaw&hl=zh_TW"
+    }
+  },
+  "風色幻想NeXus": {
+    "logo": "images/風色幻想NeXus.jpg",
+    "products": [
+      {
+        "name": "6000幻月石",
+        "price": 2659
+      },
+      {
+        "name": "2980幻月石",
+        "price": 1385
+      },
+      {
+        "name": "2000幻月石",
+        "price": 812
+      },
+      {
+        "name": "1000幻月石",
+        "price": 407
+      },
+      {
+        "name": "300幻月石",
+        "price": 150
+      },
+      {
+        "name": "祭風呢喃",
+        "price": 557
+      },
+      {
+        "name": "風華星輝",
+        "price": 274
+      },
+      {
+        "name": "寶窟之鑰",
+        "price": 150
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/wfnx.gameflier/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.gameflier.wfnx.google",
+      "禮包碼": "gift-codes.html?game=風色幻想NeXus",
+      "App Store": "https://apps.apple.com/tw/app/%E9%A2%A8%E8%89%B2%E5%B9%BB%E6%83%B3nexus/id6505138043",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=74346"
+    }
+  },
+  "星河訣愛": {
+    "logo": "images/星河訣愛.jpg",
+    "products": [
+      {
+        "name": "6480元寶",
+        "price": 2659
+      },
+      {
+        "name": "3280元寶",
+        "price": 1385
+      },
+      {
+        "name": "1980元寶",
+        "price": 812
+      },
+      {
+        "name": "1280元寶",
+        "price": 557
+      },
+      {
+        "name": "680元寶",
+        "price": 274
+      },
+      {
+        "name": "300元寶",
+        "price": 150
+      },
+      {
+        "name": "60元寶",
+        "price": 29
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/CelestiaSaga/",
+      "官方網站": "https://www.facebook.com/CelestiaSaga/",
+      "禮包碼": "gift-codes.html?game=星河訣愛",
+      "App Store": "https://apps.apple.com/tw/app/%E5%BE%A1%E5%8A%8D-%E6%98%9F%E6%B2%B3%E8%A8%A3%E6%84%9B/id6742213780",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=82525"
+    }
   }
 }

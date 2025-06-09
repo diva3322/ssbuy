@@ -613,7 +613,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const gameData = data[game];
 		
     // 🔥 設定橫幅圖片
-    const bannerPath = `giftcodesbanner/${gameData.banner || "default.jpg"}`;
+    const bannerPath = gameData.banner || "giftcodesbanner/default.jpg";
     const bannerImg = document.getElementById("giftBanner");
     if (bannerImg) {
         bannerImg.src = bannerPath;
@@ -714,3 +714,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+

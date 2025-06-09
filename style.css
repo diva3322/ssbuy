@@ -370,7 +370,7 @@ body {
 
 /* social-media => margin-top:170px=> ~8.85vw */ /* 這一行是註解，標示社交媒體區樣式開始 */
 .social-media {
-    margin-top: 20vh; /* 這一行設定社交媒體區上方外邊距為8.85vw */
+    margin-top: 5vh; /* 這一行設定社交媒體區上方外邊距為8.85vw */
 }
 
 .social-media-links {

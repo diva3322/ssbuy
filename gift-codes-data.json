@@ -4,40 +4,33 @@
     "description": "《巔峰極速》是與Codemasters®深度合作, 3A級巔峰品質擬真競速遊戲。 玩家可以自由收集、改裝超過100款正版授權的豪華車輛，馳騁在全世界的街道與專業賽道上，感受極致光影與真實轟鳴聲帶來的沉浸體驗，更擁有豐富的競速玩法，立即加入與其他玩家進行即時競速對決，突破賽車的速度極限！",
     "howTo": [
       "進入主畫面，點選個人頭像",
-      "進入右上角設定（齒輪）",
+      "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
     "codes": [
       {
-        "code": "DF666",
-        "reward": "鑽石 x100 + 金幣 x2000"
+        "code": "10000racers",
+        "reward": "_"
       },
       {
-        "code": "DF777",
-        "reward": "隨機紫色車輛一台"
+        "code": "VIP777",
+        "reward": "_"
       },
       {
-        "code": "DF888",
-        "reward": "車車"
-      }
-    ]
-  },
-  "超派救星幫幫忙": {
-    "banner": "giftcodesbanner/超派救星幫幫忙-bar.jpg",
-    "description": "殭屍來襲，末日當前！《超派救星幫幫忙》是一款結合背包管理與彈幕射擊的全新世代割草遊戲，讓你在腦力與操作間找到完美平衡！殭屍如同潮水般撲面而來，快拿起武器開闢一條生存之路，看看你能撐多久吧！",
-    "howTo": [
-      "進入主畫面，點選個人頭像",
-      "進入右上角設定（齒輪）",
-      "輸入禮包碼 → 確認兌換"
-    ],
-    "codes": [
-      {
-        "code": "aaa666",
-        "reward": "666"
+        "code": "VIP888",
+        "reward": "_"
       },
       {
-        "code": "aaa777",
-        "reward": "777"
+        "code": "KINGO1019",
+        "reward": "_"
+      },
+      {
+        "code": "BEBE888",
+        "reward": "_"
+      },
+      {
+        "code": "TEAMRACE666",
+        "reward": "_"
       }
     ]
   },
@@ -46,47 +39,1443 @@
     "description": "原神，啟動!",
     "howTo": [
       "進入主畫面，點選個人頭像",
-      "進入右上角設定（齒輪）",
+      "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
     "codes": [
       {
-        "code": "yyy666",
-        "reward": "666"
+        "code": "GS57YTSNLJ",
+        "reward": "原神素材兌換專用"
       },
       {
-        "code": "yyy777",
-        "reward": "777"
+        "code": "LWKC638ULB16",
+        "reward": "摩拉 x10,000、冒險家的經驗 x10、精鍛用雜礦 x5、香嫩椒椒雞 x5、乾炒魚河 x5"
       },
       {
-        "code": "yyy888",
-        "reward": "888"
+        "code": "ZT5RJ4AX4WYV",
+        "reward": "原石 x60、冒險家的經驗 x5"
+      },
+      {
+        "code": "GenshinGIFT",
+        "reward": "原石 x50、大英雄的經驗 x3"
       }
     ]
   },
-  "黑星勇者": {
-    "banner": "黑星勇者-bar.jpg",
-    "description": "經典日式像素風鬼畜RPG《黑星勇者》",
+  "極速快感": {
+    "banner": "giftcodesbanner/極速快感-bar.jpg",
+    "description": "",
     "howTo": [
-      "在游戲解鎖福利功能后，可以在其中的兌換碼界面進行兌換"
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "極速快感集結666",
+        "reward": "100鑽石、500熱彎幣"
+      },
+      {
+        "code": "極速快感沖刺測試",
+        "reward": "50鑽石、300熱彎幣"
+      },
+      {
+        "code": "NFSM7EUV49",
+        "reward": "_"
+      },
+      {
+        "code": "NEEDFORSPEEDNOX",
+        "reward": "_"
+      }
+    ]
+  },
+  "俠客傳說：小小英雄": {
+    "banner": "giftcodesbanner/俠客傳說：小小英雄-bar.jpg",
+    "description": "有你的地方，就有江湖。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "sshero",
+        "reward": "_"
+      },
+      {
+        "code": "sshero66",
+        "reward": "_"
+      },
+      {
+        "code": "tiger666",
+        "reward": "_"
+      },
+      {
+        "code": "tiger777",
+        "reward": "_"
+      },
+      {
+        "code": "iu216yrtm4bn",
+        "reward": "_"
+      },
+      {
+        "code": "4d9xnyukxwsn",
+        "reward": "_"
+      }
+    ]
+  },
+  "逆水寒": {
+    "banner": "giftcodesbanner/逆水寒-bar.jpg",
+    "description": "新武俠大世界冒險RPG《俠客傳說：小小英雄》",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "MMOKING",
+        "reward": "66綁定紋玉、28,888交子"
+      }
+    ]
+  },
+  "RO仙境傳說：一定要可愛": {
+    "banner": "giftcodesbanner/RO仙境傳說：一定要可愛-bar.jpg",
+    "description": "可不可愛？我們說了算！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "BahamutNO1",
+        "reward": "懸賞通緝掃蕩權 × 4"
+      },
+      {
+        "code": "fanpage3000",
+        "reward": "ZENY*30,000"
+      },
+      {
+        "code": "NOVICE01",
+        "reward": "地城入場補充卷*1"
+      },
+      {
+        "code": "SWORDSMAN02",
+        "reward": "地城入場補充卷*1"
+      },
+      {
+        "code": "BahamutNO1",
+        "reward": "懸賞通緝掃蕩權* 4"
+      },
+      {
+        "code": "ARCHER03",
+        "reward": "十字搞*2"
+      }
+    ]
+  },
+  "RO新世代": {
+    "banner": "giftcodesbanner/RO新世代-bar.jpg",
+    "description": "官方正版RO最新作「RO仙境傳説：新世代的誕生」，煥新啓航！不刪檔公測開啟！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "pfyloveroxictop4",
+        "reward": "_"
+      },
+      {
+        "code": "ROXIC666J",
+        "reward": "_"
+      },
+      {
+        "code": "ROXIC636J",
+        "reward": "_"
+      },
+      {
+        "code": "ROXIC973J",
+        "reward": "_"
+      },
+      {
+        "code": "ROXIC562J",
+        "reward": "_"
+      },
+      {
+        "code": "FPCPAJIE2624",
+        "reward": "_"
+      }
+    ]
+  },
+  "上古：龍神覺醒": {
+    "banner": "giftcodesbanner/上古：龍神覺醒-bar.jpg",
+    "description": "首款龍主題MMO鉅作！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "DG666",
+        "reward": "_"
+      },
+      {
+        "code": "DG777",
+        "reward": "_"
+      },
+      {
+        "code": "DG888",
+        "reward": "_"
+      },
+      {
+        "code": "VIP666",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP888",
+        "reward": "_"
+      }
+    ]
+  },
+  "小艦艦超勇": {
+    "banner": "giftcodesbanner/小艦艦超勇-bar.jpg",
+    "description": "無止境的武器升級，打造你的最強艦隊！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "OUTLANDER777",
+        "reward": "_"
+      },
+      {
+        "code": "ABBY01011",
+        "reward": "_"
+      },
+      {
+        "code": "MIMI01021",
+        "reward": "_"
+      },
+      {
+        "code": "HIGHSEASHEROGO",
+        "reward": "_"
+      },
+      {
+        "code": "HAPPYHSH777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      }
+    ]
+  },
+  "天使軍團": {
+    "banner": "giftcodesbanner/天使軍團-bar.jpg",
+    "description": "天使軍團是最新推出的3D天使銀河冒險RPG手遊。 希拉星系，深邃而瑰麗……這裡曾存在著古老時期的文明。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "DscdRetrom43zw",
+        "reward": "_"
+      },
+      {
+        "code": "Mkjptfjlny8j31",
+        "reward": "_"
+      },
+      {
+        "code": "ALFacebook",
+        "reward": "_"
+      }
+    ]
+  },
+  "天堂W": {
+    "banner": "giftcodesbanner/天堂W-bar.jpg",
+    "description": "《天堂W》是繼承PC MMORPG天堂正統性的跨平台遊戲，全球單一版本服務，即時AI翻譯；Full 3D畫面和斜45度視角開發的暗黑奇幻世界；將天堂的核心內容戰鬥社群延伸到世界。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "HOTNEWYEARADEN24",
+        "reward": "_"
+      },
+      {
+        "code": "BLUEDRAGONW",
+        "reward": "_"
+      }
+    ]
+  },
+  "少女前線2：追放": {
+    "banner": "giftcodesbanner/少女前線2：追放-bar.jpg",
+    "description": "講述了指揮官與格里芬之間無法調和的理念衝突，導致指揮官選擇自我流放，成為賞金獵人。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "ULLRID1205",
+        "reward": "戰場報告*5000、解析圖紙*5000"
+      },
+      {
+        "code": "SUOMI1205",
+        "reward": "戰場報告*5000、解析圖紙*5000"
+      },
+      {
+        "code": "ELMO1205",
+        "reward": "坍塌晶條*150、薩狄斯金*5000"
+      },
+      {
+        "code": "EXILIUMDC",
+        "reward": "戰場報告*5000、解析圖紙*5000"
+      },
+      {
+        "code": "GLASSISLE",
+        "reward": "_"
+      },
+      {
+        "code": "ELMOLIVE",
+        "reward": "坍塌晶條*50、戰場報告*5000、解析圖紙*5000"
+      }
+    ]
+  },
+  "幻獸傳說Ｍ": {
+    "banner": "giftcodesbanner/幻獸傳說Ｍ-bar.jpg",
+    "description": "2025年萬眾期待的幻獸手遊來啦！異世界捉獸育獸RPG《幻獸傳說M》現已上市！豆花蔡黃汝可愛代言，演繹疾海兔！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "FAFA666",
+        "reward": "_"
+      },
+      {
+        "code": "FAFA777",
+        "reward": "_"
+      },
+      {
+        "code": "FAFA888",
+        "reward": "_"
+      },
+      {
+        "code": "SSSVIP333",
+        "reward": "_"
+      },
+      {
+        "code": "SSSVIP444",
+        "reward": "_"
+      },
+      {
+        "code": "SSSVIP555",
+        "reward": "_"
+      }
+    ]
+  },
+  "未定事件簿": {
+    "banner": "giftcodesbanner/未定事件簿-bar.jpg",
+    "description": "當正義與邪惡的界定越來越模糊，妳手中的天平將會傾向何方？一場戀愛與推理的冒險，此刻，邀妳共赴。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "HAPPY38WOMENSDAY",
+        "reward": "未名晶片*60+未名幣*3800+法理之諭III*8"
+      },
+      {
+        "code": "520FALLINLOVE",
+        "reward": "未名晶片×100+友誼徽章×520+未名幣×13140"
+      },
+      {
+        "code": "SUMMERGIFT",
+        "reward": "未名晶片×60+未名幣×10000+能量飲料普通裝×1"
+      },
+      {
+        "code": "DRAGONBOAT",
+        "reward": "未名晶片×60+法理之諭III×20"
+      },
+      {
+        "code": "HappyDragonBoat2025",
+        "reward": "未名晶片×60、未名幣 ×5500、能量飲料普通裝 ×1"
+      }
+    ]
+  },
+  "永恆靈魂": {
+    "banner": "giftcodesbanner/永恆靈魂-bar.jpg",
+    "description": "末日的今天，精靈們等候您的指示…救援者，帶領著她們的靈魂活下去吧。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "2Qgift0325",
+        "reward": "1,000個永恆石"
+      }
+    ]
+  },
+  "守住呀主公": {
+    "banner": "giftcodesbanner/守住呀主公-bar.jpg",
+    "description": "喜歡策略塔防、鍾愛三國名將的你，絕對不容錯過這款高畫質3D塔防力作！豐富的塔防玩法、酷炫的技能特效，讓你盡享爽快的遊戲體驗。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
     ],
     "codes": [
       {
         "code": "VIP666",
-        "reward": "666"
-      },
-      {
-        "code": "VIP777",
-        "reward": "777"
+        "reward": "_"
       },
       {
         "code": "VIP888",
-        "reward": "888"
+        "reward": "_"
+      },
+      {
+        "code": "WEEKGIFT",
+        "reward": "_"
+      },
+      {
+        "code": "KH26UB56P",
+        "reward": "_"
+      },
+      {
+        "code": "UYJH658YY",
+        "reward": "_"
+      },
+      {
+        "code": "VIP6699",
+        "reward": "_"
+      }
+    ]
+  },
+  "吟遊戰記": {
+    "banner": "giftcodesbanner/吟遊戰記-bar.jpg",
+    "description": "新感覺放置型勇者冒險RPG，登入即可獲得免費9999連抽！輕鬆休閒的冒險，來一場解放雙手的戰鬥吧！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "VIP666",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP888",
+        "reward": "_"
       },
       {
         "code": "VIP999",
-        "reward": "999.0"
+        "reward": "_"
       }
     ]
+  },
+  "我獨自升級：ARISE": {
+    "banner": "giftcodesbanner/我獨自升級：ARISE-bar.jpg",
+    "description": "德國最強的獵人，也是世界獵人排名第12名的S級「萊納德．尼爾曼」已加入完成！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "SLALIVESTREAM",
+        "reward": "_"
+      },
+      {
+        "code": "JULYUPDATELIVE",
+        "reward": "_"
+      },
+      {
+        "code": "SEEYOUSOON",
+        "reward": "_"
+      },
+      {
+        "code": "SURPRISEGIFT",
+        "reward": "_"
+      },
+      {
+        "code": "THXSLVARISETHX",
+        "reward": "_"
+      },
+      {
+        "code": "WORLD1STLEVELUP",
+        "reward": "_"
+      }
+    ]
+  },
+  "命運聖契：少女的羈絆": {
+    "banner": "giftcodesbanner/命運聖契：少女的羈絆-bar.jpg",
+    "description": "2025首款命運少女輕放置RPG手遊《命運聖契：少女的羈絆》霜糖奇典活动開啟！登錄可得自選SSR、限定頭像框及海量高價值虛寶。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": [
+      {
+        "code": "FEEL666",
+        "reward": "_"
+      },
+      {
+        "code": "PEACH520",
+        "reward": "_"
+      },
+      {
+        "code": "SEX000",
+        "reward": "_"
+      },
+      {
+        "code": "SEX666",
+        "reward": "_"
+      },
+      {
+        "code": "SEX777",
+        "reward": "_"
+      },
+      {
+        "code": "SEX888",
+        "reward": "_"
+      }
+    ]
+  },
+  "放置軍團": {
+    "banner": "giftcodesbanner/放置軍團-bar.jpg",
+    "description": "我們敬愛的魔王大人在與人類的決戰中，因為死亡騎士臨陣倒戈，被人類打碎成了渣渣。我們三個忠心耿耿的小鬼抬著魔王的靈魂碎片，躲進了一座廢棄的地下城。在這裡我們要重新建立地下城，儲備物資，集結軍團！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "明日方舟": {
+    "banner": "giftcodesbanner/明日方舟-bar.jpg",
+    "description": "迷宮裡……竟然存在這樣的地方？準備好刀劍和法杖，也別忘了鍋、鏟和調味料！準備好了嗎，我們要開動了喔！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "屍鬼三國": {
+    "banner": "giftcodesbanner/屍鬼三國-bar.jpg",
+    "description": "獨一款屍鬼化的三國卡牌手遊上市啦！新世代三國卡牌鉅作，融合了ARPG的開放世界設計，你可以在屍鬼橫行的三國亂世中自由探索。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "星鏈計畫：未來少女": {
+    "banner": "giftcodesbanner/星鏈計畫：未來少女-bar.jpg",
+    "description": "在無盡的絕望中，為少女們構築希望藍圖！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "英雄之王": {
+    "banner": "giftcodesbanner/英雄之王-bar.jpg",
+    "description": "除了我們分享的遊戲畫面、影片和其他細節之外，我還想讓大家了解我們對遊戲的期望與願景。\n我們希望能藉由《英雄之王》捕捉遊戲的本質。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "英雄聯盟": {
+    "banner": "giftcodesbanner/英雄聯盟-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "恐龍突變": {
+    "banner": "giftcodesbanner/恐龍突變-bar.jpg",
+    "description": "» 配對以產生受精卵: 進行戰略性交配以創造更強大的恐龍。» 點擊孵化無限的蛋: 不斷擴展你的恐龍收藏。",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "神域": {
+    "banner": "giftcodesbanner/神域-bar.jpg",
+    "description": "對抗邪惡勢力，策略過人的您並非孤軍奮戰，來自世界各地且為數眾多的神話英雄，正等待您的召喚！透過遊戲掛機得到的寶石、材料及各種資源，一支強而有力且技能靈活的自訂專屬軍團，就在您的股掌之間！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "崩壞：星穹鐵道": {
+    "banner": "giftcodesbanner/崩壞：星穹鐵道-bar.jpg",
+    "description": "這片銀河中有名為「星神」的存在，祂們造就現實，抹消星辰，在無數「世界」中留下祂們的痕跡。你——一名特殊的旅客，將偕同繼承「開拓」意志的同伴們，乘坐星穹列車穿越銀河，沿著某位「星神」曾經所行之途前進。你將由此探索新的文明、結識新的夥伴、在無數光怪陸離的「世界」之間展開新的冒險。所有你想知道的，都將在群星中找到解答。\n那麼，準備好開始這段「開拓」之旅了嗎？",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "救世者之樹：新世界": {
+    "banner": "giftcodesbanner/救世者之樹：新世界-bar.jpg",
+    "description": "在重磅上線的樹緣系統中，舉行浪漫的樹緣典禮；集結戰友做好準備，迎戰魔神副本BOSS！\n新手可領取70抽、金色時裝4件套還有限定自選坐騎！\n\n讓我們來看看來自亞洲11地區的勇者們的留言！\n-「日本韓國泰國的妹妹都搶著跟我結緣…好難選哦！」 --來自世界頻道的建巨集007號\n樹緣系統重磅上線，在全服玩家的見證和祝福下，完成盛大浪漫的樹緣典禮！還會擁有一個共同的家園，一起創造美好生活！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "球球英雄": {
+    "banner": "giftcodesbanner/球球英雄-bar.jpg",
+    "description": "怪物們在這一天毫無預兆地突然降臨，城市與家園都籠罩在猙獰與陰霾中。\n我們需要你，勇士！為我們抵禦黑暗勢力！\n來吧！和我們一起，召喚出賦有神奇力量的球球，與黑暗勢力戰鬥！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "第七史詩": {
+    "banner": "giftcodesbanner/第七史詩-bar.jpg",
+    "description": "第七個世界的故事...生命的女神迪彩將自己的權勢瓜分，創造出聖約的繼承者及神獸",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "創世紀戰M：阿修羅計畫": {
+    "banner": "giftcodesbanner/創世紀戰M：阿修羅計畫-bar.jpg",
+    "description": "富饒廣闊的安塔利亞大陸，因戰爭爆發一切風雲變色，飽受戰爭欺凌，\n王女伊歐林帶著王國騎士團，憑藉勇氣與智慧復國，對抗艱難命運。\n面對強大武力的蓋席勒帝國，也絕不屈服！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "最強宗師": {
+    "banner": "giftcodesbanner/最強宗師-bar.jpg",
+    "description": "《最強宗師》是一款最強卡牌策略RPG，在這裡，每位角色都有獨特特質，不存在廢卡，所有資源都能無損傳承，讓你輕鬆成為最強宗師！躺平掛機也能生產材料，輕鬆實現戰力飆升。策略搭配、多樣玩法，帶你領略充滿熱血與智慧的宗門修煉之路！在這裡，人人都可以是主角，天選之人，唯我最強！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "無期迷途": {
+    "banner": "giftcodesbanner/無期迷途-bar.jpg",
+    "description": "《無期迷途》是款以混沌都市為主題的RPG即時策略攻防手遊。身為【米諾斯危機管理局】局長的你，將親手追蹤並收容擁有特殊力量的異能使者——禁閉者們。使用禁閉者的禁忌力量，揭開隱藏在這個世界的真相！\n「您好，新任的局長，我們一直都在等你。」這裡是米諾斯危機管理局，一座收容禁閉者的隱密場所。而您——令人尊敬的局長，將在此釋放其中最強大的禁閉者們。他們或舉止優雅，或性情乖張，或美艷狡猾；唯一的共同點他們都有不為人知的過去，以及超越常人的超凡之力。\n局長，請盡情使用他們的力量，深入狄斯城的禁區，尋找讓世界異變的源頭，解開瘋狂恐怖謎團，去扭轉命運吧！",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "絕區零": {
+    "banner": "giftcodesbanner/絕區零-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "傳說對決": {
+    "banner": "giftcodesbanner/傳說對決-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "楓之谷M": {
+    "banner": "giftcodesbanner/楓之谷M-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "鳴潮": {
+    "banner": "giftcodesbanner/鳴潮-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "劍與遠征：啟程": {
+    "banner": "giftcodesbanner/劍與遠征：啟程-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "熱血大作戰": {
+    "banner": "giftcodesbanner/熱血大作戰-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "骷髏傳說：戰神崛起": {
+    "banner": "giftcodesbanner/骷髏傳說：戰神崛起-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "黎明：血色魔女": {
+    "banner": "giftcodesbanner/黎明：血色魔女-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "黎明啟示錄": {
+    "banner": "giftcodesbanner/黎明啟示錄-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "龍魂旅人": {
+    "banner": "giftcodesbanner/龍魂旅人-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "戀與深空": {
+    "banner": "giftcodesbanner/戀與深空-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "靈魂衝擊：無限放置": {
+    "banner": "giftcodesbanner/靈魂衝擊：無限放置-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "楓葉島": {
+    "banner": "giftcodesbanner/楓葉島-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "無名江湖": {
+    "banner": "giftcodesbanner/無名江湖-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "萬妖領域": {
+    "banner": "giftcodesbanner/萬妖領域-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "一姬當千TD": {
+    "banner": "giftcodesbanner/一姬當千TD-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "劍客行": {
+    "banner": "giftcodesbanner/劍客行-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "時之樹少女": {
+    "banner": "giftcodesbanner/時之樹少女-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "錨點降臨Re：Code": {
+    "banner": "giftcodesbanner/錨點降臨Re：Code-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "神契氣靈師": {
+    "banner": "giftcodesbanner/神契氣靈師-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "不休旅途：繪卷世界": {
+    "banner": "giftcodesbanner/不休旅途：繪卷世界-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "別破防鴨": {
+    "banner": "giftcodesbanner/別破防鴨-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "超派救星幫幫忙": {
+    "banner": "giftcodesbanner/超派救星幫幫忙-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "時光大爆炸": {
+    "banner": "giftcodesbanner/時光大爆炸-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "深淵：不滅者": {
+    "banner": "giftcodesbanner/深淵：不滅者-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "Last War": {
+    "banner": "giftcodesbanner/Last War-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "勇士不要停": {
+    "banner": "giftcodesbanner/勇士不要停-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "元氣火柴人": {
+    "banner": "giftcodesbanner/元氣火柴人-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "深淵之影": {
+    "banner": "giftcodesbanner/深淵之影-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "玩星派對": {
+    "banner": "giftcodesbanner/玩星派對-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "進化吧!我的人生": {
+    "banner": "giftcodesbanner/進化吧!我的人生-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "星之夢幻島": {
+    "banner": "giftcodesbanner/星之夢幻島-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "小冰冰傳奇：回到最初": {
+    "banner": "giftcodesbanner/小冰冰傳奇：回到最初-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "江湖風雲傳": {
+    "banner": "giftcodesbanner/江湖風雲傳-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "星願之冠：狼少女物語": {
+    "banner": "giftcodesbanner/星願之冠：狼少女物語-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "香蕉缺個芭樂": {
+    "banner": "giftcodesbanner/香蕉缺個芭樂-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "精靈塔塔開": {
+    "banner": "giftcodesbanner/精靈塔塔開-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "終末之歌": {
+    "banner": "giftcodesbanner/終末之歌-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "森靈奇境": {
+    "banner": "giftcodesbanner/森靈奇境-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "鬥破蒼穹：蕭門篇": {
+    "banner": "giftcodesbanner/鬥破蒼穹：蕭門篇-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "無畏的狼煙": {
+    "banner": "giftcodesbanner/無畏的狼煙-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "代號：無頭": {
+    "banner": "giftcodesbanner/代號：無頭-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "牛頭人GO": {
+    "banner": "giftcodesbanner/牛頭人GO-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "派對吧三國": {
+    "banner": "giftcodesbanner/派對吧三國-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "酒酒大俠": {
+    "banner": "giftcodesbanner/酒酒大俠-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "鼠衛家園": {
+    "banner": "giftcodesbanner/鼠衛家園-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "未頌者之歌：異世界冒險奇譚": {
+    "banner": "giftcodesbanner/未頌者之歌：異世界冒險奇譚-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "熱練戰士": {
+    "banner": "giftcodesbanner/熱練戰士-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "聯盟戰棋": {
+    "banner": "giftcodesbanner/聯盟戰棋-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "劍客物語": {
+    "banner": "giftcodesbanner/劍客物語-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "人在塔在": {
+    "banner": "giftcodesbanner/人在塔在-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "龍語霜城": {
+    "banner": "giftcodesbanner/龍語霜城-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "洛伊的移動要塞": {
+    "banner": "giftcodesbanner/洛伊的移動要塞-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "喵喵王國": {
+    "banner": "giftcodesbanner/喵喵王國-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "東京謎影者": {
+    "banner": "giftcodesbanner/東京謎影者-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "戰極死遊": {
+    "banner": "giftcodesbanner/戰極死遊-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "進擊的蝸牛": {
+    "banner": "giftcodesbanner/進擊的蝸牛-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "純白大作戰": {
+    "banner": "giftcodesbanner/純白大作戰-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "黑星勇者": {
+    "banner": "giftcodesbanner/黑星勇者-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "龍之谷：經典再現": {
+    "banner": "giftcodesbanner/龍之谷：經典再現-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "楓之谷Artale": {
+    "banner": "giftcodesbanner/楓之谷Artale-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "出發吧麥芬": {
+    "banner": "giftcodesbanner/出發吧麥芬-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "RO仙境傳說：守護永恆的愛 Classic": {
+    "banner": "giftcodesbanner/RO仙境傳說：守護永恆的愛 Classic-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "魔力寶貝：復興": {
+    "banner": "giftcodesbanner/魔力寶貝：復興-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "東京喰種Awakening": {
+    "banner": "giftcodesbanner/東京喰種Awakening-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "晶核": {
+    "banner": "giftcodesbanner/晶核-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "無盡夢迴": {
+    "banner": "giftcodesbanner/無盡夢迴-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "RO仙境傳說：放推冒險團": {
+    "banner": "giftcodesbanner/RO仙境傳說：放推冒險團-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "英雄刷刷刷": {
+    "banner": "giftcodesbanner/英雄刷刷刷-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "萬靈物語": {
+    "banner": "giftcodesbanner/萬靈物語-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "斗羅大陸：逆轉時空": {
+    "banner": "giftcodesbanner/斗羅大陸：逆轉時空-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "魔靈召喚：保衛戰": {
+    "banner": "giftcodesbanner/魔靈召喚：保衛戰-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "潘多蘭島": {
+    "banner": "giftcodesbanner/潘多蘭島-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "電鋸果汁大亂鬥": {
+    "banner": "giftcodesbanner/電鋸果汁大亂鬥-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "風色幻想NeXus": {
+    "banner": "giftcodesbanner/風色幻想NeXus-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
+  },
+  "星河訣愛": {
+    "banner": "giftcodesbanner/星河訣愛-bar.jpg",
+    "description": "",
+    "howTo": [
+      "進入主畫面，點選個人頭像",
+      "進入設定（齒輪）",
+      "輸入禮包碼 → 確認兌換"
+    ],
+    "codes": []
   }
 }

@@ -2291,7 +2291,12 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "LWDC400K",
+        "reward": "_"
+      }
+    ]
   },
   "勇士不要停": {
     "banner": "giftcodesbanner/勇士不要停-bar.jpg",
@@ -2301,7 +2306,68 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "SAN777",
+        "reward": "_"
+      },
+      {
+        "code": "SAN888",
+        "reward": "_"
+      },
+      {
+        "code": "SAN999",
+        "reward": "_"
+      },
+      {
+        "code": "HERO666",
+        "reward": "_"
+      },
+      {
+        "code": "HERO777",
+        "reward": "_"
+      },
+      {
+        "code": "HERO888",
+        "reward": "_"
+      },
+      {
+        "code": "HERO2025",
+        "reward": "_"
+      },
+      {
+        "code": "VIP666",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP888",
+        "reward": "_"
+      },
+      {
+        "code": "VIP2025",
+        "reward": "_"
+      },
+      {
+        "code": "LINDA666",
+        "reward": "_"
+      },
+      {
+        "code": "LINDA777",
+        "reward": "_"
+      },
+      {
+        "code": "LINDA888",
+        "reward": "_"
+      },
+      {
+        "code": "LINDA999",
+        "reward": "_"
+      }
+    ]
   },
   "元氣火柴人": {
     "banner": "giftcodesbanner/元氣火柴人-bar.jpg",
@@ -2311,7 +2377,84 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "VIP666",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP888",
+        "reward": "_"
+      },
+      {
+        "code": "VIP999",
+        "reward": "_"
+      },
+      {
+        "code": "Honey666",
+        "reward": "_"
+      },
+      {
+        "code": "ET666",
+        "reward": "_"
+      },
+      {
+        "code": "ET888",
+        "reward": "_"
+      },
+      {
+        "code": "PDLOPEN",
+        "reward": "_"
+      },
+      {
+        "code": "Vinson666",
+        "reward": "_"
+      },
+      {
+        "code": "STM1212",
+        "reward": "_"
+      },
+      {
+        "code": "K7666",
+        "reward": "_"
+      },
+      {
+        "code": "LINDA666",
+        "reward": "_"
+      },
+      {
+        "code": "LINDA888",
+        "reward": "_"
+      },
+      {
+        "code": "HL666",
+        "reward": "_"
+      },
+      {
+        "code": "HL888",
+        "reward": "_"
+      },
+      {
+        "code": "GENKISTM",
+        "reward": "_"
+      },
+      {
+        "code": "MintCat666",
+        "reward": "_"
+      },
+      {
+        "code": "Kzee666",
+        "reward": "_"
+      },
+      {
+        "code": "JIGG666",
+        "reward": "_"
+      }
+    ]
   },
   "深淵之影": {
     "banner": "giftcodesbanner/深淵之影-bar.jpg",
@@ -2321,7 +2464,16 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "SOTDGIFT",
+        "reward": "1k 鑽石"
+      },
+      {
+        "code": "shadow2024",
+        "reward": "_"
+      }
+    ]
   },
   "玩星派對": {
     "banner": "giftcodesbanner/玩星派對-bar.jpg",
@@ -2331,7 +2483,32 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "helloline",
+        "reward": "_"
+      },
+      {
+        "code": "200linefans",
+        "reward": "_"
+      },
+      {
+        "code": "LINE0294",
+        "reward": "_"
+      },
+      {
+        "code": "400LINEFANS",
+        "reward": "_"
+      },
+      {
+        "code": "500LINEFANS",
+        "reward": "_"
+      },
+      {
+        "code": "600LINEFANS",
+        "reward": "_"
+      }
+    ]
   },
   "進化吧!我的人生": {
     "banner": "giftcodesbanner/進化吧!我的人生-bar.jpg",
@@ -2341,7 +2518,32 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "BEAUTYEYE1",
+        "reward": "經典造型美瞳券 * 1"
+      },
+      {
+        "code": "EYEBROW3",
+        "reward": "經典造型眉毛券 * 3"
+      },
+      {
+        "code": "DESS2566",
+        "reward": "技能召喚券 x36"
+      },
+      {
+        "code": "TAKECARE61",
+        "reward": "寶箱x200"
+      },
+      {
+        "code": "DRAGON666",
+        "reward": "水晶 x450"
+      },
+      {
+        "code": "VIP666",
+        "reward": "_"
+      }
+    ]
   },
   "星之夢幻島": {
     "banner": "giftcodesbanner/星之夢幻島-bar.jpg",
@@ -2351,7 +2553,36 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "Lucky66",
+        "reward": "_"
+      },
+      {
+        "code": "Lucky666",
+        "reward": "_"
+      },
+      {
+        "code": "Lucky777",
+        "reward": "_"
+      },
+      {
+        "code": "Lucky168",
+        "reward": "_"
+      },
+      {
+        "code": "Star9527",
+        "reward": "_"
+      },
+      {
+        "code": "Lucky88",
+        "reward": "_"
+      },
+      {
+        "code": "GameOn",
+        "reward": "_"
+      }
+    ]
   },
   "小冰冰傳奇：回到最初": {
     "banner": "giftcodesbanner/小冰冰傳奇：回到最初-bar.jpg",
@@ -2361,7 +2592,44 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "greedisgood",
+        "reward": "_"
+      },
+      {
+        "code": "randomdraft",
+        "reward": "_"
+      },
+      {
+        "code": "whosyourdaddy",
+        "reward": "_"
+      },
+      {
+        "code": "showmethemoney",
+        "reward": "_"
+      },
+      {
+        "code": "snipergogo",
+        "reward": "_"
+      },
+      {
+        "code": "VIP666",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP888",
+        "reward": "_"
+      },
+      {
+        "code": "w5jwurfznd",
+        "reward": "_"
+      }
+    ]
   },
   "江湖風雲傳": {
     "banner": "giftcodesbanner/江湖風雲傳-bar.jpg",
@@ -2371,7 +2639,20 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "MAOBT1",
+        "reward": "金幣 10,000 + 鑽石 100"
+      },
+      {
+        "code": "MAOBT22",
+        "reward": "隨機裝備寶箱 x1"
+      },
+      {
+        "code": "TOJ777",
+        "reward": "每日獎勵加倍"
+      }
+    ]
   },
   "星願之冠：狼少女物語": {
     "banner": "giftcodesbanner/星願之冠：狼少女物語-bar.jpg",
@@ -2381,7 +2662,20 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "CROWN888",
+        "reward": "大量寶石和金幣"
+      },
+      {
+        "code": "WOLFGIRL777",
+        "reward": "強化道具和高級裝備材料"
+      },
+      {
+        "code": "KNIGHT500",
+        "reward": "角色經驗加成道具"
+      }
+    ]
   },
   "香蕉缺個芭樂": {
     "banner": "giftcodesbanner/香蕉缺個芭樂-bar.jpg",
@@ -2391,7 +2685,80 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "SUNFLOWERTD",
+        "reward": "生命之種x1, 物理植物精華"
+      },
+      {
+        "code": "BANANA666",
+        "reward": "_"
+      },
+      {
+        "code": "APPLE777",
+        "reward": "_"
+      },
+      {
+        "code": "PEACH888",
+        "reward": "_"
+      },
+      {
+        "code": "SFGROUP",
+        "reward": "植物材料鑰匙x1, 體力x20"
+      },
+      {
+        "code": "B5D9SF",
+        "reward": "_"
+      },
+      {
+        "code": "VWX9HT",
+        "reward": "_"
+      },
+      {
+        "code": "VALENTINESF",
+        "reward": "_"
+      },
+      {
+        "code": "SFT25E",
+        "reward": "_"
+      },
+      {
+        "code": "SFWP2S",
+        "reward": "_"
+      },
+      {
+        "code": "SFNYEAR25",
+        "reward": "_"
+      },
+      {
+        "code": "WSF128",
+        "reward": "_"
+      },
+      {
+        "code": "WDK121",
+        "reward": "_"
+      },
+      {
+        "code": "SFJWK1",
+        "reward": "_"
+      },
+      {
+        "code": "WKSF31",
+        "reward": "_"
+      },
+      {
+        "code": "SFNewYear25",
+        "reward": "高級裝備鑰匙x1, 生命之種x1, 體力x10"
+      },
+      {
+        "code": "WEEKEND1",
+        "reward": "_"
+      },
+      {
+        "code": "SFXMAS",
+        "reward": "_"
+      }
+    ]
   },
   "精靈塔塔開": {
     "banner": "giftcodesbanner/精靈塔塔開-bar.jpg",
@@ -2401,7 +2768,12 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "ChristmasGift",
+        "reward": "_"
+      }
+    ]
   },
   "終末之歌": {
     "banner": "giftcodesbanner/終末之歌-bar.jpg",
@@ -2411,7 +2783,20 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "ESG1234",
+        "reward": "名將招募令*3"
+      },
+      {
+        "code": "ESG5678",
+        "reward": "武將突破丹*5"
+      },
+      {
+        "code": "ESG9999",
+        "reward": "_"
+      }
+    ]
   },
   "森靈奇境": {
     "banner": "giftcodesbanner/森靈奇境-bar.jpg",
@@ -2421,7 +2806,52 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "VIP666",
+        "reward": "金幣500、藍色裝備捲軸5"
+      },
+      {
+        "code": "VIP777",
+        "reward": "體力20、金幣200"
+      },
+      {
+        "code": "VIP888",
+        "reward": "白銀寶箱鑰匙*3"
+      },
+      {
+        "code": "LDPLAYER2025",
+        "reward": "元寶75、坐騎進階石10、10萬金幣*5"
+      },
+      {
+        "code": "SLQJ2025",
+        "reward": "元寶100、坐騎進階石20、金幣*50萬"
+      },
+      {
+        "code": "FORESTGIFT",
+        "reward": "稀有裝備寶箱1、經驗藥水5"
+      },
+      {
+        "code": "DEERSPIRIT",
+        "reward": "幻獸召喚券2、技能點數10"
+      },
+      {
+        "code": "group2024",
+        "reward": "_"
+      },
+      {
+        "code": "SSSVIP666",
+        "reward": "_"
+      },
+      {
+        "code": "NewYear666",
+        "reward": "_"
+      },
+      {
+        "code": "Merry888",
+        "reward": "_"
+      }
+    ]
   },
   "鬥破蒼穹：蕭門篇": {
     "banner": "giftcodesbanner/鬥破蒼穹：蕭門篇-bar.jpg",
@@ -2431,7 +2861,52 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "elfds0106",
+        "reward": "_"
+      },
+      {
+        "code": "Fight1226",
+        "reward": "_"
+      },
+      {
+        "code": "Fight1week",
+        "reward": "_"
+      },
+      {
+        "code": "Happy2025",
+        "reward": "靈石*2025；異火種子*888；鳳羽*66"
+      },
+      {
+        "code": "NewYear25",
+        "reward": "靈石*800；夥伴抽獎券*20；挑戰狀*3"
+      },
+      {
+        "code": "wpefs1230",
+        "reward": "_"
+      },
+      {
+        "code": "DAY01",
+        "reward": "_"
+      },
+      {
+        "code": "DAY02",
+        "reward": "_"
+      },
+      {
+        "code": "DP666",
+        "reward": "靈石*300；轉蛋券*5"
+      },
+      {
+        "code": "DP777",
+        "reward": "_"
+      },
+      {
+        "code": "DP888",
+        "reward": "_"
+      }
+    ]
   },
   "無畏的狼煙": {
     "banner": "giftcodesbanner/無畏的狼煙-bar.jpg",
@@ -2441,7 +2916,20 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "FEARLESS2024",
+        "reward": "500鑽石，5個高級召喚卷"
+      },
+      {
+        "code": "WELCOMEFS",
+        "reward": "300鑽石，3個高級召喚卷"
+      },
+      {
+        "code": "NEWPLAYER",
+        "reward": "200鑽石，2個高級召喚卷"
+      }
+    ]
   },
   "代號：無頭": {
     "banner": "giftcodesbanner/代號：無頭-bar.jpg",
@@ -2451,7 +2939,40 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "HIMARCH",
+        "reward": "200普通箱子與20k藍鑽"
+      },
+      {
+        "code": "WOMAN",
+        "reward": "200普通箱子與20k藍鑽"
+      },
+      {
+        "code": "LAST3",
+        "reward": "33333藍鑽與3333紅鑽"
+      },
+      {
+        "code": "IOSNEW",
+        "reward": "20000藍鑽與1000紅鑽"
+      },
+      {
+        "code": "FB1000",
+        "reward": "300普通箱子與2000藍鑽"
+      },
+      {
+        "code": "VIP111",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP999",
+        "reward": "_"
+      }
+    ]
   },
   "牛頭人GO": {
     "banner": "giftcodesbanner/牛頭人GO-bar.jpg",
@@ -2461,7 +2982,40 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "vip666",
+        "reward": "_"
+      },
+      {
+        "code": "wow999",
+        "reward": "_"
+      },
+      {
+        "code": "Taurentgo",
+        "reward": "_"
+      },
+      {
+        "code": "ntrgo666",
+        "reward": "_"
+      },
+      {
+        "code": "ntrgo777",
+        "reward": "_"
+      },
+      {
+        "code": "ntrgo888",
+        "reward": "_"
+      },
+      {
+        "code": "RYAN666",
+        "reward": "_"
+      },
+      {
+        "code": "Sora2025",
+        "reward": "_"
+      }
+    ]
   },
   "派對吧三國": {
     "banner": "giftcodesbanner/派對吧三國-bar.jpg",
@@ -2471,7 +3025,48 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "WK118",
+        "reward": "_"
+      },
+      {
+        "code": "MONDAY1",
+        "reward": "_"
+      },
+      {
+        "code": "PDBSG666",
+        "reward": "_"
+      },
+      {
+        "code": "VIP8888",
+        "reward": "_"
+      },
+      {
+        "code": "VIP7777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP6666",
+        "reward": "_"
+      },
+      {
+        "code": "Svip888",
+        "reward": "_"
+      },
+      {
+        "code": "Svip777",
+        "reward": "_"
+      },
+      {
+        "code": "Svip666",
+        "reward": "_"
+      },
+      {
+        "code": "Study111",
+        "reward": "_"
+      }
+    ]
   },
   "酒酒大俠": {
     "banner": "giftcodesbanner/酒酒大俠-bar.jpg",
@@ -2481,7 +3076,36 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "FTRQG",
+        "reward": "_"
+      },
+      {
+        "code": "ONLINE",
+        "reward": "_"
+      },
+      {
+        "code": "FUXGK",
+        "reward": "_"
+      },
+      {
+        "code": "ZIYOJ",
+        "reward": "_"
+      },
+      {
+        "code": "TISPH",
+        "reward": "_"
+      },
+      {
+        "code": "TSBGF",
+        "reward": "_"
+      },
+      {
+        "code": "YY0108",
+        "reward": "_"
+      }
+    ]
   },
   "鼠衛家園": {
     "banner": "giftcodesbanner/鼠衛家園-bar.jpg",
@@ -2491,7 +3115,28 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "UISPWJLL",
+        "reward": "_"
+      },
+      {
+        "code": "SHUWEIDW2025",
+        "reward": "_"
+      },
+      {
+        "code": "WEOQKAMN",
+        "reward": "_"
+      },
+      {
+        "code": "OIWPSLQA",
+        "reward": "_"
+      },
+      {
+        "code": "YUSQLAPI",
+        "reward": "_"
+      }
+    ]
   },
   "未頌者之歌：異世界冒險奇譚": {
     "banner": "giftcodesbanner/未頌者之歌：異世界冒險奇譚-bar.jpg",
@@ -2501,7 +3146,32 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "chitui",
+        "reward": "_"
+      },
+      {
+        "code": "OPENTODAY",
+        "reward": "_"
+      },
+      {
+        "code": "happyjanuary2025",
+        "reward": "_"
+      },
+      {
+        "code": "happydecember",
+        "reward": "_"
+      },
+      {
+        "code": "happyplay",
+        "reward": "_"
+      },
+      {
+        "code": "discordclub",
+        "reward": "_"
+      }
+    ]
   },
   "熱練戰士": {
     "banner": "giftcodesbanner/熱練戰士-bar.jpg",
@@ -2511,7 +3181,32 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "WELCOMEHCLW",
+        "reward": "鑽石10,000個、奇加工坊使用券100張"
+      },
+      {
+        "code": "PLUSHCLW",
+        "reward": "靈魂珠400個、鑽石1,500個、骰子200個"
+      },
+      {
+        "code": "PREREGISTER",
+        "reward": "鑽石5,000個、裝備召喚券30張"
+      },
+      {
+        "code": "FRIDAYHCLW",
+        "reward": "鑽石10,000個、好運Buff藥丸"
+      },
+      {
+        "code": "COMMUNITY",
+        "reward": "鑽石6,500個、裝備召喚券30張"
+      },
+      {
+        "code": "HAPPY2025",
+        "reward": "鑽石50,000個"
+      }
+    ]
   },
   "聯盟戰棋": {
     "banner": "giftcodesbanner/聯盟戰棋-bar.jpg",
@@ -2531,7 +3226,44 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "SWORDMASTER",
+        "reward": "4星角色召喚卷x1、5星防具箱子x1、S級突襲箱子x3、四葉草x5"
+      },
+      {
+        "code": "HALLOWEEN",
+        "reward": "300紅寶石"
+      },
+      {
+        "code": "THX12000",
+        "reward": "1200行動力"
+      },
+      {
+        "code": "COOLTIPS",
+        "reward": "600紅寶石"
+      },
+      {
+        "code": "GIFT1111DAY",
+        "reward": "1111行動力"
+      },
+      {
+        "code": "TOWERA",
+        "reward": "300紅寶石"
+      },
+      {
+        "code": "EHTUPDATE",
+        "reward": "700紅寶石"
+      },
+      {
+        "code": "BFGIFT",
+        "reward": "600紅寶石"
+      },
+      {
+        "code": "SCROLL3",
+        "reward": "1000行動力"
+      }
+    ]
   },
   "人在塔在": {
     "banner": "giftcodesbanner/人在塔在-bar.jpg",
@@ -2541,7 +3273,16 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "AS3DDISCORD",
+        "reward": "_"
+      },
+      {
+        "code": "AS3DDC",
+        "reward": "_"
+      }
+    ]
   },
   "龍語霜城": {
     "banner": "giftcodesbanner/龍語霜城-bar.jpg",
@@ -2551,7 +3292,60 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "D5C9P2",
+        "reward": "_"
+      },
+      {
+        "code": "JoyfulDay",
+        "reward": "_"
+      },
+      {
+        "code": "J4K6R3",
+        "reward": "_"
+      },
+      {
+        "code": "G8H2E9",
+        "reward": "_"
+      },
+      {
+        "code": "HAPPY777",
+        "reward": "_"
+      },
+      {
+        "code": "PNCGO",
+        "reward": "_"
+      },
+      {
+        "code": "PNC333",
+        "reward": "_"
+      },
+      {
+        "code": "PNC888",
+        "reward": "_"
+      },
+      {
+        "code": "PNC168",
+        "reward": "_"
+      },
+      {
+        "code": "PC777",
+        "reward": "_"
+      },
+      {
+        "code": "R2M6N9",
+        "reward": "_"
+      },
+      {
+        "code": "PNC123",
+        "reward": "_"
+      },
+      {
+        "code": "EASTERD8",
+        "reward": "_"
+      }
+    ]
   },
   "洛伊的移動要塞": {
     "banner": "giftcodesbanner/洛伊的移動要塞-bar.jpg",
@@ -2561,7 +3355,40 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "THXSSO",
+        "reward": "技師20抽、大砲20抽"
+      },
+      {
+        "code": "1003DAY",
+        "reward": "3000寶石、蛋糕3個"
+      },
+      {
+        "code": "THANKYOUFO",
+        "reward": "1000寶石"
+      },
+      {
+        "code": "FSBESTONE",
+        "reward": "技師30抽、大砲30抽、英雄10抽"
+      },
+      {
+        "code": "FSGRANDOPEN",
+        "reward": "1000寶石"
+      },
+      {
+        "code": "FS100KDOWN",
+        "reward": "英雄10抽"
+      },
+      {
+        "code": "18OMEDETOU",
+        "reward": "技師20抽、大砲20抽、英雄20抽、蛋糕20個"
+      },
+      {
+        "code": "FSTW2024",
+        "reward": "技師50抽、大砲50抽、1000寶石"
+      }
+    ]
   },
   "喵喵王國": {
     "banner": "giftcodesbanner/喵喵王國-bar.jpg",
@@ -2571,7 +3398,12 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "VYYPMPRM",
+        "reward": "_"
+      }
+    ]
   },
   "東京謎影者": {
     "banner": "giftcodesbanner/東京謎影者-bar.jpg",
@@ -2591,7 +3423,20 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "g0vveW93yH",
+        "reward": "神祕粒子結晶 x 120"
+      },
+      {
+        "code": "Ari7ved0K9",
+        "reward": "神祕粒子結晶 x 120"
+      },
+      {
+        "code": "tTa2IlRgGN",
+        "reward": "神祕粒子結晶 x 120"
+      }
+    ]
   },
   "進擊的蝸牛": {
     "banner": "giftcodesbanner/進擊的蝸牛-bar.jpg",
@@ -2601,7 +3446,72 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "SNAIL2025",
+        "reward": "金幣100000，鑽石500"
+      },
+      {
+        "code": "AOS7777",
+        "reward": "_"
+      },
+      {
+        "code": "AOS8888",
+        "reward": "_"
+      },
+      {
+        "code": "AOS9999",
+        "reward": "_"
+      },
+      {
+        "code": "AOS2025",
+        "reward": "_"
+      },
+      {
+        "code": "DBSNAIL",
+        "reward": "_"
+      },
+      {
+        "code": "LICESNAIL",
+        "reward": "_"
+      },
+      {
+        "code": "VIP666",
+        "reward": "_"
+      },
+      {
+        "code": "VIP777",
+        "reward": "_"
+      },
+      {
+        "code": "VIP888",
+        "reward": "_"
+      },
+      {
+        "code": "SCSNAIL",
+        "reward": "_"
+      },
+      {
+        "code": "SUPER555",
+        "reward": "_"
+      },
+      {
+        "code": "SUPER111",
+        "reward": "_"
+      },
+      {
+        "code": "SVIP666",
+        "reward": "_"
+      },
+      {
+        "code": "SVIP777",
+        "reward": "_"
+      },
+      {
+        "code": "SVIP888",
+        "reward": "_"
+      }
+    ]
   },
   "純白大作戰": {
     "banner": "giftcodesbanner/純白大作戰-bar.jpg",
@@ -2611,7 +3521,32 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "VIP666",
+        "reward": "寵物票券*20、墨菲斯托*1、鑽石*500、技能票券*20"
+      },
+      {
+        "code": "VIP777",
+        "reward": "貓貓拉桿*50、鑽石*50"
+      },
+      {
+        "code": "VIP888",
+        "reward": "鑽石*50、百煉錘*20"
+      },
+      {
+        "code": "FOLLOWFB",
+        "reward": "技能票券*20、鑽石*100、音魂票券*20、寵物票券*20"
+      },
+      {
+        "code": "Queen",
+        "reward": "金幣*500、技能票券*20"
+      },
+      {
+        "code": "Prajna",
+        "reward": "音魂票券*20、鑽石*50"
+      }
+    ]
   },
   "黑星勇者": {
     "banner": "giftcodesbanner/黑星勇者-bar.jpg",
@@ -2621,7 +3556,16 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "BLACKSTAR",
+        "reward": "3枚薔薇之心徽章，10本專精强化書，20瓶致命傷治療藥水"
+      },
+      {
+        "code": "NEWSERVER",
+        "reward": "3枚薔薇之心徽章，10本專精强化書，20瓶致命傷治療藥水"
+      }
+    ]
   },
   "龍之谷：經典再現": {
     "banner": "giftcodesbanner/龍之谷：經典再現-bar.jpg",
@@ -2631,7 +3575,28 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "dnm6661",
+        "reward": "_"
+      },
+      {
+        "code": "dnm999A",
+        "reward": "_"
+      },
+      {
+        "code": "dnm20258",
+        "reward": "_"
+      },
+      {
+        "code": "DNMZZXIAM",
+        "reward": "_"
+      },
+      {
+        "code": "DNMHAPPY61MM",
+        "reward": "_"
+      }
+    ]
   },
   "楓之谷Artale": {
     "banner": "giftcodesbanner/楓之谷Artale-bar.jpg",
@@ -2651,7 +3616,12 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "xvknsqea",
+        "reward": "盧恩文字x10, 原材料x200, 金幣x10K"
+      }
+    ]
   },
   "RO仙境傳說：守護永恆的愛 Classic": {
     "banner": "giftcodesbanner/RO仙境傳說：守護永恆的愛 Classic-bar.jpg",
@@ -2661,7 +3631,84 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "ROMC5DAYS",
+        "reward": "_"
+      },
+      {
+        "code": "4LEFTROMC",
+        "reward": "_"
+      },
+      {
+        "code": "3GOROMC",
+        "reward": "_"
+      },
+      {
+        "code": "ROMC2HYPE",
+        "reward": "_"
+      },
+      {
+        "code": "ROMC1MORE",
+        "reward": "_"
+      },
+      {
+        "code": "ZENYGO",
+        "reward": "_"
+      },
+      {
+        "code": "15XH6EKE",
+        "reward": "_"
+      },
+      {
+        "code": "BP04ROMC",
+        "reward": "_"
+      },
+      {
+        "code": "5TSQC2XK",
+        "reward": "_"
+      },
+      {
+        "code": "6X5S82UY",
+        "reward": "_"
+      },
+      {
+        "code": "RO6666",
+        "reward": "_"
+      },
+      {
+        "code": "ROMCWEISSG",
+        "reward": "_"
+      },
+      {
+        "code": "LILY4UGIFT",
+        "reward": "_"
+      },
+      {
+        "code": "ROMCOBT",
+        "reward": "_"
+      },
+      {
+        "code": "ROMCPFY",
+        "reward": "_"
+      },
+      {
+        "code": "ROMCBALL",
+        "reward": "_"
+      },
+      {
+        "code": "ROMCWEI",
+        "reward": "_"
+      },
+      {
+        "code": "ROMCHSU",
+        "reward": "_"
+      },
+      {
+        "code": "ROMCBAIXING",
+        "reward": "_"
+      }
+    ]
   },
   "魔力寶貝：復興": {
     "banner": "giftcodesbanner/魔力寶貝：復興-bar.jpg",
@@ -2671,7 +3718,40 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "Cyndi520",
+        "reward": "火焰鼠彩券*1，銀幣*10萬，綁鑽*100"
+      },
+      {
+        "code": "VIP666",
+        "reward": "初級熟練度卷軸*10"
+      },
+      {
+        "code": "VIP777",
+        "reward": "大地鼠彩券*5"
+      },
+      {
+        "code": "VIP888",
+        "reward": "普通圖鑑卡*5"
+      },
+      {
+        "code": "VIP999",
+        "reward": "初級魔石*5"
+      },
+      {
+        "code": "Cyndi2025",
+        "reward": "大地鼠彩券*1，金色圖鑑卡，寵物洗煉藥水*20，綁鑽*100"
+      },
+      {
+        "code": "83br75mt",
+        "reward": "銀幣*20W，寵物洗煉藥水（綁）*35"
+      },
+      {
+        "code": "LAODONG0501",
+        "reward": "火焰鼠彩券（绑）*1，馴獸寶典（绑）*5，銀色圖鑑卡*1（绑）"
+      }
+    ]
   },
   "東京喰種Awakening": {
     "banner": "giftcodesbanner/東京喰種Awakening-bar.jpg",
@@ -2681,7 +3761,60 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "DGCDM",
+        "reward": "進階結晶Ⅲ×8、赤紅結晶×10、招募券×10、界限晶幣×5"
+      },
+      {
+        "code": "YXZGO",
+        "reward": "強化石×20、招募券×4、改良電池×1、掃蕩券×10"
+      },
+      {
+        "code": "RYSXL",
+        "reward": "強化石×20、界限晶幣×10、黃金兔寶寶×1"
+      },
+      {
+        "code": "QSDLS",
+        "reward": "鑽石×100、進階結晶Ⅲ×5、進階結晶Ⅱ×10"
+      },
+      {
+        "code": "JMYAD",
+        "reward": "協同銘牌·黃×40、協同銘牌·藍×40、協同銘牌·紅×40"
+      },
+      {
+        "code": "SQYY30",
+        "reward": "鑽石×188、黃金兔寶寶×1、經驗書·大×5"
+      },
+      {
+        "code": "SQYY40",
+        "reward": "鑽石×288、赤紅結晶×10、水晶兔寶寶×1"
+      },
+      {
+        "code": "SQYY50",
+        "reward": "鑽石×666、界限晶幣×5、改良電池×1"
+      },
+      {
+        "code": "WDDXT",
+        "reward": "強化石×20、經驗書·大×10、掃蕩券×10"
+      },
+      {
+        "code": "SQDS2",
+        "reward": "招募券×3、進階結晶Ⅱ×8、協同銘牌·紅×30"
+      },
+      {
+        "code": "SQDS3",
+        "reward": "招募券×2、進階結晶Ⅱ×8、協同銘牌·藍×30"
+      },
+      {
+        "code": "SQDS5",
+        "reward": "招募券×1、進階結晶Ⅱ×8、協同銘牌·黃×30"
+      },
+      {
+        "code": "SQDS7",
+        "reward": "鑽石×100、赤紅結晶×5、進階結晶Ⅰ×10"
+      }
+    ]
   },
   "晶核": {
     "banner": "giftcodesbanner/晶核-bar.jpg",
@@ -2691,7 +3824,52 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "COAJP123",
+        "reward": "_"
+      },
+      {
+        "code": "COAJP527",
+        "reward": "_"
+      },
+      {
+        "code": "COAJP888",
+        "reward": "_"
+      },
+      {
+        "code": "COA100v",
+        "reward": "_"
+      },
+      {
+        "code": "COAwin1",
+        "reward": "_"
+      },
+      {
+        "code": "COAwin2",
+        "reward": "_"
+      },
+      {
+        "code": "COA1500",
+        "reward": "_"
+      },
+      {
+        "code": "COAKunDa",
+        "reward": "_"
+      },
+      {
+        "code": "COA200v",
+        "reward": "_"
+      },
+      {
+        "code": "COA300v",
+        "reward": "_"
+      },
+      {
+        "code": "COAvtuber100",
+        "reward": "_"
+      }
+    ]
   },
   "無盡夢迴": {
     "banner": "giftcodesbanner/無盡夢迴-bar.jpg",
@@ -2701,7 +3879,32 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "VIP6666",
+        "reward": "晚安幣 ×8888、靈感微光 ×8888、新紡枕芯 ×8"
+      },
+      {
+        "code": "VIP8888",
+        "reward": "晚安幣 ×6666、傳頌之聲 ×666、靈感微光 ×6666"
+      },
+      {
+        "code": "ZZZ666",
+        "reward": "牽絆之星 ×5"
+      },
+      {
+        "code": "ZZZ888",
+        "reward": "新紡枕芯 ×5"
+      },
+      {
+        "code": "ZZZ5188",
+        "reward": "牽絆之星 ×5"
+      },
+      {
+        "code": "EAHQQNK8D",
+        "reward": "晚安幣 ×6666、傳頌之聲 ×666、失夢之瓶 ×6"
+      }
+    ]
   },
   "RO仙境傳說：放推冒險團": {
     "banner": "giftcodesbanner/RO仙境傳說：放推冒險團-bar.jpg",
@@ -2711,7 +3914,40 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "kolihAWi",
+        "reward": "金幣*100&高級技能書*1&1小時掛機技能經驗*1"
+      },
+      {
+        "code": "kolrlEZ2",
+        "reward": "Mini卡冊*1&天使之淚*4&1小時掛機Base經驗*1"
+      },
+      {
+        "code": "kolLmdXo",
+        "reward": "虎王碎片*2&金幣*100&1小時掛機夥伴經驗*1"
+      },
+      {
+        "code": "kolRworD",
+        "reward": "金幣*100&高級技能書*1&1小時掛機Base經驗*3"
+      },
+      {
+        "code": "kolO3nxt",
+        "reward": "命運繩結*2&金幣*100&1小時掛機銀幣獎勵*3"
+      },
+      {
+        "code": "kolERDEP",
+        "reward": "金幣*100&天使之淚*4&1小時掛機技能經驗*3"
+      },
+      {
+        "code": "gnnD3lvS",
+        "reward": "Mini卡冊*1&天使之淚*5&1小時掛機銀幣獎勵*2"
+      },
+      {
+        "code": "fbhVF88G",
+        "reward": "金幣*200&許願寶箱*1&4小時掛機夥伴經驗*"
+      }
+    ]
   },
   "英雄刷刷刷": {
     "banner": "giftcodesbanner/英雄刷刷刷-bar.jpg",
@@ -2721,7 +3957,36 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "child61",
+        "reward": "_"
+      },
+      {
+        "code": "DRAGON25",
+        "reward": "_"
+      },
+      {
+        "code": "TSIB666",
+        "reward": "_"
+      },
+      {
+        "code": "foodomo",
+        "reward": "_"
+      },
+      {
+        "code": "Uzra666",
+        "reward": "_"
+      },
+      {
+        "code": "zl666",
+        "reward": "_"
+      },
+      {
+        "code": "roger666",
+        "reward": "_"
+      }
+    ]
   },
   "萬靈物語": {
     "banner": "giftcodesbanner/萬靈物語-bar.jpg",
@@ -2731,7 +3996,36 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "NOX",
+        "reward": "_"
+      },
+      {
+        "code": "NOWGG",
+        "reward": "_"
+      },
+      {
+        "code": "START",
+        "reward": "_"
+      },
+      {
+        "code": "DADA",
+        "reward": "_"
+      },
+      {
+        "code": "NICACH",
+        "reward": "_"
+      },
+      {
+        "code": "UBYE",
+        "reward": "_"
+      },
+      {
+        "code": "PABOVTB",
+        "reward": "_"
+      }
+    ]
   },
   "斗羅大陸：逆轉時空": {
     "banner": "giftcodesbanner/斗羅大陸：逆轉時空-bar.jpg",
@@ -2741,7 +4035,36 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "DLE03VU4S",
+        "reward": "_"
+      },
+      {
+        "code": "WuBoy0111",
+        "reward": "_"
+      },
+      {
+        "code": "0825EATGRASS",
+        "reward": "_"
+      },
+      {
+        "code": "0601Sausage",
+        "reward": "_"
+      },
+      {
+        "code": "7RongRong9",
+        "reward": "_"
+      },
+      {
+        "code": "DL55555",
+        "reward": "_"
+      },
+      {
+        "code": "DL66666",
+        "reward": "_"
+      }
+    ]
   },
   "魔靈召喚：保衛戰": {
     "banner": "giftcodesbanner/魔靈召喚：保衛戰-bar.jpg",
@@ -2761,7 +4084,12 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "vip888",
+        "reward": "_"
+      }
+    ]
   },
   "電鋸果汁大亂鬥": {
     "banner": "giftcodesbanner/電鋸果汁大亂鬥-bar.jpg",
@@ -2771,7 +4099,12 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "CDGOOD",
+        "reward": "_"
+      }
+    ]
   },
   "風色幻想NeXus": {
     "banner": "giftcodesbanner/風色幻想NeXus-bar.jpg",
@@ -2781,7 +4114,20 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "4uClhHDcB12t",
+        "reward": "SSR魔獸寶箱一入"
+      },
+      {
+        "code": "459YxUqbJ12u",
+        "reward": "高級新月之露x20、結晶原石x10、刻紋法典x10"
+      },
+      {
+        "code": "1zgQa3AD812u",
+        "reward": "高級新月之露x20、結晶原石x10、刻紋法典x10"
+      }
+    ]
   },
   "星河訣愛": {
     "banner": "giftcodesbanner/星河訣愛-bar.jpg",
@@ -2791,6 +4137,39 @@
       "進入設定（齒輪）",
       "輸入禮包碼 → 確認兌換"
     ],
-    "codes": []
+    "codes": [
+      {
+        "code": "STAR999",
+        "reward": "神裝鑰匙 ×5、初級神兵經驗結晶 ×5、綁元 ×50"
+      },
+      {
+        "code": "STARS520",
+        "reward": "寵物資質丹 ×1、神兵之魂 ×1、神兵之靈 ×1"
+      },
+      {
+        "code": "MOON666",
+        "reward": "高級寵物經驗丹 ×2、神裝鑰匙 ×10、世界首領體力藥酒 ×3、領主刷新令 ×1"
+      },
+      {
+        "code": "SOPHIE520",
+        "reward": "世界首領體力藥酒 ×3、邊境首領體力藥酒 ×1、神裝鑰匙 ×10、綁元 ×100"
+      },
+      {
+        "code": "Goddess001",
+        "reward": "神翼之魂 ×2、坐騎之魂 ×1、坐騎進階結晶 ×10"
+      },
+      {
+        "code": "vip666",
+        "reward": "神裝鑰匙 ×10、小精衛碎片 ×5、綁元 ×50"
+      },
+      {
+        "code": "vip777",
+        "reward": "坐騎進階結晶 ×10、初級寵物經驗丹 ×10、綁元 ×50"
+      },
+      {
+        "code": "vip888",
+        "reward": "神裝鑰匙 ×10、小精衛碎片 ×5、綁元 ×50"
+      }
+    ]
   }
 }

@@ -1445,12 +1445,14 @@ body::-webkit-scrollbar {
   }
   
 .new-games-page .main-content {
-	padding-top: 10vh;
+	text-align: center;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
 }
 
 .all-games-page .main-content {
     text-align: center; /* 這一行使主內容文字置中 */
-	padding-top: 10vh;
+	padding-top: 6vh;
 	padding-bottom: 5vh; /* 確保頁面底部留空，不會被 footer 蓋住 */
 }
 

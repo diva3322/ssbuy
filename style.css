@@ -1004,10 +1004,10 @@ img.zoomable {
 /* 手機下拉選單 - 固定並覆蓋內容，位於 mobile-top-bar 下方 */
 .mobile-dropdown-menu {
     position: fixed; /* 固定在視窗 */
-    top: calc(2.4vh + 10vh); /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
+    top: calc(8.4vh + 10vh); /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
     left: 0;
     width: 100%;
-    height: 7%; /* 佔滿剩餘高度 */
+    height: 8vh; /* 佔滿剩餘高度 */
     background-color: rgba(0, 0, 0, 0.9); /* 深色半透明背景，覆蓋內容 */
     z-index: 99; /* 在內容之上，但在 mobile-top-bar 之下 */
     overflow-y: auto; /* 允許選單內容滾動 */
@@ -1238,9 +1238,10 @@ body::-webkit-scrollbar {
 		
     .header-img {
 	position: fixed; /* 固定在頂部 */
+	z-index: 1001;
     order: -1;                  /* 提前順序，確保 header-img 在最上面 */
     display: block;            /* 顯示圖片 */
-    height: auto;
+    height: 12vh;
     min-height: auto; /* 根據您 Logo Banner 的實際高度微調，確保空間足夠 */
     width: 100%;               /* 寬度撐滿 */
     max-width: 100%;           /* 限制最大寬度 */
@@ -1394,7 +1395,7 @@ body::-webkit-scrollbar {
 }
 
 .mobile-vertical .main-content {
-  margin-top:1vh;
+  margin-top:8vh;
   display: flex;
   flex-direction: column;      /* ← 原本是 column，改成 row */
   justify-content: center;
@@ -1403,6 +1404,7 @@ body::-webkit-scrollbar {
 
 .index-page .main-content {
 	overflow: hidden;
+	padding-top: 6vh;
 	}
 
 .main-content {
@@ -1415,8 +1417,8 @@ body::-webkit-scrollbar {
 
 .index-page h1 {
 	align-items: center;
-	margin-top: 2vh;
-	margin-bottom: 2vh;
+	margin-top: 4vh;
+	margin-bottom: 4vh;
 }
 
 .mobile-vertical .game-slider-container {
@@ -1530,7 +1532,7 @@ body::-webkit-scrollbar {
     }
 .mobile-top-bar {
     position: fixed; /* 固定在頂部 */
-    top: 6.4%;
+    top: 11.8vh;
     width: 100%;
     z-index: 1001; /* 確保在所有內容和選單之上 */
     background-color: #333; /* 與 header-wrapper 顏色一致 */

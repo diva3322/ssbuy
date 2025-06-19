@@ -1004,7 +1004,7 @@ img.zoomable {
 /* 手機下拉選單 - 固定並覆蓋內容，位於 mobile-top-bar 下方 */
 .mobile-dropdown-menu {
     position: fixed; /* 固定在視窗 */
-    top: 14.25vh; /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
+    top: 14vh; /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
     left: 0;
     width: 100%;
     height: 8vh; /* 佔滿剩餘高度 */
@@ -1460,7 +1460,7 @@ body::-webkit-scrollbar {
     max-width: 90%; /* 這一行設定網格最大寬度為90% */
     display: grid; /* 這一行使網格使用網格布局 */
     grid-template-columns: repeat(auto-fit, minmax(9vh, 1fr)); /* 這一行設定網格列數自適應，最小150px，每列等寬 */
-    gap: 2.2vh; /* 這一行設定網格內元素間距為2.6vw */
+    gap: 3vh; /* 這一行設定網格內元素間距為2.6vw */
     justify-content: center; /* 這一行使網格內容水平置中 */
     margin: 0 auto; /* 這一行使網格水平置中 */
 }
@@ -1485,6 +1485,7 @@ body::-webkit-scrollbar {
     padding: 2vh 10vw; /* 手機版上下 5vh，左右 10vw */
     grid-template-columns: repeat(3, 1fr); /* 每排3張卡片 */
     grid-template-rows: repeat(5, auto); /* 5排 */
+	gap: 3vh;
   }
 /* new-game-item 可保留原樣 */
 .new-game-item {

@@ -1004,7 +1004,7 @@ img.zoomable {
 /* 手機下拉選單 - 固定並覆蓋內容，位於 mobile-top-bar 下方 */
 .mobile-dropdown-menu {
     position: fixed; /* 固定在視窗 */
-    top: 16vh; /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
+    top: 14.5vh; /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
     left: 0;
     width: 100%;
     height: 8vh; /* 佔滿剩餘高度 */
@@ -1032,7 +1032,7 @@ img.zoomable {
     padding: 1px;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .mobile-dropdown-menu ul li {
@@ -1407,7 +1407,7 @@ body::-webkit-scrollbar {
 
 .index-page .main-content {
 	overflow: hidden;
-	padding-top: 6vh;
+	padding-top: 18vh;
 	}
 
 .main-content {

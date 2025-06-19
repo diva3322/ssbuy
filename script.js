@@ -1,94 +1,237 @@
+// ====== 通用功能 (所有頁面都會執行) ======
+
 document.addEventListener("DOMContentLoaded", () => {
-  const isMobile = window.innerWidth <= 1024;
-  if (isMobile) {
-    document.body.classList.add("mobile-vertical");
-  }
-
-  // ✅ 如果是禮包碼頁面，只跑這個，然後直接 return
-  if (document.body.classList.contains("giftcodes-page")) {
-    loadLatestGames();
-    return;
-  }
-
-  // ✅ 如果是首頁才跑 renderGames
-  if (document.body.classList.contains("index-page")) {
-    renderGames();
-
-    window.addEventListener("resize", () => {
-      const isNowMobile = window.innerWidth <= 1024;
-      const isMobileVertical = document.body.classList.contains("mobile-vertical");
-
-      if (isNowMobile && !isMobileVertical) {
+    // 手機版 body class 判斷
+    const isMobile = window.innerWidth <= 1024;
+    if (isMobile) {
         document.body.classList.add("mobile-vertical");
-        renderGames();
-      }
-
-      if (!isNowMobile && isMobileVertical) {
-        document.body.classList.remove("mobile-vertical");
-        renderGames();
-      }
-    });
-  }
-
-  // ✅ 處理 game-detail 頁面載入（⚠️ 原本寫在外面，會導致錯誤）
-  if (document.body.classList.contains("game-detail")) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const gameName = urlParams.get("game") ? decodeURIComponent(urlParams.get("game")) : "未知遊戲";
-
-    if (gameName) {
-      fetch("games.json")
-        .then(response => {
-          if (!response.ok) throw new Error("載入 JSON 失敗");
-          return response.json();
-        })
-        .then(data => {
-          const game = data[gameName];
-          if (game) {
-            loadGameDetails(gameName, game);
-          } else {
-            console.error("找不到遊戲:", gameName);
-            document.getElementById("gameTitle").textContent = "找不到遊戲";
-            document.getElementById("gameLogo").src = "images/default.jpg";
-            document.getElementById("productList").innerHTML = "<p>目前沒有可購買的商品</p>";
-          }
-        })
-        .catch(error => {
-          console.error("載入 games.json 失敗:", error);
-          document.getElementById("gameTitle").textContent = "載入失敗";
-        });
-    } else {
-      console.error("未提供遊戲名稱");
-      document.getElementById("gameTitle").textContent = "未提供遊戲名稱";
     }
-  }
+
+    // ★ 修正漢堡選單邏輯：確保它在任何頁面都可執行且不被跳過
+    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+    const mobileDropdownMenu = document.querySelector(".mobile-dropdown-menu");
+    if (mobileMenuToggle && mobileDropdownMenu) {
+        mobileMenuToggle.addEventListener("click", () => {
+            mobileDropdownMenu.classList.toggle("open"); // 使用 toggle，更簡潔
+            // 讓手機選單的開合也影響 body 的 overflow，避免滾動
+            document.body.classList.toggle("no-scroll"); 
+        });
+    }
+
+    // 圖片放大燈箱效果 (zoomable class)
+    document.querySelectorAll(".zoomable").forEach(img => {
+        img.addEventListener("click", () => {
+            const fullSrc = img.dataset.src || img.src;
+
+            const overlay = document.createElement("div");
+            overlay.className = "image-lightbox-overlay";
+
+            const fullImage = document.createElement("img");
+            fullImage.src = fullSrc;
+
+            overlay.appendChild(fullImage);
+            document.body.appendChild(overlay);
+
+            overlay.addEventListener("click", () => {
+                overlay.classList.add("fade-out");
+                setTimeout(() => overlay.remove(), 300);
+            });
+        });
+    });
+
+    // 錨點連結平滑滾動
+    document.querySelectorAll("a[href^='#']").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            target?.scrollIntoView({ behavior: "smooth" });
+        });
+    });
+
+    // ===== 頁面專屬邏輯 (只在特定頁面執行) ======
+
+    // 首頁 (index.html) 邏輯
+    if (document.body.classList.contains("index-page")) {
+        renderGames(); // 渲染首頁遊戲卡片
+
+        // 監聽窗口大小調整，重新渲染遊戲卡片
+        window.addEventListener("resize", () => {
+            const isNowMobile = window.innerWidth <= 1024;
+            const wrapper = document.getElementById("gamesWrapper");
+            if (wrapper) {
+                // 檢查是否需要重新渲染
+                const currentIsMobileVertical = document.body.classList.contains("mobile-vertical");
+                if ((isNowMobile && !currentIsMobileVertical) || (!isNowMobile && currentIsMobileVertical)) {
+                    wrapper.innerHTML = "";
+                    if (isNowMobile) {
+                        document.body.classList.add("mobile-vertical");
+                    } else {
+                        document.body.classList.remove("mobile-vertical");
+                    }
+                    renderGames();
+                }
+            }
+        });
+    }
+
+    // 所有遊戲頁面 (all-games.html) 邏輯
+    if (document.body.classList.contains("all-games-page")) {
+        loadAllGames(); // 載入並顯示所有遊戲
+        // filterGames() 函數會由 input 的 oninput 事件觸發，不需要在這裡 DOMContentLoaded 額外綁定
+    }
+
+    // 新上遊戲頁面 (new-games.html) 邏輯
+    if (document.body.classList.contains("new-games-page")) {
+        loadNewGamesContent(); // 專門為 new-games.html 載入最新遊戲
+    }
+
+    // 遊戲詳情頁 (game-detail.html) 邏輯
+    if (document.body.classList.contains("game-detail")) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameName = urlParams.get("game") ? decodeURIComponent(urlParams.get("game")) : "未知遊戲";
+
+        if (gameName) {
+            fetch("games.json")
+                .then(response => {
+                    if (!response.ok) throw new Error("載入 games.json 失敗: " + response.statusText);
+                    return response.json();
+                })
+                .then(data => {
+                    const game = data[gameName];
+                    if (game) {
+                        loadGameDetails(gameName, game); // 載入遊戲詳情
+                    } else {
+                        console.error("找不到遊戲:", gameName);
+                        document.getElementById("gameTitle").textContent = "找不到遊戲";
+                        document.getElementById("gameLogo").src = "images/default.jpg";
+                        document.getElementById("productList").innerHTML = "<p>目前沒有可購買的商品</p>";
+                    }
+                })
+                .catch(error => {
+                    console.error("載入遊戲詳情失敗:", error);
+                    document.getElementById("gameTitle").textContent = "載入失敗";
+                    document.getElementById("gameLogo").src = "images/default.jpg";
+                    document.getElementById("productList").innerHTML = "<p>載入商品失敗</p>"; // 提供友善錯誤訊息
+                });
+        } else {
+            console.error("未提供遊戲名稱");
+            document.getElementById("gameTitle").textContent = "未提供遊戲名稱";
+            document.getElementById("gameLogo").src = "images/default.jpg";
+            document.getElementById("productList").innerHTML = "<p>請選擇一個遊戲</p>";
+        }
+    }
+
+    // 禮包碼頁面 (giftcodes.html) 邏輯
+    if (document.body.classList.contains("giftcodes-page")) {
+        const params = new URLSearchParams(window.location.search);
+        const game = decodeURIComponent(params.get("game") || "未知遊戲");
+
+        document.querySelectorAll('[id^="gameName"]').forEach(el => el.textContent = game);
+        document.getElementById("giftTitle").textContent = `${game} 最新禮包碼|兌換碼|序號|免費領取`;
+
+        fetch("gift-codes-data.json")
+            .then(res => {
+                if (!res.ok) throw new Error("載入 gift-codes-data.json 失敗");
+                return res.json();
+            })
+            .then(data => {
+                if (!data[game]) {
+                    document.querySelector(".content-box").innerHTML += `<p>❌ 找不到 ${game} 的禮包碼資料</p>`;
+                    return;
+                }
+                const gameData = data[game];
+
+                // 設定橫幅圖片
+                const bannerPath = gameData.banner || "giftcodesbanner/default.jpg";
+                const bannerImg = document.getElementById("giftBanner");
+                if (bannerImg) {
+                    bannerImg.src = bannerPath;
+                }
+
+                // 設定介紹文字
+                const section4Element = document.getElementById("section4");
+                if (section4Element) {
+                    section4Element.innerHTML += `<p> <span class="normal">${gameData.description}</span></p>`;
+                }
+
+                // 填入禮包碼表格
+                const tbody = document.querySelector(".gift-table tbody");
+                if (tbody) {
+                    tbody.innerHTML = "";
+                    gameData.codes.forEach(item => {
+                        const row = `<tr><td>${item.code}</td><td>${item.reward}</td></tr>`;
+                        tbody.insertAdjacentHTML("beforeend", row);
+                    });
+                }
+
+                // 填入兌換教學
+                const howToElement = document.getElementById("section3");
+                if (howToElement) {
+                    const steps = gameData.howTo.map(step => `<li>${step}</li>`).join("");
+                    howToElement.innerHTML += `<ol>${steps}</ol>`;
+                }
+            })
+            .catch(e => {
+                console.error("讀取禮包碼資料錯誤", e);
+                const contentBox = document.querySelector(".content-box");
+                if (contentBox) {
+                    contentBox.innerHTML += `<p style="color: red;">載入禮包碼資料失敗：${e.message}</p>`;
+                }
+            });
+        
+        loadLatestGamesInGiftcodesPage(); // 專門為禮包碼頁面載入最新遊戲卡片
+    }
+
+    // 文章頁面 (articles.html) 邏輯
+    if (document.body.classList.contains("articles-page")) {
+        console.log("articles.html 頁面載入，無需額外 JavaScript 渲染文章。");
+
+        const searchBox = document.querySelector('.articles-search-bar');
+        if (searchBox) {
+            searchBox.addEventListener('input', function() {
+                const searchText = this.value.toLowerCase();
+                document.querySelectorAll('.article-card').forEach(card => {
+                    const titleElement = card.querySelector('h3');
+                    const descriptionElement = card.querySelector('p');
+                    const content = (titleElement ? titleElement.textContent.toLowerCase() : '') +
+                                    (descriptionElement ? descriptionElement.textContent.toLowerCase() : '');
+
+                    if (content.includes(searchText)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+    }
 });
+
+
+// ====== 函數定義 (所有頁面可能調用，或只在特定頁面調用) ======
 
 async function renderGames() {
     const wrapper = document.getElementById('gamesWrapper');
-    if (!wrapper) return; // 如果 wrapper 不存在，直接返回
-    wrapper.innerHTML = ""; // 清空當前內容，避免重複
+    if (!wrapper) return;
+    wrapper.innerHTML = "";
 
     let gameData = [];
-
     try {
         const response = await fetch("games.json");
-        if (!response.ok) throw new Error("無法載入遊戲資料");
+        if (!response.ok) throw new Error("無法載入 games.json: " + response.statusText);
         gameData = await response.json();
 
-        // 確保資料格式是陣列
-        if (Array.isArray(gameData)) {
-            // 如果是陣列，繼續處理
-        } else if (typeof gameData === "object") {
-            // 如果是物件，將它轉換為陣列
-            gameData = Object.entries(gameData).map(([name, info]) => ({
+        // 檢查 games.json 是物件的情況，轉換為陣列
+        if (!Array.isArray(gameData)) {
+             gameData = Object.entries(gameData).map(([name, info]) => ({
                 name,
-                logo: info.logo
+                logo: info.logo,
+                // 如果需要，也可以將其他 info 屬性帶過來
             }));
-        } else {
-            throw new Error("遊戲資料格式不正確");
         }
     } catch (error) {
-        console.error("❌ 無法載入 games.json", error);
+        console.error("❌ 無法載入 games.json (renderGames):", error);
+        wrapper.innerHTML = `<p style="color: red;">載入遊戲列表失敗，請稍後再試。</p>`;
         return;
     }
 
@@ -96,26 +239,18 @@ async function renderGames() {
     while (gameData.length < 26) {
         gameData = gameData.concat(gameData);
     }
-
-    // 隨機打亂遊戲資料
     gameData = gameData.sort(() => Math.random() - 0.5);
-
-    // 拆成兩組，每組 13 個遊戲
     let gameChunks = [
         gameData.slice(0, 13),
         gameData.slice(13, 26)
     ];
-	
-	// 📌 根據是否為手機版（垂直）決定用哪種渲染邏輯
-const isMobileVertical = window.innerWidth <= 1024;
 
+    const isMobileVertical = window.innerWidth <= 1024;
+    if (isMobileVertical) {
+        renderVerticalLoopSlider(wrapper, gameChunks);
+        return;
+    }
 
-if (isMobileVertical) {
-  renderVerticalLoopSlider(wrapper, gameChunks);
-  return; // ✅ 完成手機版渲染就跳出
-}
-	
-    // 渲染兩排遊戲
     for (let i = 0; i < 2; i++) {
         const slider = document.createElement('div');
         slider.classList.add('game-slider-container');
@@ -128,195 +263,254 @@ if (isMobileVertical) {
         wrapper.appendChild(slider);
 
         const container = slider.querySelector('.game-slider');
-
-        // 初始時複製 3 倍卡片（13 張變成 39 張），減少動態追加頻率
         const initialMultiplier = 3;
         let extendedGames = [];
         for (let j = 0; j < initialMultiplier; j++) {
             extendedGames = extendedGames.concat(gameChunks[i]);
         }
 
-        // 產生這個 slider 的卡片
-        extendedGames.forEach((game, index) => {
-            const card = document.createElement('div');
+        extendedGames.forEach((game) => {
+            const card = document.createElement('a'); // 將 card 直接設為 a 標籤
             card.classList.add('card', 'game-card');
+            card.href = `game-detail.html?game=${encodeURIComponent(game.name)}`; // 設定 href
 
-            // 建立圖片元素
             const img = document.createElement('img');
             img.src = game.logo;
             img.alt = game.name;
             img.onerror = () => {
-                img.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
-                img.onerror = null; // 避免無限循環
+                img.src = "images/default.jpg";
+                img.onerror = null;
             };
 
-            // 建立遊戲名稱
             const text = document.createElement('div');
             text.classList.add('game-title');
             text.textContent = game.name;
 
-            // 把圖片和文字加入卡片
             card.appendChild(img);
             card.appendChild(text);
-
-            // 點擊跳轉到遊戲詳細頁面
-            card.addEventListener('click', () => {
-                window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
-            });
-
             container.appendChild(card);
         });
 
-        // 設置初始位置為中間（顯示第 5 到第 9 張卡片）
-        const visibleCards = 5; // 一次顯示 5 張
-        const initialIndex = Math.floor((gameChunks[i].length - visibleCards) / 2); // 基於原始 13 張計算中間位置
-        const cardWidth = 220; // 每張卡片的寬度（包含 margin）
+        const visibleCards = 5;
+        const initialIndex = Math.floor((gameChunks[i].length - visibleCards) / 2);
+        const cardWidth = 220;
 
-        // 設置初始偏移量
         let initialOffset = initialIndex * cardWidth;
         container.style.transform = `translateX(-${initialOffset}px)`;
-        container.setAttribute('data-index', initialIndex); // 記住初始索引
-        container.setAttribute('data-offset', initialOffset); // 記住初始偏移量
-        container.setAttribute('data-original-length', gameChunks[i].length); // 記住原始卡片數量
+        container.setAttribute('data-index', initialIndex);
+        container.setAttribute('data-offset', initialOffset);
+        container.setAttribute('data-original-length', gameChunks[i].length);
     }
 }
 
 // 滑動功能（實現真正的無限滑動）
 function moveSlide(direction, containerId) {
     const container = document.getElementById(containerId);
-    const originalLength = parseInt(container.getAttribute('data-original-length')); // 原始卡片數量（13）
-    const cardWidth = 220; // 每張卡片的寬度（包含 margin）
-    const visibleCards = 5; // 一次顯示 5 張
+    if (!container) return;
+
+    const originalLength = parseInt(container.getAttribute('data-original-length'));
+    const cardWidth = 220;
+    const visibleCards = 5;
     let currentIndex = parseInt(container.getAttribute('data-index')) || 0;
     let currentOffset = parseFloat(container.getAttribute('data-offset')) || 0;
 
-    // 計算滑動距離（每次只移動一個卡片）
     const moveDistance = direction * cardWidth;
     currentOffset += moveDistance;
     currentIndex += direction;
 
-    // 計算當前卡片總數
     let totalCards = container.querySelectorAll('.game-card').length;
 
-    // 當往右滑動接近末尾時，追加卡片到末尾
-    if (currentIndex >= totalCards - visibleCards - 1) {
-        const cards = container.querySelectorAll('.game-card');
-        const cardsToAppend = Array.from(cards).slice(0, originalLength); // 複製原始的 13 張卡片
-        cardsToAppend.forEach(card => {
-            const clonedCard = card.cloneNode(true);
-            // 重新綁定事件
-            clonedCard.addEventListener('click', () => {
-                const gameName = clonedCard.querySelector('.game-title').textContent;
-                window.location.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
+    if (direction > 0) { // Moving right
+        if (currentIndex >= totalCards - visibleCards - 1) {
+            const cards = container.querySelectorAll('.game-card');
+            const cardsToAppend = Array.from(cards).slice(0, originalLength);
+            cardsToAppend.forEach(card => {
+                const clonedCard = card.cloneNode(true);
+                // 重新綁定事件，因為 cloneNode(true) 不會複製事件監聽器
+                // 確保 cloneNode 的點擊事件也是正確的 href
+                const gameNameElement = clonedCard.querySelector('.game-title');
+                if (gameNameElement) {
+                    const gameName = gameNameElement.textContent;
+                    clonedCard.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
+                } else {
+                    clonedCard.href = `game-detail.html`; // fallback
+                }
+                container.appendChild(clonedCard);
             });
-            container.appendChild(clonedCard);
-        });
-        totalCards = container.querySelectorAll('.game-card').length; // 更新總卡片數
+        }
+    } else { // Moving left
+        if (currentIndex < 1) {
+            const cards = container.querySelectorAll('.game-card');
+            const cardsToPrepend = Array.from(cards).slice(-originalLength);
+            cardsToPrepend.reverse().forEach(card => {
+                const clonedCard = card.cloneNode(true);
+                // 重新綁定事件
+                const gameNameElement = clonedCard.querySelector('.game-title');
+                if (gameNameElement) {
+                    const gameName = gameNameElement.textContent;
+                    clonedCard.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
+                } else {
+                    clonedCard.href = `game-detail.html`; // fallback
+                }
+                container.insertBefore(clonedCard, container.firstChild);
+            });
+            currentIndex += originalLength;
+            currentOffset += originalLength * cardWidth;
+        }
     }
 
-    // 當往左滑動接近開頭時，追加卡片到開頭
-    if (currentIndex < 1) {
-        const cards = container.querySelectorAll('.game-card');
-        const cardsToPrepend = Array.from(cards).slice(-originalLength); // 複製最後 13 張卡片
-        cardsToPrepend.reverse().forEach(card => {
-            const clonedCard = card.cloneNode(true);
-            // 重新綁定事件
-            clonedCard.addEventListener('click', () => {
-                const gameName = clonedCard.querySelector('.game-title').textContent;
-                window.location.href = `game-detail.html?game=${encodeURIComponent(gameName)}`;
-            });
-            container.insertBefore(clonedCard, container.firstChild);
-        });
-        totalCards = container.querySelectorAll('.game-card').length; // 更新總卡片數
-        currentIndex += originalLength; // 調整索引
-        currentOffset += originalLength * cardWidth; // 調整偏移量
-    }
+    totalCards = container.querySelectorAll('.game-card').length; // Update totalCards after appending/prepending
 
-    // 清理遠離視窗的卡片以優化性能
-    const maxCards = originalLength * 5; // 最多保留 5 倍的卡片數量
+    const maxCards = originalLength * 5;
     if (totalCards > maxCards) {
         if (direction > 0) {
-            // 往右滑動，移除開頭的卡片
             const cardsToRemove = totalCards - maxCards;
             for (let i = 0; i < cardsToRemove; i++) {
-                container.removeChild(container.firstChild);
+                if (container.firstChild) {
+                    container.removeChild(container.firstChild);
+                }
             }
             currentIndex -= cardsToRemove;
             currentOffset -= cardsToRemove * cardWidth;
         } else {
-            // 往左滑動，移除末尾的卡片
             const cardsToRemove = totalCards - maxCards;
             for (let i = 0; i < cardsToRemove; i++) {
-                container.removeChild(container.lastChild);
+                if (container.lastChild) {
+                    container.removeChild(container.lastChild);
+                }
             }
         }
-        totalCards = container.querySelectorAll('.game-card').length; // 更新總卡片數
     }
 
-    // 應用滑動
     container.style.transform = `translateX(-${currentOffset}px)`;
-    container.setAttribute('data-index', currentIndex); // 記住當前索引
-    container.setAttribute('data-offset', currentOffset); // 記住當前偏移量
+    container.setAttribute('data-index', currentIndex);
+    container.setAttribute('data-offset', currentOffset);
 }
 
-// 其他功能保持不變
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function (event) {
-            const targetPage = this.getAttribute("href");
-            if (targetPage && (targetPage.endsWith(".html") || targetPage.startsWith("http"))) {
-                return; // 讓正常的連結直接跳轉
-            }
-            event.preventDefault();
+function renderVerticalLoopSlider(wrapper, gameChunks) {
+    for (let i = 0; i < 2; i++) {
+        const slider = document.createElement("div");
+        slider.classList.add("game-slider-container");
+
+        const sliderInner = document.createElement("div");
+        sliderInner.classList.add("game-slider");
+
+        slider.appendChild(sliderInner);
+        wrapper.appendChild(slider);
+
+        let extended = [];
+        for (let j = 0; j < 10; j++) {
+            extended = extended.concat(gameChunks[i]);
+        }
+
+        function createCard(game) {
+            const card = document.createElement("a"); // 這裡也改為 a 標籤
+            card.classList.add("card", "game-card");
+            card.href = `game-detail.html?game=${encodeURIComponent(game.name)}`; // 設定 href
+
+            const img = document.createElement("img");
+            img.src = game.logo;
+            img.alt = game.name;
+            img.onerror = () => {
+                img.src = "images/default.jpg";
+                img.onerror = null;
+            };
+
+            const text = document.createElement("div");
+            text.classList.add("game-title");
+            text.textContent = game.name;
+
+            card.appendChild(img);
+            card.appendChild(text);
+            return card;
+        }
+
+        extended.forEach(game => {
+            sliderInner.appendChild(createCard(game));
         });
-    });
-});
+
+        slider.addEventListener("scroll", () => {
+            if (slider.scrollTop + slider.clientHeight >= slider.scrollHeight - 10) {
+                extended.forEach(game => {
+                    sliderInner.appendChild(createCard(game));
+                });
+            }
+
+            if (slider.scrollTop <= 10) {
+                const cardsToAdd = extended.slice().reverse();
+                cardsToAdd.forEach(game => {
+                    const card = createCard(game);
+                    sliderInner.insertBefore(card, sliderInner.firstChild);
+                    slider.scrollTop += card.offsetHeight;
+                });
+            }
+        });
+    }
+}
+
 
 function loadGameDetails(gameName, game) {
     const gameLogo = document.getElementById("gameLogo");
-    document.getElementById("gameTitle").textContent =  `${gameName} 代儲值`;
-    document.getElementById("gameName").value = gameName;
-    gameLogo.src = game.logo;
-    gameLogo.onerror = () => {
-        gameLogo.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
-        gameLogo.onerror = null; // 避免無限循環
-    };
-    document.getElementById("gameDescription").innerHTML = `
-        請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
-        一切問題歡迎私訊官方@客服。<br>
-        歡迎加入 LINE@ 生活圈 ID：@ssbuy (@也要輸入)。<br>
-        我們將不定時舉辦抽優惠券與點卡活動哦!
-    `;
+    if (gameLogo) { // null check
+        gameLogo.src = game.logo;
+        gameLogo.alt = gameName;
+        gameLogo.onerror = () => {
+            gameLogo.src = "images/default.jpg";
+            gameLogo.onerror = null;
+        };
+    }
+    
+    const gameTitleElement = document.getElementById("gameTitle");
+    if (gameTitleElement) { // null check
+        gameTitleElement.textContent = `${gameName} 代儲值`;
+    }
 
-const socialContainer = document.querySelector(".social-media p");
+    const gameNameInput = document.getElementById("gameName");
+    if (gameNameInput) { // null check
+        gameNameInput.value = gameName;
+    }
 
-const socialLinks = Object.entries(game.social).map(([name, url]) => {
-  const link = url && url !== "N" ? url : "#";
-  return `<a href="${link}" target="_blank">${name}</a>`;
-});
+    const gameDescriptionElement = document.getElementById("gameDescription");
+    if (gameDescriptionElement) { // null check
+        gameDescriptionElement.innerHTML = `
+            請確認好帳戶資料和所購買商品無誤再結帳，感謝您的支持。<br>
+            一切問題歡迎私訊官方@客服。<br>
+            歡迎加入 LINE@ 生活圈 ID：@ssbuy (@也要輸入)。<br>
+            我們將不定時舉辦抽優惠券與點卡活動哦!
+        `;
+    }
 
-// 分割點：前 3 個在第一行，後面在第二行（即使是 # 也保留 <a>）
-const line1 = socialLinks.slice(0, 3).join(" | ");
-const line2 = socialLinks.slice(3).join(" | ");
+    const socialContainer = document.querySelector(".social-media p");
+    if (socialContainer) {
+        const socialLinks = Object.entries(game.social).map(([name, url]) => {
+            const link = url && url !== "N" ? url : "#";
+            return `<a href="${link}" target="_blank">${name}</a>`;
+        });
 
-socialContainer.innerHTML = `
-  <div class="social-line line1">${line1}</div>
-  <div class="social-line line2">${line2}</div>
-`;
+        const line1 = socialLinks.slice(0, 3).join(" | ");
+        const line2 = socialLinks.slice(3).join(" | ");
 
-    // 確保 game.products 存在
+        socialContainer.innerHTML = `
+            <div class="social-line line1">${line1}</div>
+            <div class="social-line line2">${line2}</div>
+        `;
+    }
+
     if (game && game.products) {
         loadProducts(game.products);
     } else {
         const productContainer = document.getElementById("productList");
-        productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
+        if (productContainer) {
+            productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
+        }
     }
 }
 
 function loadProducts(products) {
-    console.log("載入的產品:", products);
     const productContainer = document.getElementById("productList");
-    productContainer.innerHTML = ""; // 清空現有商品
+    if (!productContainer) return;
+
+    productContainer.innerHTML = "";
 
     if (!products || products.length === 0) {
         productContainer.innerHTML = "<p>目前沒有可購買的商品</p>";
@@ -324,7 +518,6 @@ function loadProducts(products) {
     }
 
     products.forEach(product => {
-        console.log("處理產品:", product);
         const row = document.createElement("div");
         row.classList.add("product-item");
 
@@ -360,50 +553,27 @@ function updateTotal() {
     });
 
     const selectedProductsField = document.getElementById("selectedProducts");
-    selectedProductsField.value = selectedProducts.length > 0 ? selectedProducts.join(" + ") : "購買商品";
+    if (selectedProductsField) {
+        selectedProductsField.value = selectedProducts.length > 0 ? selectedProducts.join(" + ") : "購買商品";
+        selectedProductsField.style.height = "auto";
+        selectedProductsField.style.height = Math.min(selectedProductsField.scrollHeight, 120) + "px";
+    }
 
-    selectedProductsField.style.height = "auto";
-    selectedProductsField.style.height = Math.min(selectedProductsField.scrollHeight, 120) + "px";
-
-    document.getElementById("totalAmount").innerHTML = `<strong>結帳總金額: NT$${total}</strong>`;
+    const totalAmountElement = document.getElementById("totalAmount");
+    if (totalAmountElement) {
+        totalAmountElement.innerHTML = `<strong>結帳總金額: NT$${total}</strong>`;
+    }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("games.json")
-        .then(response => response.json())
-        .then(data => {
-            const gameEntries = Object.entries(data);
-            const latestGames = gameEntries.slice(-15).reverse(); // 倒數 21 個，但只取 20 個
+function filterGames() {
+    const searchQuery = document.getElementById("searchBox").value.toLowerCase();
+    const gameCards = document.querySelectorAll(".game-card");
 
-            const container = document.getElementById("new-games-container");
-            if (container) {
-                container.innerHTML = ""; // 清空原本內容
-
-                latestGames.forEach(([name, info]) => {
-                    const gameCard = document.createElement("div");
-                    gameCard.classList.add("new-game-item");
-
-                    gameCard.innerHTML = `
-                        <a href="game-detail.html?game=${encodeURIComponent(name)}">
-                            <div class="card new-game-card">
-                                <img src="${info.logo}" alt="${name}" onerror="this.src='images/default.jpg'; this.onerror=null;">
-                                <div class="game-title">${name}</div>
-                            </div>
-                        </a>
-                    `;
-                    container.appendChild(gameCard);
-                });
-            }
-        })
-        .catch(error => console.error("Error loading games:", error));
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    if (document.body.classList.contains("all-games-page")) {
-        loadAllGames();
-    }
-});
-
+    gameCards.forEach(card => {
+        const gameName = card.querySelector(".game-title").textContent.toLowerCase();
+        card.style.display = gameName.includes(searchQuery) ? "block" : "none";
+    });
+}
 
 
 async function loadAllGames() {
@@ -417,12 +587,15 @@ async function loadAllGames() {
             logo: gamesData[gameName].logo
         }));
 
-        // 隨機排序遊戲
         games = games.sort(() => Math.random() - 0.5);
 
         displayGames(games);
     } catch (error) {
         console.error("無法讀取遊戲數據:", error);
+        const gamesContainer = document.getElementById("gamesContainer");
+        if(gamesContainer) {
+            gamesContainer.innerHTML = `<p style="color: red;">無法載入所有遊戲列表。</p>`;
+        }
     }
 }
 
@@ -430,18 +603,19 @@ function displayGames(games) {
     const gamesContainer = document.getElementById("gamesContainer");
     if (!gamesContainer) return;
 
-    gamesContainer.innerHTML = ""; // 清空現有內容
+    gamesContainer.innerHTML = "";
 
     games.forEach(game => {
-        const gameCard = document.createElement("div");
+        const gameCard = document.createElement("a"); // 改為 <a> 標籤
         gameCard.classList.add("card", "game-card");
+        gameCard.href = `game-detail.html?game=${encodeURIComponent(game.name)}`; // 設定 href
 
         const img = document.createElement("img");
         img.src = game.logo;
         img.alt = game.name;
         img.onerror = () => {
-            img.src = "images/default.jpg"; // 如果圖片載入失敗，使用預設圖片
-            img.onerror = null; // 避免無限循環
+            img.src = "images/default.jpg";
+            img.onerror = null;
         };
 
         const gameName = document.createElement("div");
@@ -452,266 +626,85 @@ function displayGames(games) {
         gameCard.appendChild(gameName);
         gamesContainer.appendChild(gameCard);
 
-        gameCard.addEventListener("click", () => {
-            window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
-        });
+        // 移除 click event listener，因為 <a> 標籤的 href 會自動處理導航
+        // gameCard.addEventListener("click", () => {
+        //     window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
+        // });
     });
 }
 
-function filterGames() {
-    const searchQuery = document.getElementById("searchBox").value.toLowerCase();
-    const gameCards = document.querySelectorAll(".game-card");
-
-    gameCards.forEach(card => {
-        const gameName = card.querySelector(".game-title").textContent.toLowerCase();
-        card.style.display = gameName.includes(searchQuery) ? "block" : "none";
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  // -- 既有功能: renderGames() / etc -- 
-  // 請保持原本代碼不動
-
-  // ★ 新增: 手機版漢堡按鈕
-  const mobileToggle = document.querySelector(".mobile-menu-toggle");
-  const mobileDropdown = document.querySelector(".mobile-dropdown-menu");
-
-  if (mobileToggle && mobileDropdown) {
-    mobileToggle.addEventListener("click", () => {
-      if (mobileDropdown.style.display === "block") {
-        mobileDropdown.style.display = "none";
-      } else {
-        mobileDropdown.style.display = "block";
-      }
-    });
-  }
-
-  // -- 其餘功能繼續 --
-});
-
-function renderVerticalLoopSlider(wrapper, gameChunks) {
-  for (let i = 0; i < 2; i++) {
-    const slider = document.createElement("div");
-    slider.classList.add("game-slider-container");
-
-    const sliderInner = document.createElement("div");
-    sliderInner.classList.add("game-slider");
-
-    slider.appendChild(sliderInner);
-    wrapper.appendChild(slider);
-
-    // 複製資料增加循環性
-    let extended = [];
-    for (let j = 0; j < 10; j++) {
-      extended = extended.concat(gameChunks[i]);
-    }
-
-    function createCard(game) {
-      const card = document.createElement("div");
-      card.classList.add("card", "game-card");
-
-      const img = document.createElement("img");
-      img.src = game.logo;
-      img.alt = game.name;
-      img.onerror = () => {
-        img.src = "images/default.jpg";
-        img.onerror = null;
-      };
-
-      const text = document.createElement("div");
-      text.classList.add("game-title");
-      text.textContent = game.name;
-
-      card.appendChild(img);
-      card.appendChild(text);
-
-      card.addEventListener("click", () => {
-        window.location.href = `game-detail.html?game=${encodeURIComponent(game.name)}`;
-      });
-
-      return card;
-    }
-
-    // 初始填入
-    extended.forEach(game => {
-      sliderInner.appendChild(createCard(game));
-    });
-
-    // 無限滾動：往下補
-    slider.addEventListener("scroll", () => {
-      if (slider.scrollTop + slider.clientHeight >= slider.scrollHeight - 10) {
-        extended.forEach(game => {
-          sliderInner.appendChild(createCard(game));
-        });
-      }
-
-      // 無限滾動：往上補
-      if (slider.scrollTop <= 10) {
-        const scrollOffset = slider.scrollTop;
-        const cardsToAdd = extended.slice().reverse();
-        cardsToAdd.forEach(game => {
-          const card = createCard(game);
-          sliderInner.insertBefore(card, sliderInner.firstChild);
-          slider.scrollTop += card.offsetHeight; // 調整 scrollTop，避免畫面跳動
-        });
-      }
-    });
-  }
-}
-
-let resizeTimer;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    const isNowMobile = window.innerWidth <= 1024;
-
-    // 如果目前是首頁才執行
-    if (document.body.classList.contains("index-page")) {
-      const wrapper = document.getElementById("gamesWrapper");
-      if (wrapper) {
-        wrapper.innerHTML = "";     // 清空舊卡片
-        if (isNowMobile) {
-          document.body.classList.add("mobile-vertical");
-        } else {
-          document.body.classList.remove("mobile-vertical");
-        }
-        renderGames();             // 重新載入卡片
-      }
-    }
-  }, 10); // debounce：延遲 200ms 觸發
-});
-
-
-	//禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容 禮包碼的內容
-document.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    const game = params.get("game") || "遊戲名稱";
-
-    // 填入所有 ID 包含 "gameName"
-    document.querySelectorAll('[id^="gameName"]').forEach(el => {
-        el.textContent = game;
-    });
-    document.getElementById("giftTitle").textContent = `${game} 禮包碼領取`;
-});
-
-document.addEventListener("DOMContentLoaded", async () => {
-    const params = new URLSearchParams(window.location.search);
-    const game = decodeURIComponent(params.get("game") || "未知遊戲");
-
-    document.querySelectorAll('[id^="gameName"]').forEach(el => el.textContent = game);
-    document.getElementById("giftTitle").textContent = `${game} 最新禮包碼|兌換碼|序號|免費領取`;
-
+// Function to load latest games specifically for new-games.html
+async function loadNewGamesContent() {
     try {
-        const res = await fetch("gift-codes-data.json");
-        const data = await res.json();
+        const response = await fetch("games.json");
+        if (!response.ok) throw new Error("無法載入遊戲資料");
+        const data = await response.json();
 
-        if (!data[game]) {
-            document.querySelector(".content-box").innerHTML += `<p>❌ 找不到 ${game} 的資料</p>`;
-            return;
+        const gameEntries = Object.entries(data);
+        const latestGames = gameEntries.slice(-15).reverse();
+
+        const container = document.getElementById("new-games-container");
+        if (container) {
+            container.innerHTML = "";
+
+            latestGames.forEach(([name, info]) => {
+                const gameCard = document.createElement("a"); // 改為 <a> 標籤
+                gameCard.classList.add("new-game-item");
+                gameCard.href = `game-detail.html?game=${encodeURIComponent(name)}`; // 設定 href
+
+                gameCard.innerHTML = `
+                    <div class="card new-game-card">
+                        <img src="${info.logo}" alt="${name}" onerror="this.src='images/default.jpg'; this.onerror=null;">
+                        <div class="game-title">${name}</div>
+                    </div>
+                `;
+                container.appendChild(gameCard);
+            });
         }
-
-        const gameData = data[game];
-		
-    // 🔥 設定橫幅圖片
-    const bannerPath = gameData.banner || "giftcodesbanner/default.jpg";
-    const bannerImg = document.getElementById("giftBanner");
-    if (bannerImg) {
-        bannerImg.src = bannerPath;
-    };
-
-        // 設定介紹文字
-        document.getElementById("section4").innerHTML += `<p> <span class="normal">${gameData.description}</span></p>`;
-
-
-        // 填入禮包碼表格
-        const tbody = document.querySelector(".gift-table tbody");
-        tbody.innerHTML = "";
-        gameData.codes.forEach(item => {
-            const row = `<tr><td>${item.code}</td><td>${item.reward}</td></tr>`;
-            tbody.insertAdjacentHTML("beforeend", row);
-        });
-
-        // 填入兌換教學
-        const howTo = document.getElementById("section3");
-        const steps = gameData.howTo.map(step => `<li>${step}</li>`).join("");
-        howTo.innerHTML += `<ol>${steps}</ol>`;
-
-    } catch (e) {
-        console.error("讀取禮包碼資料錯誤", e);
+    } catch (error) {
+        console.error("Error loading new games content:", error);
+        const container = document.getElementById("new-games-container");
+        if(container) {
+            container.innerHTML = `<p style="color: red;">無法載入最新遊戲列表。</p>`;
+        }
     }
-	    // ✅ 加在這裡，專門給禮包碼頁面跑最新遊戲卡片
-    if (document.body.classList.contains("giftcodes-page")) {
-        loadLatestGames();
-    }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("a[href^='#']").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            target?.scrollIntoView({ behavior: "smooth" });
-        });
-    });
-});
-
-async function loadLatestGames(limit = 10) {
-  const res = await fetch("games.json");
-  const data = await res.json();
-  const container = document.getElementById("gamesWrapper");
-  if (!container) return;
-
-  container.innerHTML = "";
-  container.className = "fixed-card-grid";
-
-  const gameNames = Object.keys(data).slice(-limit).reverse();
-  const isMobile = window.innerWidth <= 1024;
-
-  gameNames.forEach((name) => {
-    const game = data[name];
-    const card = document.createElement("div");
-    card.className = "card game-card";
-
-    const img = document.createElement("img");
-    img.src = game.logo;
-    img.alt = name;
-    img.onerror = () => {
-      img.src = "images/default.jpg";
-    };
-
-    const title = document.createElement("div");
-    title.className = "game-title";
-    title.textContent = name;
-
-    card.appendChild(img);
-    card.appendChild(title);
-    card.onclick = () => (location.href = `game-detail.html?game=${encodeURIComponent(name)}`);
-    container.appendChild(card);
-  });
-
-  // ✅ 加上對應的 CSS 類名，用來控制每排幾個
-  container.classList.add(isMobile ? "gift-mobile-grid" : "gift-desktop-grid");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".zoomable").forEach(img => {
-    img.addEventListener("click", () => {
-      const fullSrc = img.dataset.src;
+// Function to load latest games specifically for giftcodes.html
+async function loadLatestGamesInGiftcodesPage(limit = 10) {
+    const res = await fetch("games.json");
+    const data = await res.json();
+    const container = document.getElementById("new-games-container"); // 這是禮包碼頁面最新遊戲的容器 ID
+    if (!container) return;
 
-      const overlay = document.createElement("div");
-      overlay.className = "image-lightbox-overlay";
+    container.innerHTML = "";
+    container.className = "fixed-card-grid";
 
-      const fullImage = document.createElement("img");
-      fullImage.src = fullSrc;
+    const gameNames = Object.keys(data).slice(-limit).reverse();
+    const isMobile = window.innerWidth <= 1024;
 
-      overlay.appendChild(fullImage);
-      document.body.appendChild(overlay);
+    gameNames.forEach((name) => {
+        const game = data[name];
+        const card = document.createElement("a"); // 這裡也改為 a 標籤
+        card.className = "card game-card";
+        card.href = `game-detail.html?game=${encodeURIComponent(name)}`; // 設定 href
 
-      overlay.addEventListener("click", () => {
-        overlay.classList.add("fade-out");
-        setTimeout(() => overlay.remove(), 300); // 動畫結束後移除
-      });
+        const img = document.createElement("img");
+        img.src = game.logo;
+        img.alt = name;
+        img.onerror = () => {
+            img.src = "images/default.jpg";
+            img.onerror = null;
+        };
+
+        const title = document.createElement("div");
+        title.className = "game-title";
+        title.textContent = name;
+
+        card.appendChild(img);
+        card.appendChild(title);
+        container.appendChild(card);
     });
-  });
-});
 
+    container.classList.add(isMobile ? "gift-mobile-grid" : "gift-desktop-grid");
+}

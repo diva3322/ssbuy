@@ -34,6 +34,127 @@ body {
   font-weight: normal !important;
 }
 
+/* 新增或調整 style.css 中的樣式來匹配 */
+.articles-page .main-content {
+	margin-left: 13vw;
+	display: flex;
+	flex-direction: column;
+	padding: 3vh;
+	gap: 5px;
+	align-items: center;
+}
+
+.articles-banner {
+	display: block; /* 將圖片轉換為塊級元素 */
+    margin: 0 auto; /* 上下外邊距為0，左右自動，實現水平置中 */
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.articles-banner img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.articles-search-bar {
+	width: 90%;
+	padding: 10px 15px;
+	border: 1px solid #444;
+	border-radius: 5px;
+	background-color: #333;
+	color: #eee;
+	font-size: 1rem;
+	margin-bottom: 20px;
+}
+
+.articles-section {
+	background-color: #222;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.articles-section h2 {
+	color: #00c300; /* 或您的品牌色 */
+	margin-bottom: 15px;
+	border-bottom: 2px solid #444;
+	padding-bottom: 10px;
+	font-size: 1.8rem;
+}
+
+.article-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 20px;
+}
+
+.article-card {
+	background-color: #333;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none; /* 移除連結下劃線 */
+	color: inherit; /* 繼承文字顏色 */
+}
+
+.article-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.article-card img {
+	width: 100%;
+	height: 180px; /* 固定圖片高度 */
+	object-fit: cover;
+}
+
+.article-card-content {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.article-card-content h3 {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: #eee;
+	line-height: 1.4;
+}
+
+.article-card-content p {
+	font-size: 0.9rem;
+	color: #bbb;
+	margin-bottom: 10px;
+	flex-grow: 1;
+}
+
+.article-meta {
+	font-size: 0.8rem;
+	color: #888;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.article-meta a {
+	color: #00bfff; /* 連結顏色 */
+	text-decoration: none;
+}
+
+.article-meta a:hover {
+	text-decoration: underline;
+}
+
+
+
 /* 側邊欄 */ /* 這一行是註解，標示側邊欄樣式開始 */
 .sidebar {
     width: 10.4vw; /* 這一行設定側邊欄寬度為視窗寬度的10.4%，響應式設計 */
@@ -85,9 +206,7 @@ body {
 }
 
 .header-img {
-    max-width: 80%; /* 這一行設定頭部圖片最大寬度為80% */
     height: auto; /* 這一行設定頭部圖片高度自動調整 */
-    margin-top: 0vh; /* 這一行使頭部圖片向上移動8vh */
 }
 
 /* 調整遊戲卡片容器顯示方式 */ /* 這一行是註解，標示遊戲卡片容器樣式開始 */
@@ -852,12 +971,20 @@ img.zoomable {
     font-family: 'Kanit', 'Noto Sans TC', sans-serif; /* 這一行設定文本區域字體為Kanit和Noto Sans TC */
 }
 
-/* ★ 新增：小螢幕頂部漢堡選單預設隱藏 */ /* 這一行是註解，標示小螢幕頂部漢堡選單樣式開始 */
+/* 手機頂部條 (漢堡選單) - 固定在 header-wrapper 下方 */
 .mobile-top-bar {
-	width: 100%;
-  display: none; /* 這一行預設隱藏頂部漢堡選單 */
-  background: #333; /* 這一行設定頂部漢堡選單背景為深灰色 */
-  padding: 0.5rem; /* 這一行設定頂部漢堡選單內邊距為1rem */
+    position: fixed; /* 固定在頂部 */
+    top: 80px; /* 範例值：緊接在 header-wrapper 之下。實際值請根據 .header-wrapper 的高度調整 */
+    left: 0;
+    width: 100%;
+    z-index: 95; /* 在 mobile-dropdown-menu 和內容之間 */
+    background-color: #222; 
+    padding: 10px 15px;
+    display: none; /* 預設在桌面隱藏，手機顯示 */
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    height: auto; /* 高度自適應 */
 }
 
 .mobile-menu-toggle {
@@ -874,31 +1001,46 @@ img.zoomable {
   margin-right: 6px; /* 這一行設定漢堡圖標右側外邊距為6px */
 }
 
-/* ★ 新增：下拉選單預設隱藏 */ /* 這一行是註解，標示下拉選單樣式開始 */
+/* 手機下拉選單 - 固定並覆蓋內容，位於 mobile-top-bar 下方 */
 .mobile-dropdown-menu {
-  display: none; /* 這一行預設隱藏下拉選單 */
-  background: #444; /* 這一行設定下拉選單背景為深灰色 */
-  padding: 0.5rem 1rem;  /* ← 可減少 padding */
-  margin-bottom: 0;      /* ← 清除底部空隙 */
+    position: fixed; /* 固定在視窗 */
+    top: calc(2.4vh + 10vh); /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
+    left: 0;
+    width: 100%;
+    height: 7%; /* 佔滿剩餘高度 */
+    background-color: rgba(0, 0, 0, 0.9); /* 深色半透明背景，覆蓋內容 */
+    z-index: 99; /* 在內容之上，但在 mobile-top-bar 之下 */
+    overflow-y: auto; /* 允許選單內容滾動 */
+    display: none; /* 預設隱藏 */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%); /* 預設在上方隱藏 */
+	overflow: hidden !important;
+}
+
+/* mobile-dropdown-menu 展開時的樣式 */
+.mobile-dropdown-menu.open {
+    display: block; /* 顯示 */
+    opacity: 1;
+    transform: translateY(0); /* 滑入視窗 */
 }
 
 .mobile-dropdown-menu ul {
-  list-style: none; /* 這一行移除下拉選單ul的項目符號 */
-  margin: 0; /* 這一行移除下拉選單ul的外邊距 */
-  padding: 0; /* 這一行移除下拉選單ul的內邊距 */
-    display: flex;             /* 改為橫向排列 */
-  justify-content: center;   /* 水平置中 */
-  gap: 2.2rem;                 /* 項目之間留點空隙 */
+    list-style: none;
+    margin: 1.2vh;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 0.9rem;
 }
 
 .mobile-dropdown-menu ul li {
-  word-break: break-all; /* 中文兩字換行 */
-  text-align: center;     /* 置中文字中 */
-  padding: 0.5rem 0.75rem;       /* 改為左右 padding */
-  font-size: 1rem;
-  border: none;               /* 移除底線 */
-  background: rgba(255,255,255,0.2);  /* 可以加點底色區分 */
-  border-radius: 8px;         /* 圓角更好看 */
+    text-align: center;
+    padding: 0.5vh 0.25vh;
+    font-size: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
 }
 
 .social-media {
@@ -976,6 +1118,7 @@ img.zoomable {
     flex-wrap: nowrap;
     gap: 0.5vh;
     overflow-x: auto;
+	overflow-y: hidden;
 	padding-top:3vh;
 }
 
@@ -985,8 +1128,8 @@ img.zoomable {
 }
 
 .giftcodes-page #new-games-container .game-card {
-  width: 12vh;           /* ✅ 固定寬 */
-  height: 12vh;          /* ✅ 固定高，卡片永遠是正方形 */
+  width: 11vh;          /* ✅ 固定寬 */
+  height: 11vh;          /* ✅ 固定高，卡片永遠是正方形 */
   overflow: hidden;
   position: relative;
   border-radius: 1vh;
@@ -1027,12 +1170,91 @@ img.zoomable {
   justify-content: center;
 }
 
+.giftcodes-page .game-card {
+    width: 12vh;                /* 固定卡片寬度 */
+    height: 12vh;               /* 固定卡片高度 */
+    flex-shrink: 0;             /* 防止卡片縮小 */
+    margin: 0 0.5vh;            /* 左右間距 */
+}
+
 /* ★ 針對小螢幕(≤1024px)：隱藏sidebar、顯示 mobile-top-bar */ /* 這一行是註解，標示小螢幕媒體查詢開始 */
 @media (max-width: 1024px) {
-	html, body {
-    overflow-x: hidden;  /* 禁止水平滾動 */
-    width: 100vw;        /* 確保寬度不超過螢幕 */
+	
+html, body {
+    /* 確保寬度不超過螢幕 */
+    width: 100vw; 
+    /* 禁止水平滾動 */
+    overflow-x: hidden; 
+
+    /* 隱藏垂直滾動條，但保留滾動功能 */
+    /* 針對 Firefox 瀏覽器 */
+    scrollbar-width: none; 
+    /* 針對 Internet Explorer 10+ 和 Edge */
+    -ms-overflow-style: none; 
+}
+
+/* 針對基於 WebKit 的瀏覽器 (Chrome, Safari, Opera, 新版 Edge 等) */
+/* 這是針對 html 和 body 滾動條本身的一個偽元素 */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* 隱藏滾動條的視覺部分 */
+}
+
+.giftcodes-page #new-games-container {
+    display: flex;              /* 使用 flex 布局 */
+    flex-direction: row;        /* 水平排列 */
+    gap: 1vh;                   /* 卡片間距 */
+    overflow-x: auto;           /* 啟用水平滾動 */
+    padding: 3vh 0;             /* 上下內邊距 */
+    scroll-behavior: smooth;    /* 平滑滾動效果 */
+    -webkit-overflow-scrolling: touch; /* 手機端平滑滾動 */
+    width: 100%;                /* 確保容器寬度適應內容 */
+}
+
+.giftcodes-page .game-card {
+    width: 12vh;                /* 固定卡片寬度 */
+    height: 12vh;               /* 固定卡片高度 */
+    flex-shrink: 0;             /* 防止卡片縮小 */
+    margin: 0 0.5vh;            /* 左右間距 */
+}
+
+.giftcodes-page #new-games-container::-webkit-scrollbar {
+	overflow: hidden;
+    display: none;              /* 隱藏滾動條（可選，視需求） */
+}
+  
+	.articles-page .sidebar {
+		display: none; /* 手機版隱藏側邊欄，透過漢堡選單顯示 */
+	}
+	
+    .header-wrapper {
+        left: 0;
+        width: 100%;
+        padding: 0; /* 移除內邊距，讓圖片可以完全填滿 */
+        height: auto;
+        min-height: 10vh; /* 根據您 Logo Banner 的實際高度微調，確保空間足夠 */
+        box-sizing: border-box; /* 確保 padding 不影響寬度計算 */
+    }
+		
+    .header-img {
+	position: fixed; /* 固定在頂部 */
+    order: -1;                  /* 提前順序，確保 header-img 在最上面 */
+    display: block;            /* 顯示圖片 */
+    height: auto;
+    min-height: auto; /* 根據您 Logo Banner 的實際高度微調，確保空間足夠 */
+    width: 100%;               /* 寬度撐滿 */
+    max-width: 100%;           /* 限制最大寬度 */
+    cursor: pointer;           /* 滑鼠變成點擊狀態 */
   }
+
+	.articles-page .main-content {
+		margin-right:0px ; /* 手機版主內容區佔滿 */
+		padding: 1vh;
+	}
+
+	.article-grid {
+		grid-template-columns: 1fr; /* 手機版單欄顯示 */
+	}
   
 .gift-mobile-grid {
     display: grid;
@@ -1162,7 +1384,7 @@ img.zoomable {
 
 .mobile-vertical .games-wrapper-2col {
   display: flex;
-	margin-top: 5vh;
+	margin-top: 0vh;
 	margin-bottom: 7.5vh;
   flex-direction: row;
   justify-content: center;
@@ -1172,16 +1394,19 @@ img.zoomable {
 }
 
 .mobile-vertical .main-content {
+  margin-top:1vh;
   display: flex;
   flex-direction: column;      /* ← 原本是 column，改成 row */
   justify-content: center;
   align-items: center;
-  gap: 3vw;
 }
 
+.index-page .main-content {
+	overflow: hidden;
+	}
 
 .main-content {
-    display: flex;
+	display: flex;
     flex-direction: column;
     gap: 0vh;
     align-items: center;
@@ -1190,6 +1415,8 @@ img.zoomable {
 
 .index-page h1 {
 	align-items: center;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
 }
 
 .mobile-vertical .game-slider-container {
@@ -1297,39 +1524,42 @@ img.zoomable {
     display: none; /* 手機不顯示箭頭 */
   }
 
-  .header-img {
-    order: -1;                  /* 提前順序，確保 header-img 在最上面 */
-    display: block;            /* 顯示圖片 */
-    width: 100%;               /* 寬度撐滿 */
-    max-width: 100%;           /* 限制最大寬度 */
-    margin: 0 auto 0rem;       /* 置中並與下方留距 */
-    cursor: pointer;           /* 滑鼠變成點擊狀態 */
-  }
   
-  .sidebar {
-    display: none; /* 這一行在螢幕寬度小於等於1024px時隱藏側邊欄 */
-  }
-  .mobile-top-bar {
-    display: block; /* 這一行在螢幕寬度小於等於1024px時顯示頂部漢堡選單 */
-  }
-  .main-content {
-    margin-left: 0 !important; /* 這一行強制移除主內容左側外邊距 */
-    width: 100% !important;    /* 這一行強制主內容寬度為100%，佔滿螢幕 */
-  }
-  footer {
-    left: 0 !important;         /* 確保不再使用原本 left:xxx 的值 */
-    margin-left: 0 !important;  /* 若原本 footer 有 margin-left 也一起覆蓋 */
-    width: 100% !important;     /* 使頁腳佔滿螢幕寬度 */
-    background: #333;           /* 頁腳背景 */
-    color: #fff;                /* 頁腳文字顏色 */
-    font-size: 1.75vh;          /* 你原先想要的字體大小 (或改成 1rem/1vw 皆可) */
-    padding: 1vw 0;            /* 你原先的上下內邊距 (可再改) */
-    position: fixed;            /* 固定在底部 */
-    bottom: 0;                  /* 與底部對齊 */
-    display: flex;              /* Flex 置中 */
-    justify-content: center;    /* 水平置中 */
-    align-items: center;        /* 垂直置中 */
-  }
+    .sidebar {
+        display: none !important;
+    }
+.mobile-top-bar {
+    position: fixed; /* 固定在頂部 */
+    top: 6.4%;
+    width: 100%;
+    z-index: 1001; /* 確保在所有內容和選單之上 */
+    background-color: #333; /* 與 header-wrapper 顏色一致 */
+    padding: 10px 0px;
+    display: flex; /* 預設在桌面隱藏，手機顯示 */
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* 添加陰影 */
+}
+    /* 強制主內容區塊在手機版時的邊距和寬度 */
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 頁腳在手機版時的調整 */
+    footer {
+        left: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        position: fixed; /* 確保固定在底部 */
+        bottom: 0;
+        /* ... 其他 footer 樣式 ... */
+    }
+	
+	    /* 阻止 body 滾動 (當選單開啟時) */
+    body.no-scroll {
+        overflow: hidden;
+    }
 
   .game-detail .login-box {
     display: none !important;
@@ -1337,8 +1567,8 @@ img.zoomable {
 
 	.info-box{
     width: 80vw ;
-    margin: 1vh auto; /* 上下各 5vh，左右置中 */
-    padding: 3vh 5vw;
+    margin: 3vh auto; /* 上下各 5vh，左右置中 */
+    padding: 4vh 5vw;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1.5vh;
     box-shadow: 0 0 1vh rgba(255, 255, 255, 0.2);
@@ -1349,7 +1579,7 @@ img.zoomable {
 
   .products-box {
     width: 80vw ;
-    margin: 5vh auto; /* 上下各 5vh，左右置中 */
+    margin: 1vh auto; /* 上下各 5vh，左右置中 */
     padding: 3vh 5vw;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1.5vh;
@@ -1360,9 +1590,10 @@ img.zoomable {
   }
 
   .game-detail .main-content {
-		justify-content: center;
+	justify-content: center;
     flex-wrap: flex;               /* 允許換行 */
-    padding-bottom: 10vh;         /* 避免被 footer 蓋到 */
+    padding-bottom: 4vh;         /* 避免被 footer 蓋到 */
+	margin-top: 2vh;
   }
   
     .giftcodes-page .new-games-grid {
@@ -1391,6 +1622,23 @@ img.zoomable {
   display: block;
   margin: 10px auto;
 }
+
+.articles-banner {
+	display: block; /* 將圖片轉換為塊級元素 */
+    margin: 0 auto; /* 上下外邊距為0，左右自動，實現水平置中 */
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	text-align: center
+}
+
+.articles-banner img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
   
 }
 
@@ -1398,11 +1646,8 @@ img.zoomable {
 @media (min-width: 1025px) {
   .header-img {
     display: block;
-  padding-left: calc(10.4vw + 2vw); /* 加上 sidebar 寬度與一些額外距離 */
-  padding-right: 9vw;
-    max-width: 80%;       /* 你已經設定，保持也沒問題 */
-	mask-image: radial-gradient(ellipse 90% 100% at 50% 50%, black 55%, transparent 100%);
-	-webkit-mask-image: radial-gradient(ellipse 90% 100% at 50% 50%, black 55%, transparent 100%);
+  padding-left: 10vw; /* 加上 sidebar 寬度與一些額外距離 */
+    max-width: 88vw;       /* 你已經設定，保持也沒問題 */
   }
   
 .giftcodes-page .new-games-grid {

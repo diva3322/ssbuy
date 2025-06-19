@@ -1004,7 +1004,7 @@ img.zoomable {
 /* 手機下拉選單 - 固定並覆蓋內容，位於 mobile-top-bar 下方 */
 .mobile-dropdown-menu {
     position: fixed; /* 固定在視窗 */
-    top: calc(8.4vh + 10vh); /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
+    top: 16vh; /* 範例值：緊接在 mobile-top-bar 之下。80px是header, 60px是mobile-top-bar高度 */
     left: 0;
     width: 100%;
     height: 8vh; /* 佔滿剩餘高度 */
@@ -1020,6 +1020,7 @@ img.zoomable {
 
 /* mobile-dropdown-menu 展開時的樣式 */
 .mobile-dropdown-menu.open {
+	
     display: block; /* 顯示 */
     opacity: 1;
     transform: translateY(0); /* 滑入視窗 */
@@ -1027,16 +1028,16 @@ img.zoomable {
 
 .mobile-dropdown-menu ul {
     list-style: none;
-    margin: 1.2vh;
-    padding: 0px;
+    margin: 1vh;
+    padding: 1px;
     display: flex;
     justify-content: center;
-    gap: 0.9rem;
+    gap: 0.5rem;
 }
 
 .mobile-dropdown-menu ul li {
     text-align: center;
-    padding: 0.5vh 0.25vh;
+    padding: 1vh 0.25vh;
     font-size: 1rem;
     border: none;
     background: rgba(255, 255, 255, 0.2);
@@ -1241,7 +1242,7 @@ body::-webkit-scrollbar {
 	z-index: 1001;
     order: -1;                  /* 提前順序，確保 header-img 在最上面 */
     display: block;            /* 顯示圖片 */
-    height: 12vh;
+    height: 8vh;
     min-height: auto; /* 根據您 Logo Banner 的實際高度微調，確保空間足夠 */
     width: 100%;               /* 寬度撐滿 */
     max-width: 100%;           /* 限制最大寬度 */
@@ -1395,11 +1396,13 @@ body::-webkit-scrollbar {
 }
 
 .mobile-vertical .main-content {
-  margin-top:8vh;
+  padding-top: 8vh;
   display: flex;
   flex-direction: column;      /* ← 原本是 column，改成 row */
   justify-content: center;
   align-items: center;
+  gap: 1vh;
+  padding: 1vh;
 }
 
 .index-page .main-content {
@@ -1532,7 +1535,7 @@ body::-webkit-scrollbar {
     }
 .mobile-top-bar {
     position: fixed; /* 固定在頂部 */
-    top: 11.8vh;
+    top: 8vh;
     width: 100%;
     z-index: 1001; /* 確保在所有內容和選單之上 */
     background-color: #333; /* 與 header-wrapper 顏色一致 */
@@ -1569,7 +1572,7 @@ body::-webkit-scrollbar {
 
 	.info-box{
     width: 80vw ;
-    margin: 3vh auto; /* 上下各 5vh，左右置中 */
+    margin: 5vh auto; /* 上下各 5vh，左右置中 */
     padding: 4vh 5vw;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1.5vh;

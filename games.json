@@ -4770,5 +4770,209 @@
       "App Store": "https://apps.apple.com/tw/app/shadowverse-worlds-beyond/id6472019540",
       "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=29330"
     }
+  },
+  "雪月風花": {
+    "logo": "images/雪月風花.jpg",
+    "products": [
+      {
+        "name": "6480珍珠",
+        "price": 2567
+      },
+      {
+        "name": "3280珍珠",
+        "price": 1331
+      },
+      {
+        "name": "1980珍珠",
+        "price": 791
+      },
+      {
+        "name": "1280珍珠",
+        "price": 543
+      },
+      {
+        "name": "680珍珠",
+        "price": 268
+      },
+      {
+        "name": "300珍珠",
+        "price": 138
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/LMeblade/",
+      "官方網站": "https://home.gamer.com.tw/artwork.php?sn=6163550",
+      "禮包碼": "gift-codes.html?game=雪月風花",
+      "App Store": "https://apps.apple.com/tw/app/%E9%9B%AA%E6%9C%88%E9%A2%A8%E8%8A%B1-eternal-blade/id6744101859",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=83057"
+    }
+  },
+  "文明帝國：同盟時代": {
+    "logo": "images/文明帝國同盟時代.jpg",
+    "products": [
+      {
+        "name": "6480鑽石",
+        "price": 2567
+      },
+      {
+        "name": "3280鑽石",
+        "price": 1331
+      },
+      {
+        "name": "1980鑽石",
+        "price": 791
+      },
+      {
+        "name": "1280鑽石",
+        "price": 543
+      },
+      {
+        "name": "300鑽石",
+        "price": 138
+      },
+      {
+        "name": "基金",
+        "price": 268
+      },
+      {
+        "name": "榮耀月卡",
+        "price": 138
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/CivErasAndAlliesTW/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.t2k.prometheusroa&hl=zh_HK",
+      "禮包碼": "gift-codes.html?game=文明帝國：同盟時代",
+      "App Store": "https://apps.apple.com/tw/app/%E6%96%87%E6%98%8E%E5%B8%9D%E5%9C%8B-%E5%90%8C%E7%9B%9F%E6%99%82%E4%BB%A3/id1617124341",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=79696"
+    }
+  },
+  "魔法商店大亨": {
+    "logo": "images/魔法商店大亨.jpg",
+    "products": [
+      {
+        "name": "500寶石",
+        "price": 559
+      },
+      {
+        "name": "300寶石",
+        "price": 397
+      },
+      {
+        "name": "150寶石",
+        "price": 236
+      },
+      {
+        "name": "90寶石",
+        "price": 133
+      },
+      {
+        "name": "50寶石",
+        "price": 80
+      },
+      {
+        "name": "30寶石",
+        "price": 53
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/groups/214123035067318/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.chamelio.magicraft&hl=zh_HK",
+      "禮包碼": "gift-codes.html?game=魔法商店大亨",
+      "App Store": "https://apps.apple.com/tw/app/%E8%A3%BD%E4%BD%9C%E9%AD%94%E6%B3%95-%E5%90%88%E6%88%90%E5%A4%A7%E4%BA%A8/id6450827276",
+      "巴哈姆特": "https://gnn.gamer.com.tw/detail.php?sn=274899"
+    }
+  },
+  "新仙劍奇俠傳lite": {
+    "logo": "images/新仙劍奇俠傳lite.jpg",
+    "products": [
+      {
+        "name": "648玉龍",
+        "price": 2450
+      },
+      {
+        "name": "328玉龍",
+        "price": 1328
+      },
+      {
+        "name": "198玉龍",
+        "price": 808
+      },
+      {
+        "name": "98玉龍",
+        "price": 437
+      },
+      {
+        "name": "50玉龍",
+        "price": 273
+      },
+      {
+        "name": "30玉龍",
+        "price": 137
+      },
+      {
+        "name": "8玉龍",
+        "price": 30
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/NCPSAF/",
+      "官方網站": "https://gnn.gamer.com.tw/detail.php?sn=287546",
+      "禮包碼": "gift-codes.html?game=新仙劍奇俠傳lite",
+      "App Store": "https://apps.apple.com/tw/app/%E6%96%B0%E4%BB%99%E5%8A%8D%E5%A5%87%E4%BF%A0%E5%82%B3lite/id6741674989",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=83046"
+    }
+  },
+  "神州M": {
+    "logo": "images/神州M.jpg",
+    "products": [
+      {
+        "name": "8250金元寶",
+        "price": 2333
+      },
+      {
+        "name": "3550金元寶",
+        "price": 1030
+      },
+      {
+        "name": "2170金元寶",
+        "price": 631
+      },
+      {
+        "name": "795金元寶",
+        "price": 236
+      },
+      {
+        "name": "355金元寶",
+        "price": 115
+      },
+      {
+        "name": "90金元寶",
+        "price": 29
+      },
+      {
+        "name": "2990禮包",
+        "price": 2333
+      },
+      {
+        "name": "1290禮包",
+        "price": 1030
+      },
+      {
+        "name": "790禮包",
+        "price": 631
+      },
+      {
+        "name": "290禮包",
+        "price": 236
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/szm.ujgame/",
+      "官方網站": "https://www.facebook.com/szm.ujgame/",
+      "禮包碼": "gift-codes.html?game=神州M",
+      "App Store": "https://apps.apple.com/tw/app/%E7%A5%9E%E5%B7%9Em/id1617979084",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=75470"
+    }
   }
 }

@@ -40,12 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 錨點連結平滑滾動
-    document.querySelectorAll("a[href^='#']").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            target?.scrollIntoView({ behavior: "smooth" });
-        });
+    // 修正：只對「純錨點」連結執行平滑滾動，避免干擾完整 URL 的連結
+    document.querySelectorAll("a[href]").forEach(anchor => { // 選擇所有有 href 屬性的 a 標籤
+        const href = anchor.getAttribute("href");
+        if (href && href.startsWith("#") && href.length > 1) { // 確保是純錨點連結 (e.g. #section1, 而非 # 或 #game)
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault(); // 阻止預設跳轉行為
+                const target = document.querySelector(href);
+                target?.scrollIntoView({ behavior: "smooth" });
+            });
+        }
     });
 
     // ===== 頁面專屬邏輯 (只在特定頁面執行) ======
@@ -478,6 +482,16 @@ function loadGameDetails(gameName, game) {
             歡迎加入 LINE@ 生活圈 ID：@ssbuy (@也要輸入)。<br>
             我們將不定時舉辦抽優惠券與點卡活動哦!
         `;
+    }
+	
+	    // 新增：設定攻略與禮包碼連結
+    const gameArticleLink = document.getElementById("gameArticleLink");
+    if (gameArticleLink) {
+        gameArticleLink.href = `articles.html?game=${encodeURIComponent(gameName)}`;
+    }
+    const gameGiftCodeLink = document.getElementById("gameGiftCodeLink");
+    if (gameGiftCodeLink) {
+        gameGiftCodeLink.href = `gift-codes.html?game=${encodeURIComponent(gameName)}`;
     }
 
     const socialContainer = document.querySelector(".social-media p");

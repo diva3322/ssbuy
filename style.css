@@ -1178,6 +1178,30 @@ img.zoomable {
     margin: 0 0.5vh;            /* 左右間距 */
 }
 
+    .game-detail .game-links-container {
+        display: flex; /* 使用 Flexbox */
+        flex-direction: column; /* 垂直排列子元素 */
+        align-items: flex-start; /* 子元素靠左對齊 */
+        gap: 8px; /* 增加連結之間的垂直間距 */
+        margin-top: 1vh; /* 根據需要調整與上方內容的距離 */
+        margin-bottom: 1vh; /* 根據需要調整與下方內容的距離 */
+        text-align: left; /* 確保文字本身也是左對齊 */
+    }
+
+    .game-detail .game-links-container a {
+        display: block; /* 讓連結變成塊級元素，各自佔據一行 */
+        width: 100%; /* 寬度佔滿父容器 */
+        /* 移除或覆蓋任何會導致水平排版的屬性，例如 white-space: nowrap; */
+        white-space: normal; /* 允許文字換行 */
+        text-align: left; /* 確保連結文字靠左 */
+    }
+
+    /* 移除連結中間的 "|" 分隔符 */
+    .game-detail .game-links-container a + a {
+        /* 如果您在 HTML 中使用了 "|"，這裡無法直接移除，需要調整 HTML */
+        /* 如果您是想用 CSS 方式自動添加分隔符，則這裡可以控制 */
+    }
+
 /* ★ 針對小螢幕(≤1024px)：隱藏sidebar、顯示 mobile-top-bar */ /* 這一行是註解，標示小螢幕媒體查詢開始 */
 @media (max-width: 1024px) {
 	
@@ -1193,6 +1217,30 @@ html, body {
     /* 針對 Internet Explorer 10+ 和 Edge */
     -ms-overflow-style: none; 
 }
+
+    .game-detail .game-links-container {
+        display: flex; /* 使用 Flexbox */
+        flex-direction: column; /* 垂直排列子元素 */
+        align-items: flex-start; /* 子元素靠左對齊 */
+        gap: 8px; /* 增加連結之間的垂直間距 */
+        margin-top: 1vh; /* 根據需要調整與上方內容的距離 */
+        margin-bottom: 1vh; /* 根據需要調整與下方內容的距離 */
+        text-align: left; /* 確保文字本身也是左對齊 */
+    }
+
+    .game-detail .game-links-container a {
+        display: block; /* 讓連結變成塊級元素，各自佔據一行 */
+        width: 100%; /* 寬度佔滿父容器 */
+        /* 移除或覆蓋任何會導致水平排版的屬性，例如 white-space: nowrap; */
+        white-space: normal; /* 允許文字換行 */
+        text-align: left; /* 確保連結文字靠左 */
+    }
+
+    /* 移除連結中間的 "|" 分隔符 */
+    .game-detail .game-links-container a + a {
+        /* 如果您在 HTML 中使用了 "|"，這裡無法直接移除，需要調整 HTML */
+        /* 如果您是想用 CSS 方式自動添加分隔符，則這裡可以控制 */
+    }
 
 /* 針對基於 WebKit 的瀏覽器 (Chrome, Safari, Opera, 新版 Edge 等) */
 /* 這是針對 html 和 body 滾動條本身的一個偽元素 */

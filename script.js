@@ -125,66 +125,72 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 禮包碼頁面 (giftcodes.html) 邏輯
-    if (document.body.classList.contains("giftcodes-page")) {
-        const params = new URLSearchParams(window.location.search);
-        const game = decodeURIComponent(params.get("game") || "未知遊戲");
+// 禮包碼頁面 (giftcodes.html) 邏輯
+if (document.body.classList.contains("giftcodes-page")) {
+    const params = new URLSearchParams(window.location.search);
+    const game = decodeURIComponent(params.get("game") || "未知遊戲"); // 取得 URL 中的遊戲名稱
 
-        document.querySelectorAll('[id^="gameName"]').forEach(el => el.textContent = game);
-        document.getElementById("giftTitle").textContent = `${game} 最新禮包碼|兌換碼|序號|免費領取`;
+    document.querySelectorAll('[id^="gameName"]').forEach(el => el.textContent = game);
+    document.getElementById("giftTitle").textContent = `${game} 最新禮包碼|兌換碼|序號|免費領取`;
 
-        fetch("gift-codes-data.json")
-            .then(res => {
-                if (!res.ok) throw new Error("載入 gift-codes-data.json 失敗");
-                return res.json();
-            })
-            .then(data => {
-                if (!data[game]) {
-                    document.querySelector(".content-box").innerHTML += `<p>❌ 找不到 ${game} 的禮包碼資料</p>`;
-                    return;
-                }
-                const gameData = data[game];
+    fetch("gift-codes-data.json")
+        .then(res => {
+            if (!res.ok) throw new Error("載入 gift-codes-data.json 失敗");
+            return res.json();
+        })
+        .then(data => {
+            if (!data[game]) {
+                document.querySelector(".content-box").innerHTML += `<p>❌ 找不到 ${game} 的禮包碼資料</p>`;
+                return;
+            }
+            const gameData = data[game];
 
-                // 設定橫幅圖片
-                const bannerPath = gameData.banner || "giftcodesbanner/default.jpg";
-                const bannerImg = document.getElementById("giftBanner");
-                if (bannerImg) {
-                    bannerImg.src = bannerPath;
-                }
+            // 設定橫幅圖片
+            const bannerPath = gameData.banner || "giftcodesbanner/default.jpg";
+            const bannerImg = document.getElementById("giftBanner");
+            if (bannerImg) {
+                bannerImg.src = bannerPath;
+            }
 
-                // 設定介紹文字
-                const section4Element = document.getElementById("section4");
-                if (section4Element) {
-                    section4Element.innerHTML += `<p> <span class="normal">${gameData.description}</span></p>`;
-                }
+            // 設定介紹文字
+            const section4Element = document.getElementById("section4");
+            if (section4Element) {
+                section4Element.innerHTML += `<p> <span class="normal">${gameData.description}</span></p>`;
+            }
 
-                // 填入禮包碼表格
-                const tbody = document.querySelector(".gift-table tbody");
-                if (tbody) {
-                    tbody.innerHTML = "";
-                    gameData.codes.forEach(item => {
-                        const row = `<tr><td>${item.code}</td><td>${item.reward}</td></tr>`;
-                        tbody.insertAdjacentHTML("beforeend", row);
-                    });
-                }
+            // 填入禮包碼表格
+            const tbody = document.querySelector(".gift-table tbody");
+            if (tbody) {
+                tbody.innerHTML = "";
+                gameData.codes.forEach(item => {
+                    const row = `<tr><td>${item.code}</td><td>${item.reward}</td></tr>`;
+                    tbody.insertAdjacentHTML("beforeend", row);
+                });
+            }
 
-                // 填入兌換教學
-                const howToElement = document.getElementById("section3");
-                if (howToElement) {
-                    const steps = gameData.howTo.map(step => `<li>${step}</li>`).join("");
-                    howToElement.innerHTML += `<ol>${steps}</ol>`;
-                }
-            })
-            .catch(e => {
-                console.error("讀取禮包碼資料錯誤", e);
-                const contentBox = document.querySelector(".content-box");
-                if (contentBox) {
-                    contentBox.innerHTML += `<p style="color: red;">載入禮包碼資料失敗：${e.message}</p>`;
-                }
-            });
+            // 填入兌換教學
+            const howToElement = document.getElementById("section3");
+            if (howToElement) {
+                const steps = gameData.howTo.map(step => `<li>${step}</li>`).join("");
+                howToElement.innerHTML += `<ol>${steps}</ol>`;
+            }
+        })
+        .catch(e => {
+            console.error("讀取禮包碼資料錯誤", e);
+            const contentBox = document.querySelector(".content-box");
+            if (contentBox) {
+                contentBox.innerHTML += `<p style="color: red;">載入禮包碼資料失敗：${e.message}</p>`;
+            }
+        });
         
-        loadLatestGamesInGiftcodesPage(); // 專門為禮包碼頁面載入最新遊戲卡片
+    // 設定返回儲值頁面的連結
+    const backToGameDetailBtn = document.getElementById("backToGameDetailBtn");
+    if (backToGameDetailBtn) {
+        backToGameDetailBtn.href = `game-detail.html?game=${encodeURIComponent(game)}`;
     }
+    
+    loadLatestGamesInGiftcodesPage(); // 專門為禮包碼頁面載入最新遊戲卡片
+}
 
     // 文章頁面 (articles.html) 邏輯
     if (document.body.classList.contains("articles-page")) {

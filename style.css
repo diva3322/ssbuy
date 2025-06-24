@@ -1468,18 +1468,17 @@ body::-webkit-scrollbar {
 }
 
 .mobile-vertical .main-content {
-  padding-top: 8vh;
+  padding-top: 1vh;
   display: flex;
   flex-direction: column;      /* ← 原本是 column，改成 row */
   justify-content: center;
   align-items: center;
   gap: 1vh;
-  padding: 1vh;
 }
 
 .index-page .main-content {
 	overflow: hidden;
-	padding-top: 18vh;
+	padding-top: 5vh;
 	}
 
 .main-content {

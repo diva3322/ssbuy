@@ -1499,7 +1499,7 @@ body::-webkit-scrollbar {
 }
 
 .all-games-page .main-content {
-	margin-right: 2vh;
+	margin-right: 1vh;
     text-align: center; /* 這一行使主內容文字置中 */
 	padding-top: 6vh;
 	padding-bottom: 5vh; /* 確保頁面底部留空，不會被 footer 蓋住 */
@@ -1509,7 +1509,7 @@ body::-webkit-scrollbar {
     max-width: 90%; /* 這一行設定網格最大寬度為90% */
     display: grid; /* 這一行使網格使用網格布局 */
     grid-template-columns: repeat(auto-fit, minmax(9vh, 1fr)); /* 這一行設定網格列數自適應，最小150px，每列等寬 */
-    gap: 5vh; /* 這一行設定網格內元素間距為2.6vw */
+    gap: 4vh; /* 這一行設定網格內元素間距為2.6vw */
     justify-content: center; /* 這一行使網格內容水平置中 */
     margin: 0 auto; /* 這一行使網格水平置中 */
 }

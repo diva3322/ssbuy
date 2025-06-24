@@ -9,12 +9,6 @@ a:hover {
     text-decoration: underline; /* 這一行設定連結hover時加底線 */
 }
 
-
-
-html, body {
-    height: 100%; /* 這一行設定網頁和body高度100% */
-}
-
 body {
     overflow-x: hidden;  /* 禁止水平滾動，這一行避免出現橫向捲軸 */
     background-color: #222; /* 這一行設定body背景色為深灰色 */
@@ -1218,6 +1212,36 @@ html, body {
     -ms-overflow-style: none; 
 }
 
+    .info-page .content-box {
+        width: 90vw; /* 寬度為視窗寬度的 80% */
+        max-width: 500px; /* 設定一個最大寬度，避免在較大的平板上過寬 */
+        min-height: auto; /* 這是關鍵：讓內容盒隨著內容縮小，不會被固定高度限制 */
+        height: auto; /* 確保高度會根據內容自動調整 */
+		max-height: none;
+
+        margin-top: 6vh;    /* 上方外邊距，與頁面頂部或其他元素保持距離 */
+        margin-bottom: 5vh; /* 下方外邊距，與頁腳或其他元素保持距離 */
+        margin-left: auto;  /* 左右自動外邊距，用於水平置中 */
+        margin-right: auto; /* 左右自動外邊距，用於水平置中 */
+
+        padding-top: 1vh;   /* 上方內邊距，增加內容與邊框的空間 */
+        padding-bottom: 0vh; /* 下方內邊距，增加內容與邊框的空間 */
+        padding-left: 5vw;  /* 左側內邊距 */
+        padding-right: 5vw; /* 右側內邊距 */
+
+        background: rgba(255, 255, 255, 0.05); /* 背景顏色（保持您原本的半透明深灰） */
+        color: white; /* 文字顏色 */
+        border-radius: 2.5vh; /* 圓角弧度 */
+        box-shadow: 0 0 1vh rgba(255, 255, 255, 0.2); /* 陰影效果 */
+
+        display: flex; /* 使用 Flexbox，如果內容是多個區塊，可以更好地控制排版 */
+        flex-direction: column; /* 讓內部元素垂直堆疊 */
+        align-items: center; /* 讓內部元素水平置中 */
+
+        box-sizing: border-box; /* 確保 padding 和 border 包含在寬度計算中，避免意外的寬度增加 */
+        overflow-y: visible; /* 確保內容溢出時會撐開容器，而不是出現滾動條 */
+    }
+
     .game-detail .game-links-container {
         display: flex; /* 使用 Flexbox */
         flex-direction: column; /* 垂直排列子元素 */
@@ -1604,7 +1628,7 @@ body::-webkit-scrollbar {
     /* 強制主內容區塊在手機版時的邊距和寬度 */
     .main-content {
         margin-left: 0 !important;
-        width: 100% !important;
+        width: 100% !important;		
     }
 
     /* 頁腳在手機版時的調整 */

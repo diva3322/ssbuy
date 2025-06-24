@@ -1,5 +1,67 @@
 // ====== 通用功能 (所有頁面都會執行) ======
 
+// Helper function to update meta tags
+function updateMetaTags(title, description, pageName = "") {
+    document.title = title;
+
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = description;
+
+    // 如果需要，也可以動態更新 open graph 標籤 (用於社群分享)
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+        ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        document.head.appendChild(ogTitle);
+    }
+    ogTitle.content = title;
+
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+        ogDescription = document.createElement('meta');
+        ogDescription.setAttribute('property', 'og:description');
+        document.head.appendChild(ogDescription);
+    }
+    ogDescription.content = description;
+
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+        ogUrl = document.createElement('meta');
+        ogUrl.setAttribute('property', 'og:url');
+        document.head.appendChild(ogUrl);
+    }
+    ogUrl.content = window.location.href; // 當前頁面 URL
+
+    // 預設的 og:image，請替換為您的預設分享圖片 URL
+    let ogImage = document.querySelector('meta[property="og:image"]');
+    if (!ogImage) {
+        ogImage = document.createElement('meta');
+        ogImage.setAttribute('property', 'og:image');
+        document.head.appendChild(ogImage);
+    }
+    ogImage.content = 'https://www.ssbuy.tw/logobanner.jpg'; // **請務必替換為您實際的網站預設分享圖片 URL**
+
+    // 設置 keywords (現在對 SEO 影響較小，但可以考慮)
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.name = 'keywords';
+        document.head.appendChild(metaKeywords);
+    }
+    let keywords = "速速幫你儲, 手遊儲值, 遊戲代儲, 手遊代儲";
+    if (pageName === "index") keywords += ", 最新遊戲, 熱門遊戲";
+    else if (pageName === "all-games") keywords += ", 所有遊戲, 遊戲列表";
+    else if (pageName === "new-games") keywords += ", 新上遊戲, 最新手遊";
+    else if (pageName === "game-detail" && title) keywords += `, ${title.replace('代儲值 - 速速幫你儲手遊', '').trim()}, 遊戲儲值, 遊戲充值`;
+    else if (pageName === "giftcodes" && title) keywords += `, ${title.replace('最新禮包碼|兌換碼|序號|免費領取 - 速速幫你儲手遊', '').trim()}, 禮包碼, 兌換碼, 序號, 免費領取`;
+    metaKeywords.content = keywords;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // 手機版 body class 判斷
     const isMobile = window.innerWidth <= 1024;
@@ -56,7 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 首頁 (index.html) 邏輯
     if (document.body.classList.contains("index-page")) {
-        renderGames(); // 渲染首頁遊戲卡片
+		updateMetaTags("速速幫你儲手遊 - 專業遊戲代儲平台", "速速幫你儲手遊，提供最安全、快速、優惠的遊戲代儲服務，支援多款熱門手遊，立即體驗！", "index");
+		renderGames(); // 渲染首頁遊戲卡片
 
         // 監聽窗口大小調整，重新渲染遊戲卡片
         window.addEventListener("resize", () => {
@@ -80,21 +143,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 所有遊戲頁面 (all-games.html) 邏輯
     if (document.body.classList.contains("all-games-page")) {
-        loadAllGames(); // 載入並顯示所有遊戲
+		updateMetaTags("所有遊戲 - 速速幫你儲手遊", "探索速速幫你儲手遊平台所有支援的熱門手遊列表，輕鬆找到您想儲值的遊戲。", "all-games");
+		loadAllGames(); // 載入並顯示所有遊戲
         // filterGames() 函數會由 input 的 oninput 事件觸發，不需要在這裡 DOMContentLoaded 額外綁定
     }
 
     // 新上遊戲頁面 (new-games.html) 邏輯
     if (document.body.classList.contains("new-games-page")) {
-        loadNewGamesContent(); // 專門為 new-games.html 載入最新遊戲
+		updateMetaTags("新上遊戲 - 速速幫你儲手遊", "瀏覽速速幫你儲手遊最新上架的遊戲，不錯過任何熱門手遊儲值優惠！", "new-games");
+		loadNewGamesContent(); // 專門為 new-games.html 載入最新遊戲
     }
 
-    // 遊戲詳情頁 (game-detail.html) 邏輯
+// 遊戲詳情頁 (game-detail.html) 邏輯
     if (document.body.classList.contains("game-detail")) {
         const urlParams = new URLSearchParams(window.location.search);
         const gameName = urlParams.get("game") ? decodeURIComponent(urlParams.get("game")) : "未知遊戲";
 
         if (gameName) {
+            // 在獲取到遊戲名稱後，立即更新標籤
+            updateMetaTags(`${gameName} 代儲值 - 速速幫你儲手遊`, `速速幫你儲為您提供${gameName}最安全、快速的代儲值服務，獨享優惠價格，立即體驗！`, "game-detail");
+
             fetch("games.json")
                 .then(response => {
                     if (!response.ok) throw new Error("載入 games.json 失敗: " + response.statusText);
@@ -103,32 +171,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(data => {
                     const game = data[gameName];
                     if (game) {
-                        loadGameDetails(gameName, game); // 載入遊戲詳情
+                        loadGameDetails(gameName, game); // 載入遊戲詳情 (已包含更新 gameTitle)
                     } else {
-                        console.error("找不到遊戲:", gameName);
-                        document.getElementById("gameTitle").textContent = "找不到遊戲";
-                        document.getElementById("gameLogo").src = "images/default.jpg";
-                        document.getElementById("productList").innerHTML = "<p>目前沒有可購買的商品</p>";
+                        // 找不到遊戲時的通用標籤
+                        updateMetaTags("遊戲不存在 - 速速幫你儲手遊", "抱歉，您請求的遊戲不存在或已下架。", "game-detail");
+                        console.error("找不到遊戲:", gameName); // 移到這裡
+                        document.getElementById("gameTitle").textContent = "找不到遊戲"; // 移到這裡
+                        document.getElementById("gameLogo").src = "images/default.jpg"; // 移到這裡
+                        document.getElementById("productList").innerHTML = "<p>目前沒有可購買的商品</p>"; // 移到這裡
                     }
                 })
-                .catch(error => {
+                .catch(error => { // <--- 修正後的單一 catch 區塊
                     console.error("載入遊戲詳情失敗:", error);
                     document.getElementById("gameTitle").textContent = "載入失敗";
                     document.getElementById("gameLogo").src = "images/default.jpg";
                     document.getElementById("productList").innerHTML = "<p>載入商品失敗</p>"; // 提供友善錯誤訊息
+                    // 錯誤處理時的通用標籤
+                    updateMetaTags("載入失敗 - 速速幫你儲手遊", "抱歉，載入遊戲資料失敗，請稍後再試。", "game-detail");
                 });
         } else {
-            console.error("未提供遊戲名稱");
-            document.getElementById("gameTitle").textContent = "未提供遊戲名稱";
-            document.getElementById("gameLogo").src = "images/default.jpg";
-            document.getElementById("productList").innerHTML = "<p>請選擇一個遊戲</p>";
+            updateMetaTags("未提供遊戲名稱 - 速速幫你儲手遊", "請透過遊戲列表選擇您想要儲值的遊戲。", "game-detail");
+            console.error("未提供遊戲名稱"); // 移到這裡
+            document.getElementById("gameTitle").textContent = "未提供遊戲名稱"; // 移到這裡
+            document.getElementById("gameLogo").src = "images/default.jpg"; // 移到這裡
+            document.getElementById("productList").innerHTML = "<p>請選擇一個遊戲</p>"; // 移到這裡
         }
     }
 
 // 禮包碼頁面 (giftcodes.html) 邏輯
 if (document.body.classList.contains("giftcodes-page")) {
     const params = new URLSearchParams(window.location.search);
-    const game = decodeURIComponent(params.get("game") || "未知遊戲"); // 取得 URL 中的遊戲名稱
+    const game = decodeURIComponent(params.get("game") || "未知遊戲");
+
+    // 在獲取到遊戲名稱後，立即更新標籤
+    updateMetaTags(`${game} 最新禮包碼|兌換碼|序號|免費領取 - 速速幫你儲手遊`, `獲取${game}最新的禮包碼、兌換碼、序號，免費領取豐厚遊戲獎勵，立即提升戰力！`, "giftcodes");
 
     document.querySelectorAll('[id^="gameName"]').forEach(el => el.textContent = game);
     document.getElementById("giftTitle").textContent = `${game} 最新禮包碼|兌換碼|序號|免費領取`;
@@ -188,13 +264,13 @@ if (document.body.classList.contains("giftcodes-page")) {
     if (backToGameDetailBtn) {
         backToGameDetailBtn.href = `game-detail.html?game=${encodeURIComponent(game)}`;
     }
-    
+
     loadLatestGamesInGiftcodesPage(); // 專門為禮包碼頁面載入最新遊戲卡片
 }
 
     // 文章頁面 (articles.html) 邏輯
     if (document.body.classList.contains("articles-page")) {
-        console.log("articles.html 頁面載入，無需額外 JavaScript 渲染文章。");
+		updateMetaTags("遊戲攻略與最新資訊 - 速速幫你儲手遊", "提供多款熱門手遊的最新遊戲攻略、活動資訊與深度分析，助您輕鬆玩轉遊戲！", "articles");
 
         const searchBox = document.querySelector('.articles-search-bar');
         if (searchBox) {

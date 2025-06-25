@@ -1,6 +1,6 @@
 // ====== 通用功能 (所有頁面都會執行) ======
 
-// Helper function to update meta tags
+// Helper function to update meta tags (包含 Canonical Tag)
 function updateMetaTags(title, description, pageName = "") {
     document.title = title;
 
@@ -11,6 +11,38 @@ function updateMetaTags(title, description, pageName = "") {
         document.head.appendChild(metaDescription);
     }
     metaDescription.content = description;
+
+    // --- 新增 Canonical Tag 邏輯 ---
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.rel = 'canonical';
+        document.head.appendChild(canonicalLink);
+    }
+    // 根據頁面名稱設定規範 URL
+    if (pageName === "index") {
+        canonicalLink.href = "https://www.ssbuy.tw/"; // 首頁的規範 URL
+    } else {
+        // 對於其他頁面，規範 URL 就是當前頁面的完整 URL
+        // 但需要處理 URL 參數，確保只有必要的參數保留，例如遊戲名稱
+        const currentUrl = new URL(window.location.href);
+        // 清除不必要的參數 (例如 UTM 追蹤碼等)
+        // 這裡只舉例，您可以根據實際需求調整要保留或移除的參數
+        if (pageName === "game-detail" || pageName === "giftcodes" || pageName === "articles") {
+            const gameParam = currentUrl.searchParams.get("game");
+            if (gameParam) {
+                currentUrl.search = `?game=${gameParam}`; // 只保留 game 參數
+            } else {
+                currentUrl.search = ""; // 沒有 game 參數就清除所有參數
+            }
+        } else {
+            currentUrl.search = ""; // 其他靜態頁面清空所有參數
+        }
+        currentUrl.hash = ""; // 移除 hash 部分
+        canonicalLink.href = currentUrl.toString();
+    }
+    // --- Canonical Tag 邏輯結束 ---
+
 
     // 如果需要，也可以動態更新 open graph 標籤 (用於社群分享)
     let ogTitle = document.querySelector('meta[property="og:title"]');
@@ -35,7 +67,7 @@ function updateMetaTags(title, description, pageName = "") {
         ogUrl.setAttribute('property', 'og:url');
         document.head.appendChild(ogUrl);
     }
-    ogUrl.content = window.location.href; // 當前頁面 URL
+    ogUrl.content = canonicalLink.href; // OG URL 應該與 Canonical URL 一致
 
     // 預設的 og:image，請替換為您的預設分享圖片 URL
     let ogImage = document.querySelector('meta[property="og:image"]');
@@ -44,7 +76,7 @@ function updateMetaTags(title, description, pageName = "") {
         ogImage.setAttribute('property', 'og:image');
         document.head.appendChild(ogImage);
     }
-    ogImage.content = 'https://www.ssbuy.tw/logobanner.jpg'; // **請務必替換為您實際的網站預設分享圖片 URL**
+    ogImage.content = 'https://www.ssbuy.tw/logobanner.jpg';
 
     // 設置 keywords (現在對 SEO 影響較小，但可以考慮)
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -59,6 +91,16 @@ function updateMetaTags(title, description, pageName = "") {
     else if (pageName === "new-games") keywords += ", 新上遊戲, 最新手遊";
     else if (pageName === "game-detail" && title) keywords += `, ${title.replace('代儲值 - 速速幫你儲手遊', '').trim()}, 遊戲儲值, 遊戲充值`;
     else if (pageName === "giftcodes" && title) keywords += `, ${title.replace('最新禮包碼|兌換碼|序號|免費領取 - 速速幫你儲手遊', '').trim()}, 禮包碼, 兌換碼, 序號, 免費領取`;
+    else if (pageName === "articles" && title) keywords += `, ${title.replace(' - SSbuy最安全的手遊代儲', '').trim()}, 遊戲攻略, 遊戲資訊`;
+    else if (pageName === "purchase-guide") keywords += ", 購買教學, 儲值教學, 手遊儲值步驟";
+    else if (pageName === "contact") keywords += ", 聯絡客服, 客服中心, 聯絡我們";
+    else if (pageName === "disclaimer") keywords += ", 免責聲明, 服務風險, 遊戲代儲風險";
+    else if (pageName === "terms-of-service") keywords += ", 服務條款, 用戶協議, 代儲服務條款";
+    else if (pageName === "account-verification") keywords += ", 帳戶認證, 首次交易驗證, 帳號安全";
+    else if (pageName === "google-verify") keywords += ", Google 復原碼, Google 驗證, 帳號復原教學";
+    else if (pageName === "fb-verify") keywords += ", FB 安全碼, Facebook 驗證, 臉書雙重驗證";
+    else if (pageName === "711pay") keywords += ", 超商代碼繳費, 7-11 繳費, 超商付款教學";
+
     metaKeywords.content = keywords;
 }
 

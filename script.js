@@ -608,6 +608,18 @@ function loadGameDetails(gameName, game) {
         `;
     }
 	
+	    // ====== 新增這一段程式碼：載入遊戲簡介 ======
+    const gameIntroActualDescriptionElement = document.getElementById("gameIntroActualDescription");
+    if (gameIntroActualDescriptionElement && game.description) {
+        gameIntroActualDescriptionElement.textContent = game.description;
+    } else if (gameIntroActualDescriptionElement) {
+        // 如果 JSON 中沒有簡介，可以設定為空或預設文字
+        gameIntroActualDescriptionElement.textContent = ""; 
+        // 也可以隱藏這個元素，如果不想顯示空白行
+        // gameIntroActualDescriptionElement.style.display = "none";
+    }
+    // ===========================================
+	
 	    // 新增：設定攻略與禮包碼連結
     const gameArticleLink = document.getElementById("gameArticleLink");
     if (gameArticleLink) {

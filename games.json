@@ -4974,5 +4974,53 @@
       "App Store": "https://apps.apple.com/tw/app/%E7%A5%9E%E5%B7%9Em/id1617979084",
       "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=75470"
     }
+  },
+  "英雄傳說：卡卡布三部曲": {
+    "logo": "images/英雄傳說卡卡布三部曲.jpg",
+    "products": [
+      {
+        "name": "5400藍色石榴石",
+        "price": 2333
+      },
+      {
+        "name": "3000藍色石榴石",
+        "price": 1190
+      },
+      {
+        "name": "1200藍色石榴石",
+        "price": 543
+      },
+      {
+        "name": "600藍色石榴石",
+        "price": 268
+      },
+      {
+        "name": "240藍色石榴石",
+        "price": 115
+      },
+      {
+        "name": "60藍色石榴石",
+        "price": 29
+      },
+      {
+        "name": "普通石榴石月卡",
+        "price": 138
+      },
+      {
+        "name": "高級石榴石月卡",
+        "price": 268
+      },
+      {
+        "name": "奢華石榴石月卡",
+        "price": 543
+      }
+    ],
+    "social": {
+      "Facebook": "https://www.facebook.com/legendofheroes.tw/",
+      "官方網站": "https://play.google.com/store/apps/details?id=com.hg.legendofheroes.gl",
+      "禮包碼": "gift-codes.html?game=英雄傳說：卡卡布三部曲",
+      "App Store": "https://apps.apple.com/tw/app/%E8%8B%B1%E9%9B%84%E5%82%B3%E8%AA%AA-%E5%8D%A1%E5%8D%A1%E5%B8%83%E4%B8%89%E9%83%A8%E6%9B%B2/id6740768121",
+      "巴哈姆特": "https://forum.gamer.com.tw/B.php?bsn=80736"
+    }
   }
 }

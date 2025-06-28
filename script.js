@@ -268,6 +268,17 @@ if (document.body.classList.contains("giftcodes-page")) {
             const bannerImg = document.getElementById("giftBanner");
             if (bannerImg) {
                 bannerImg.src = bannerPath;
+				// ★ 新增這一段：自動生成並設定 Alt Text
+                const altTexts = [
+                    `${game} 2025最新禮包碼活動，限量獎勵立即領取！`,
+                    `${game} 最齊全禮包碼與兌換碼，獨家好禮免費領取！`,
+                    `${game} 最新禮包碼序號，最強優惠不容錯過！`,
+                    `${game} 官方兌換碼大全，立即領取稀有獎勵！`,
+                    `${game} 2025最強優惠禮包碼，助你戰力飆升！`
+                ];
+                const randomAltText = altTexts[Math.floor(Math.random() * altTexts.length)];
+                bannerImg.alt = randomAltText;
+                // ★ 結束新增
             }
 
             // 設定介紹文字
